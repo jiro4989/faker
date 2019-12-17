@@ -1,12 +1,28 @@
-# This is just an example to get you started. You may wish to put all of your
-# tests into a single file, or separate them into multiple `test1`, `test2`
-# etc. files (better names are recommended, just make sure the name starts with
-# the letter 't').
-#
-# To run these tests, simply execute `nimble test`.
-
 import unittest
 
-import fakerpkg/submodule
-test "correct welcome":
-  check getWelcomeMessage() == "Hello, World!"
+import faker
+
+suite "basic usage":
+  test "generate random value":
+    let fake = newFaker()
+    echo fake.name()
+    echo fake.address()
+    echo fake.text()
+  test "generate random values by loop":
+    let fake = newFaker()
+    for i in 1..10:
+      echo fake.name()
+  # test "case adding provider":
+  #   var fake = newFaker()
+  #   fake.addProvider(address)
+  #   echo fake.address()
+  test "localization":
+    let fake = newFaker("en_US")
+    echo fake.name()
+    echo fake.address()
+    echo fake.text()
+  test "multiple locales":
+    let fake = newFaker("en_US", "ja_JP")
+    echo fake.name()
+    echo fake.address()
+    echo fake.text()

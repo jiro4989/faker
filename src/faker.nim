@@ -1,7 +1,15 @@
-# This is just an example to get you started. A typical hybrid package
-# uses this file as the main entry point of the application.
+type
+  Faker* = object
 
-import fakerpkg/submodule
+proc newFaker*(locale: varargs[string]): Faker =
+  echo locale
+  result = Faker()
 
-when isMainModule:
-  echo(getWelcomeMessage())
+proc name*(faker: Faker): string =
+  discard
+
+proc address*(faker: Faker): string =
+  discard
+
+proc text*(faker: Faker): string =
+  discard
