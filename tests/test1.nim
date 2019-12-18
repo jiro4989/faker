@@ -21,8 +21,3 @@ suite "basic usage":
     echo fake.name()
     echo fake.address()
     echo fake.text()
-  test "multiple locales":
-    let fake = newFaker("en_US", "ja_JP")
-    echo fake.name()
-    echo fake.address()
-    echo fake.text()

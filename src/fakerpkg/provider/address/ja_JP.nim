@@ -1,5 +1,7 @@
-import random
+import random, strutils
 from strformat import `&`
+
+include interfaces
 
 const
   addressFormats = @[
@@ -342,32 +344,75 @@ const
 
   buildingNames = @["パレス", "ハイツ", "コーポ", "アーバン", "クレスト", "パーク", "シティ", "シャルム", "コート"]
 
-proc prefecture*(): string =
-  sample(prefectures)
+proc prefecture*(f: Faker): string =
+  f.rand.sample(prefectures)
 
-proc city*(): string =
-  sample(cities)
+proc city*(f: Faker): string =
+  f.rand.sample(cities)
 
-proc town*(): string =
-  sample(towns)
+proc country*(f: Faker): string =
+  f.rand.sample(countries)
 
-proc chome*(): string =
-  $rand(1..42) & "丁目"
+proc town*(f: Faker): string =
+  f.rand.sample(towns)
 
-proc ban*(): string =
-  $rand(1..27) & "番"
+proc chome*(f: Faker): string =
+  $f.rand.rand(1..42) & "丁目"
 
-proc gou*(): string =
-  $rand(1..20) & "号"
+proc ban*(f: Faker): string =
+  $f.rand.rand(1..27) & "番"
 
-proc buildingName*(): string =
-  sample(buildingNames)
+proc gou*(f: Faker): string =
+  $f.rand.rand(1..20) & "号"
 
-proc postcode*(): string =
-  let x = rand(1..999)
-  let y = rand(1..9999)
+proc buildingName*(f: Faker): string =
+  f.rand.sample(buildingNames)
+
+proc postcode*(f: Faker): string =
+  let x = f.rand.rand(1..999)
+  let y = f.rand.rand(1..9999)
   &"{x:>03}-{y:>04}"
 
-proc zipcode*(): string =
-  postcode()
+proc zipcode*(f: Faker): string =
+  f.postcode()
 
+proc address*(f: Faker): string =
+  let
+    prefecture = f.prefecture()
+    city = f.city()
+    town = f.town()
+    chome = f.chome()
+    ban = f.ban()
+    gou = f.gou()
+    buildingName = f.buildingName()
+    buildingNumber = f.buildingNumber()
+    addrFmt = f.rand.sample(addressFormats)
+  addrFmt % [
+    "prefecture", prefecture,
+    "city", city,
+    "town", town,
+    "chome", chome,
+    "ban", ban,
+    "gou", gou,
+    "buildingName", buildingName,
+    "buildingNumber", buildingNumber]
+
+proc buildingNumber*(f: Faker): string = "TODO"
+proc cityPrefix*(f: Faker): string = "TODO"
+proc citySuffix*(f: Faker): string = "TODO"
+proc countryCode*(f: Faker, representation: string): string = "TODO"
+proc militaryApo*(f: Faker): string = "TODO"
+proc militaryDpo*(f: Faker): string = "TODO"
+proc militaryShip*(f: Faker): string = "TODO"
+proc militaryState*(f: Faker): string = "TODO"
+proc postalcode*(f: Faker): string = "TODO"
+proc postalcodeInState*(f: Faker, stateAbbr: string): string = "TODO"
+proc postalcodePlus4*(f: Faker): string = "TODO"
+proc secondaryAddress*(f: Faker): string = "TODO"
+proc state*(f: Faker): string = "TODO"
+proc stateAbbr*(f: Faker, includeTerritories: string): string = "TODO"
+proc streetAddress*(f: Faker): string = "TODO"
+proc streetName*(f: Faker): string = "TODO"
+proc streetSuffix*(f: Faker): string = "TODO"
+proc zipcodeInState*(f: Faker, stateAbbr: string): string = "TODO"
+proc zipcodePlus4*(f: Faker): string = "TODO"
