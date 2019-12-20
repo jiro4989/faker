@@ -4,6 +4,27 @@ Faker is a Nim package that generates fake data for you.
 
 WIP
 
+## Installation
+
+```bash
+nimble install https://github.com/jiro4989/faker
+```
+
+## Usage
+
+```nim
+import faker
+
+block:
+  let fake = newFaker("ja_JP")
+  echo fake.address()
+
+block:
+  # default locale is `LANG` environment variables
+  let fake = newFaker()
+  echo fake.address()
+```
+
 ## Providers
 
 - [ ] base
