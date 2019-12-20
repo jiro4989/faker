@@ -529,8 +529,16 @@ proc buildingNumber*(f: Faker): string =
 
   $f.rand.rand(1..20)
 
-proc cityPrefix*(f: Faker): string = ""
-proc citySuffix*(f: Faker): string = ""
+proc cityPrefix*(f: Faker): string =
+  ## 空文字を返却する。
+  ## 日本では特に町名に接頭語などを設けないため。
+  ""
+
+proc citySuffix*(f: Faker): string =
+  ## 空文字を返却する。
+  ## 日本では特に町名に接尾語などを設けないため。
+  ""
+
 proc countryCode*(f: Faker, representation: string): string =
   ## ランダムに国名コードを返却する。
   runnableExamples:
@@ -540,6 +548,7 @@ proc countryCode*(f: Faker, representation: string): string =
     ##   CX
 
   f.rand.sample(countryCodes)
+
 proc militaryApo*(f: Faker): string = ""
 proc militaryDpo*(f: Faker): string = ""
 proc militaryShip*(f: Faker): string = ""
