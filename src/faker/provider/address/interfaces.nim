@@ -5,6 +5,7 @@
 # ジャを全て実装しないと、コンパイルが通らない。
 
 import ../../base
+export base
 
 proc address*(f: Faker): string
 proc buildingNumber*(f: Faker): string

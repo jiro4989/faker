@@ -5,7 +5,6 @@
 ##
 
 runnableExamples:
-  import faker/base
   import faker/provider/address/ja_JP
 
   let f = newFaker("ja_JP")
@@ -365,8 +364,6 @@ const
 proc prefecture*(f: Faker): string =
   ## ランダムに都道府県を返却する。
   runnableExamples:
-    import faker/base
-
     let f = newFaker("ja_JP")
     echo f.prefecture()
     ## Output:
@@ -377,8 +374,6 @@ proc prefecture*(f: Faker): string =
 proc city*(f: Faker): string =
   ## ランダムに市区町村を返却する。
   runnableExamples:
-    import faker/base
-
     let f = newFaker("ja_JP")
     echo f.city()
     ## Output:
@@ -389,8 +384,6 @@ proc city*(f: Faker): string =
 proc country*(f: Faker): string =
   ## ランダムに国名を返却する。
   runnableExamples:
-    import faker/base
-
     let f = newFaker("ja_JP")
     echo f.country()
     ## Output:
@@ -401,8 +394,6 @@ proc country*(f: Faker): string =
 proc town*(f: Faker): string =
   ## ランダムに町名を返却する。
   runnableExamples:
-    import faker/base
-
     let f = newFaker("ja_JP")
     echo f.town()
     ## Output:
@@ -413,8 +404,6 @@ proc town*(f: Faker): string =
 proc chome*(f: Faker): string =
   ## ランダムに丁目を返却する。
   runnableExamples:
-    import faker/base
-
     let f = newFaker("ja_JP")
     echo f.chome()
     ## Output:
@@ -425,8 +414,6 @@ proc chome*(f: Faker): string =
 proc ban*(f: Faker): string =
   ## ランダムに番地を返却する。
   runnableExamples:
-    import faker/base
-
     let f = newFaker("ja_JP")
     echo f.ban()
     ## Output:
@@ -437,8 +424,6 @@ proc ban*(f: Faker): string =
 proc gou*(f: Faker): string =
   ## ランダムに号を返却する。
   runnableExamples:
-    import faker/base
-
     let f = newFaker("ja_JP")
     echo f.gou()
     ## Output:
@@ -449,8 +434,6 @@ proc gou*(f: Faker): string =
 proc buildingName*(f: Faker): string =
   ## ランダムに建物名を返却する。
   runnableExamples:
-    import faker/base
-
     let f = newFaker("ja_JP")
     echo f.buildingName()
     ## Output:
@@ -461,8 +444,6 @@ proc buildingName*(f: Faker): string =
 proc postcode*(f: Faker): string =
   ## ランダムに郵便番号を返却する。
   runnableExamples:
-    import faker/base
-
     let f = newFaker("ja_JP")
     echo f.postcode()
     ## Output:
@@ -476,8 +457,6 @@ proc zipcode*(f: Faker): string =
   ## ランダムに郵便番号を返却する。
   ## 実体は `proc postcode <#postcode,Faker>_` と同じです。
   runnableExamples:
-    import faker/base
-
     let f = newFaker("ja_JP")
     echo f.zipcode()
     ## Output:
@@ -488,8 +467,6 @@ proc zipcode*(f: Faker): string =
 proc address*(f: Faker): string =
   ## ランダムに住所を返却する。
   runnableExamples:
-    import faker/base
-
     let f = newFaker("ja_JP")
     echo f.address()
     ## Output:
