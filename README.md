@@ -12,6 +12,8 @@ nimble install https://github.com/jiro4989/faker
 
 ## Usage
 
+### Library
+
 ```nim
 import faker
 
@@ -23,6 +25,13 @@ block:
   # default locale is `LANG` environment variables
   let fake = newFaker()
   echo fake.address()
+```
+
+### CLI
+
+```bash
+$ faker address
+大阪府調布市湯宮27丁目24番12号
 ```
 
 ## Providers
