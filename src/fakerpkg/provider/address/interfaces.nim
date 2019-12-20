@@ -23,7 +23,7 @@ proc postalcodePlus4*(f: Faker): string
 proc postcode*(f: Faker): string
 proc secondaryAddress*(f: Faker): string
 proc state*(f: Faker): string
-proc stateAbbr*(f: Faker, includeTerritories: string): string
+proc stateAbbr*(f: Faker, includeTerritories: bool): string
 proc streetAddress*(f: Faker): string
 proc streetName*(f: Faker): string
 proc streetSuffix*(f: Faker): string

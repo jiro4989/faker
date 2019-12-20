@@ -310,11 +310,11 @@ const
 
   military_dpo_format = @["Unit #### Box ####"]
 
-  city_formats = @[
-      "{{city_prefix}} {{first_name}}{{city_suffix}}",
-      "{{city_prefix}} {{first_name}}",
-      "{{first_name}}{{city_suffix}}",
-      "{{last_name}}{{city_suffix}}",
+  cityFormats = @[
+      "$cityPrefix $firstName$citySuffix",
+      "$cityPrefix $firstName",
+      "$firstName$citySuffix",
+      "$lastName$citySuffix",
   ]
 
   street_name_formats = @[
@@ -327,8 +327,8 @@ const
       "{{building_number}} {{street_name}} {{secondary_address}}",
   ]
 
-  address_formats = @[
-      "{{street_address}}\n{{city}}, {{state_abbr}} {{postcode}}",
+  addressFormats = @[
+      "$streetAddress\n$city, $stateAbbr $postcode",
   ]
 
   # address_formats = OrderedDict((
@@ -341,11 +341,36 @@ const
 
   secondary_address_formats = @["Apt. ###", "Suite ###"]
 
-proc address*(f: Faker): string = "TODO"
+proc address*(f: Faker): string =
+  let
+    addrFmt = f.rand.sample(addressFormats)
+    streetAddress = f.streetAddress()
+    city = f.city()
+    stateAbbr = f.stateAbbr(false)
+    postcode = f.postcode()
+  addrFmt % [
+    "streetAddress", streetAddress,
+    "city", city,
+    "stateAbbr", stateAbbr,
+    "postcode", postcode]
+
 proc buildingNumber*(f: Faker): string = "TODO"
-proc city*(f: Faker): string = "TODO"
-proc cityPrefix*(f: Faker): string = "TODO"
-proc citySuffix*(f: Faker): string = "TODO"
+proc city*(f: Faker): string =
+  let
+    cityFmt = f.rand.sample(cityFormats)
+    cityPrefix = f.cityPrefix()
+    citySuffix = f.citySuffix()
+    firstName = "John"
+    lastName = "Marker"
+  cityFmt % @[
+    "cityPrefix", cityPrefix,
+    "citySuffix", citySuffix,
+    "citySuffix", citySuffix,
+    "firstName", firstName,
+    "lastName", lastName,
+    ]
+proc cityPrefix*(f: Faker): string = f.rand.sample(cityPrefixes)
+proc citySuffix*(f: Faker): string = f.rand.sample(citySuffixes)
 proc country*(f: Faker): string = "TODO"
 proc countryCode*(f: Faker, representation: string): string = "TODO"
 proc militaryApo*(f: Faker): string = "TODO"
@@ -358,7 +383,7 @@ proc postalcodePlus4*(f: Faker): string = "TODO"
 proc postcode*(f: Faker): string = "TODO"
 proc secondaryAddress*(f: Faker): string = "TODO"
 proc state*(f: Faker): string = "TODO"
-proc stateAbbr*(f: Faker, includeTerritories: string): string = "TODO"
+proc stateAbbr*(f: Faker, includeTerritories: bool): string = "TODO"
 proc streetAddress*(f: Faker): string = "TODO"
 proc streetName*(f: Faker): string = "TODO"
 proc streetSuffix*(f: Faker): string = "TODO"
