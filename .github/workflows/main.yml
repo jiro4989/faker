@@ -20,5 +20,6 @@ jobs:
         path: ~/.nimble
         key: ${{ runner.os }}-nimble-${{ hashFiles('*.nimble') }}
     - uses: jiro4989/setup-nim-action@v1.0.1
+    - run: nimble build -Y
     - run: nimble test -Y
 
