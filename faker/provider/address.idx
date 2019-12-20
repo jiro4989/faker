@@ -1,0 +1,4 @@
+genProc	faker/provider/address.html#genProc.m,untyped,untyped	address: genProc(names, modules: untyped): untyped	
+address	faker/provider/address.html#address,Faker	address: address(f: Faker): string	
+buildingNumber	faker/provider/address.html#buildingNumber,Faker	address: buildingNumber(f: Faker): string	
+city	faker/provider/address.html#city,Faker	address: city(f: Faker): string	

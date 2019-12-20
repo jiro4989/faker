@@ -1,0 +1,30 @@
+prefecture	faker/provider/address/ja_JP.html#prefecture,Faker	ja_JP: prefecture(f: Faker): string	
+city	faker/provider/address/ja_JP.html#city,Faker	ja_JP: city(f: Faker): string	
+country	faker/provider/address/ja_JP.html#country,Faker	ja_JP: country(f: Faker): string	
+town	faker/provider/address/ja_JP.html#town,Faker	ja_JP: town(f: Faker): string	
+chome	faker/provider/address/ja_JP.html#chome,Faker	ja_JP: chome(f: Faker): string	
+ban	faker/provider/address/ja_JP.html#ban,Faker	ja_JP: ban(f: Faker): string	
+gou	faker/provider/address/ja_JP.html#gou,Faker	ja_JP: gou(f: Faker): string	
+buildingName	faker/provider/address/ja_JP.html#buildingName,Faker	ja_JP: buildingName(f: Faker): string	
+postcode	faker/provider/address/ja_JP.html#postcode,Faker	ja_JP: postcode(f: Faker): string	
+zipcode	faker/provider/address/ja_JP.html#zipcode,Faker	ja_JP: zipcode(f: Faker): string	
+address	faker/provider/address/ja_JP.html#address,Faker	ja_JP: address(f: Faker): string	
+buildingNumber	faker/provider/address/ja_JP.html#buildingNumber,Faker	ja_JP: buildingNumber(f: Faker): string	
+cityPrefix	faker/provider/address/ja_JP.html#cityPrefix,Faker	ja_JP: cityPrefix(f: Faker): string	
+citySuffix	faker/provider/address/ja_JP.html#citySuffix,Faker	ja_JP: citySuffix(f: Faker): string	
+countryCode	faker/provider/address/ja_JP.html#countryCode,Faker,string	ja_JP: countryCode(f: Faker; representation: string): string	
+militaryApo	faker/provider/address/ja_JP.html#militaryApo,Faker	ja_JP: militaryApo(f: Faker): string	
+militaryDpo	faker/provider/address/ja_JP.html#militaryDpo,Faker	ja_JP: militaryDpo(f: Faker): string	
+militaryShip	faker/provider/address/ja_JP.html#militaryShip,Faker	ja_JP: militaryShip(f: Faker): string	
+militaryState	faker/provider/address/ja_JP.html#militaryState,Faker	ja_JP: militaryState(f: Faker): string	
+postalcode	faker/provider/address/ja_JP.html#postalcode,Faker	ja_JP: postalcode(f: Faker): string	
+postalcodeInState	faker/provider/address/ja_JP.html#postalcodeInState,Faker,string	ja_JP: postalcodeInState(f: Faker; stateAbbr: string): string	
+postalcodePlus4	faker/provider/address/ja_JP.html#postalcodePlus4,Faker	ja_JP: postalcodePlus4(f: Faker): string	
+secondaryAddress	faker/provider/address/ja_JP.html#secondaryAddress,Faker	ja_JP: secondaryAddress(f: Faker): string	
+state	faker/provider/address/ja_JP.html#state,Faker	ja_JP: state(f: Faker): string	
+stateAbbr	faker/provider/address/ja_JP.html#stateAbbr,Faker,bool	ja_JP: stateAbbr(f: Faker; includeTerritories: bool): string	
+streetAddress	faker/provider/address/ja_JP.html#streetAddress,Faker	ja_JP: streetAddress(f: Faker): string	
+streetName	faker/provider/address/ja_JP.html#streetName,Faker	ja_JP: streetName(f: Faker): string	
+streetSuffix	faker/provider/address/ja_JP.html#streetSuffix,Faker	ja_JP: streetSuffix(f: Faker): string	
+zipcodeInState	faker/provider/address/ja_JP.html#zipcodeInState,Faker,string	ja_JP: zipcodeInState(f: Faker; stateAbbr: string): string	
+zipcodePlus4	faker/provider/address/ja_JP.html#zipcodePlus4,Faker	ja_JP: zipcodePlus4(f: Faker): string	
