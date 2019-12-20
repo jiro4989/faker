@@ -1041,7 +1041,7 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#zipcode%2CFaker"><span class="Identifier">zipcode</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-ランダムに郵便番号を返却する。 実体は <tt class="docutils literal"><span class="pre">proc postcode &lt;#postcode,Faker&gt;_</span></tt> と同じです。
+ランダムに郵便番号を返却する。 実体は <a class="reference external" href="#postcode,Faker">proc postcode</a> と同じです。
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;ja_JP&quot;</span><span class="Other">)</span>
 <span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">zipcode</span><span class="Other">(</span><span class="Other">)</span>
@@ -1065,7 +1065,12 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#buildingNumber%2CFaker"><span class="Identifier">buildingNumber</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+ランダムに家屋番号を返却する。
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;ja_JP&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">buildingNumber</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   4</span></pre>
 
 </dd>
 <a id="cityPrefix,Faker"></a>
@@ -1086,7 +1091,12 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#countryCode%2CFaker%2Cstring"><span class="Identifier">countryCode</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">;</span> <span class="Identifier">representation</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+ランダムに国名コードを返却する。
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;ja_JP&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">countryCode</span><span class="Other">(</span><span class="StringLit">&quot;&quot;</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   CX</span></pre>
 
 </dd>
 <a id="militaryApo,Faker"></a>
@@ -1209,7 +1219,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2019-12-20 14:32:23 UTC</small>
+        <small>Made with Nim. Generated: 2019-12-20 15:26:50 UTC</small>
       </div>
     </div>
   </div>
