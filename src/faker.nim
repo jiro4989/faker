@@ -1,6 +1,6 @@
 import times, os, strutils
 
-import fakerpkg/[base, provider]
+import faker/[base, provider]
 export base, provider
 
 proc newFaker*(locale = "", seed = 0): Faker =

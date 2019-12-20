@@ -1,0 +1,3 @@
+import ../../faker
+
+echo "test"
