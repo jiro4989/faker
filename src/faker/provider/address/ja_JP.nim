@@ -1,3 +1,21 @@
+## ja_JP は日本語用のランダム住所生成モジュールです。
+##
+## 使用例
+## ------
+##
+
+runnableExamples:
+  import faker/base
+  import faker/provider/address/ja_JP
+
+  let f = newFaker("ja_JP")
+  echo f.address()
+  ## Output:
+  ##   茨城県港区東三島31丁目3番16号
+
+  for i in 1..10:
+    echo f.address() ## 10回ランダムな住所を出力する
+
 import random, strutils
 from strformat import `&`
 
@@ -345,38 +363,138 @@ const
   buildingNames = @["パレス", "ハイツ", "コーポ", "アーバン", "クレスト", "パーク", "シティ", "シャルム", "コート"]
 
 proc prefecture*(f: Faker): string =
+  ## ランダムに都道府県を返却する。
+  runnableExamples:
+    import faker/base
+
+    let f = newFaker("ja_JP")
+    echo f.prefecture()
+    ## Output:
+    ##   東京都
+
   f.rand.sample(prefectures)
 
 proc city*(f: Faker): string =
+  ## ランダムに市区町村を返却する。
+  runnableExamples:
+    import faker/base
+
+    let f = newFaker("ja_JP")
+    echo f.city()
+    ## Output:
+    ##   足立区
+
   f.rand.sample(cities)
 
 proc country*(f: Faker): string =
+  ## ランダムに国名を返却する。
+  runnableExamples:
+    import faker/base
+
+    let f = newFaker("ja_JP")
+    echo f.country()
+    ## Output:
+    ##   ウガンダ
+
   f.rand.sample(countries)
 
 proc town*(f: Faker): string =
+  ## ランダムに町名を返却する。
+  runnableExamples:
+    import faker/base
+
+    let f = newFaker("ja_JP")
+    echo f.town()
+    ## Output:
+    ##   雷門
+
   f.rand.sample(towns)
 
 proc chome*(f: Faker): string =
+  ## ランダムに丁目を返却する。
+  runnableExamples:
+    import faker/base
+
+    let f = newFaker("ja_JP")
+    echo f.chome()
+    ## Output:
+    ##   23丁目
+
   $f.rand.rand(1..42) & "丁目"
 
 proc ban*(f: Faker): string =
+  ## ランダムに番地を返却する。
+  runnableExamples:
+    import faker/base
+
+    let f = newFaker("ja_JP")
+    echo f.ban()
+    ## Output:
+    ##   12番
+
   $f.rand.rand(1..27) & "番"
 
 proc gou*(f: Faker): string =
+  ## ランダムに号を返却する。
+  runnableExamples:
+    import faker/base
+
+    let f = newFaker("ja_JP")
+    echo f.gou()
+    ## Output:
+    ##   8号
+
   $f.rand.rand(1..20) & "号"
 
 proc buildingName*(f: Faker): string =
+  ## ランダムに建物名を返却する。
+  runnableExamples:
+    import faker/base
+
+    let f = newFaker("ja_JP")
+    echo f.buildingName()
+    ## Output:
+    ##   コーポ
+
   f.rand.sample(buildingNames)
 
 proc postcode*(f: Faker): string =
+  ## ランダムに郵便番号を返却する。
+  runnableExamples:
+    import faker/base
+
+    let f = newFaker("ja_JP")
+    echo f.postcode()
+    ## Output:
+    ##   731-8901
+
   let x = f.rand.rand(1..999)
   let y = f.rand.rand(1..9999)
   &"{x:>03}-{y:>04}"
 
 proc zipcode*(f: Faker): string =
+  ## ランダムに郵便番号を返却する。
+  ## 実体は `proc postcode <#postcode,Faker>_` と同じです。
+  runnableExamples:
+    import faker/base
+
+    let f = newFaker("ja_JP")
+    echo f.zipcode()
+    ## Output:
+    ##   731-8901
+
   f.postcode()
 
 proc address*(f: Faker): string =
+  ## ランダムに住所を返却する。
+  runnableExamples:
+    import faker/base
+
+    let f = newFaker("ja_JP")
+    echo f.address()
+    ## Output:
+    ##   茨城県港区東三島31丁目3番16号
+
   let
     prefecture = f.prefecture()
     city = f.city()
