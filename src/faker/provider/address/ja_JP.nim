@@ -482,7 +482,7 @@ proc postcode*(f: Faker): string =
 
 proc zipcode*(f: Faker): string =
   ## ランダムに郵便番号を返却する。
-  ## 実体は `proc postcode <#postcode,Faker>_` と同じです。
+  ## 実体は `proc postcode <#postcode,Faker>`_ と同じです。
   runnableExamples:
     let f = newFaker("ja_JP")
     echo f.zipcode()
@@ -519,10 +519,26 @@ proc address*(f: Faker): string =
     "buildingName", buildingName,
     "buildingNumber", buildingNumber]
 
-proc buildingNumber*(f: Faker): string = $f.rand.rand(1..20)
+proc buildingNumber*(f: Faker): string =
+  ## ランダムに家屋番号を返却する。
+  runnableExamples:
+    let f = newFaker("ja_JP")
+    echo f.buildingNumber()
+    ## Output:
+    ##   4
+
+  $f.rand.rand(1..20)
+
 proc cityPrefix*(f: Faker): string = ""
 proc citySuffix*(f: Faker): string = ""
 proc countryCode*(f: Faker, representation: string): string =
+  ## ランダムに国名コードを返却する。
+  runnableExamples:
+    let f = newFaker("ja_JP")
+    echo f.countryCode("")
+    ## Output:
+    ##   CX
+
   f.rand.sample(countryCodes)
 proc militaryApo*(f: Faker): string = ""
 proc militaryDpo*(f: Faker): string = ""
