@@ -26,7 +26,6 @@ const
     "$prefecture$city$town$chome$ban$gou $town$buildingName$buildingNumber",
     "$prefecture$city$town$chome$ban$gou $buildingName$town$buildingNumber",
     ]
-  buildingNumberFormats = @["###"]
 
   countries = @[
     "アフガニスタン",
@@ -361,6 +360,34 @@ const
 
   buildingNames = @["パレス", "ハイツ", "コーポ", "アーバン", "クレスト", "パーク", "シティ", "シャルム", "コート"]
 
+  countryCodes = @[
+    "AC", "AD", "AE", "AF", "AG", "AI", "AL", "AM", "AN", "AO",
+    "AQ", "AR", "AS", "AT", "AU", "AW", "AZ", "BA", "BB", "BD",
+    "BE", "BF", "BG", "BH", "BI", "BJ", "BM", "BN", "BO", "BR",
+    "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF",
+    "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU",
+    "CV", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ",
+    "EC", "EE", "EG", "ER", "ES", "ET", "FI", "FJ", "FK", "FM",
+    "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI",
+    "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW",
+    "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL",
+    "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO",
+    "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KY",
+    "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU",
+    "LV", "LY", "MA", "MC", "MD", "MG", "MH", "MK", "ML", "MM",
+    "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW",
+    "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL",
+    "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG",
+    "PH", "PK", "PL", "PM", "PN", "PR", "PT", "PW", "PY", "QA",
+    "RE", "RO", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG",
+    "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "ST",
+    "SU", "SV", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ",
+    "TK", "TM", "TN", "TO", "TP", "TR", "TT", "TV", "TW", "TZ",
+    "UA", "UG", "UK", "UM", "US", "UY", "UZ", "VA", "VC", "VE",
+    "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "YU", "ZA",
+    "ZM", "ZR", "ZW",
+    ]
+
 proc prefecture*(f: Faker): string =
   ## ランダムに都道府県を返却する。
   runnableExamples:
@@ -492,22 +519,23 @@ proc address*(f: Faker): string =
     "buildingName", buildingName,
     "buildingNumber", buildingNumber]
 
-proc buildingNumber*(f: Faker): string = "TODO"
-proc cityPrefix*(f: Faker): string = "TODO"
-proc citySuffix*(f: Faker): string = "TODO"
-proc countryCode*(f: Faker, representation: string): string = "TODO"
-proc militaryApo*(f: Faker): string = "TODO"
-proc militaryDpo*(f: Faker): string = "TODO"
-proc militaryShip*(f: Faker): string = "TODO"
-proc militaryState*(f: Faker): string = "TODO"
-proc postalcode*(f: Faker): string = "TODO"
-proc postalcodeInState*(f: Faker, stateAbbr: string): string = "TODO"
-proc postalcodePlus4*(f: Faker): string = "TODO"
-proc secondaryAddress*(f: Faker): string = "TODO"
-proc state*(f: Faker): string = "TODO"
-proc stateAbbr*(f: Faker, includeTerritories: bool): string = "TODO"
-proc streetAddress*(f: Faker): string = "TODO"
-proc streetName*(f: Faker): string = "TODO"
-proc streetSuffix*(f: Faker): string = "TODO"
-proc zipcodeInState*(f: Faker, stateAbbr: string): string = "TODO"
-proc zipcodePlus4*(f: Faker): string = "TODO"
+proc buildingNumber*(f: Faker): string = $f.rand.rand(1..20)
+proc cityPrefix*(f: Faker): string = ""
+proc citySuffix*(f: Faker): string = ""
+proc countryCode*(f: Faker, representation: string): string =
+  f.rand.sample(countryCodes)
+proc militaryApo*(f: Faker): string = ""
+proc militaryDpo*(f: Faker): string = ""
+proc militaryShip*(f: Faker): string = ""
+proc militaryState*(f: Faker): string = ""
+proc postalcode*(f: Faker): string = ""
+proc postalcodeInState*(f: Faker, stateAbbr: string): string = ""
+proc postalcodePlus4*(f: Faker): string = ""
+proc secondaryAddress*(f: Faker): string = ""
+proc state*(f: Faker): string = ""
+proc stateAbbr*(f: Faker, includeTerritories: bool): string = ""
+proc streetAddress*(f: Faker): string = ""
+proc streetName*(f: Faker): string = ""
+proc streetSuffix*(f: Faker): string = ""
+proc zipcodeInState*(f: Faker, stateAbbr: string): string = ""
+proc zipcodePlus4*(f: Faker): string = ""
