@@ -1,3 +1,2 @@
-newFaker	faker.html#newFaker,string,int	faker: newFaker(locale = &quot;&quot;; seed = 0): Faker	
 name	faker.html#name,Faker	faker: name(faker: Faker): string	
 text	faker.html#text,Faker	faker: text(faker: Faker): string	

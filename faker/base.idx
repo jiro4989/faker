@@ -1,1 +1,2 @@
 Faker	faker/base.html#Faker	base: Faker	
+newFaker	faker/base.html#newFaker,string,int	base: newFaker(locale = &quot;&quot;; seed = 0): Faker	
