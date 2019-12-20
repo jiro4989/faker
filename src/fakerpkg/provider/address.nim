@@ -8,6 +8,7 @@ macro genProc*(names, modules: untyped): untyped =
   var lines: seq[string]
   for name in names:
     lines.add(&"proc {name}*(f: Faker): string =")
+    lines.add(&"  ## Generates random {name}.")
     lines.add(&"  case f.locale")
     for m in modules:
       lines.add(&"""  of "{repr(m)}": {repr(m)}.{repr(name)}(f)""")
