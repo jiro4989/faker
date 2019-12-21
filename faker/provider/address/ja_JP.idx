@@ -1,4 +1,5 @@
 使用例	ja_JP.html#使用例	 使用例	
+言い換え用語	ja_JP.html#言い換え用語	 言い換え用語	
 prefecture	faker/provider/address/ja_JP.html#prefecture,Faker	ja_JP: prefecture(f: Faker): string	
 city	faker/provider/address/ja_JP.html#city,Faker	ja_JP: city(f: Faker): string	
 country	faker/provider/address/ja_JP.html#country,Faker	ja_JP: country(f: Faker): string	

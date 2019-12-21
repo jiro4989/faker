@@ -824,6 +824,7 @@ function main() {
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li><a class="reference" id="使用例_toc" href="#使用例">使用例</a></li>
+<li><a class="reference" id="言い換え用語_toc" href="#言い換え用語">言い換え用語</a></li>
 <li>
   <a class="reference reference-toplevel" href="#6" id="56">Imports</a>
   <ul class="simple simple-toc-section">
@@ -920,7 +921,18 @@ function main() {
 <span class="Comment">## Output:</span>
 <span class="Comment">##   茨城県港区東三島31丁目3番16号</span>
 <span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="DecNumber">1</span> <span class="Operator">..</span> <span class="DecNumber">10</span><span class="Other">:</span>
-  <span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">address</span><span class="Other">(</span><span class="Other">)</span>             <span class="Comment">## 10回ランダムな住所を出力する</span></pre></p>
+  <span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">address</span><span class="Other">(</span><span class="Other">)</span>             <span class="Comment">## 10回ランダムな住所を出力する</span></pre><blockquote><p>
+<h1><a class="toc-backref" id="言い換え用語" href="#言い換え用語">言い換え用語</a></h1><p>このモジュールが公開しているプロシージャの中に、いくつか別のプロシージャのエ イリアスが存在します。これは日本語での名称と英語での名称の違いを吸収するため のアプローチによるものです。</p>
+<p>addressモジュールのインタフェースは英語をベースとしています。しかしながら、英 語をベースにしたときに、英語には存在して、日本語では違う名称で同意義のものが いくつか存在します。</p>
+<p>このとき、英語のインタフェースだけに統一すると、本モジュールを使用する際に、 理解を難しくする恐れがあります。例えば、英語での「州」は日本では「都道府県」 に該当します。このとき、 <tt class="docutils literal"><span class="pre">state</span></tt> に統一するよりも、日本語モジュールにだけ 都道府県を意味する <tt class="docutils literal"><span class="pre">prefecture</span></tt> プロシージャを設けて、これを <tt class="docutils literal"><span class="pre">state</span></tt> からも呼 び出すというアプローチにしています。</p>
+<p>以下に英語と日本語での言い換え用語の表を示します。</p>
+<table border="1" class="docutils"><tr><th>名称 (</th><th>日本語)   </th><th>プロシージャ名  </th><th>名称 (</th><th>アメリカ)  </th><th>プロシージャ名  名称 (イギリス)  プロシージャ名</th></tr>
+<tr><td>郵便番号</td><td>postcode</td><td></td><td>郵便番号         </td><td>zipcode         </td><td>郵便番号         postalcode</td></tr>
+<tr><td>都道府県</td><td>prefecture</td><td>州</td><td>state</td><td></td><td></td></tr>
+<tr><td>番地</td><td>ban</td><td>番地</td><td>street</td><td></td><td></td></tr>
+<tr><td>市町村</td><td>city</td><td>市</td><td>city</td><td></td><td></td></tr>
+</table></p></blockquote>
+</p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
@@ -1116,7 +1128,7 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#militaryApo%2CFaker"><span class="Identifier">militaryApo</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p><strong>Note:</strong></p>
+<p>空文字を返却する。 <strong>Note:</strong></p>
 <p>APO (Air Force Post Office) は米国空軍郵便局を指す。</p>
 
 
@@ -1125,7 +1137,7 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#militaryDpo%2CFaker"><span class="Identifier">militaryDpo</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p><strong>Note:</strong></p>
+<p>空文字を返却する。 <strong>Note:</strong></p>
 <p>DPO (Diplomatic Post Office) は外交郵便局を指す。</p>
 
 
@@ -1134,14 +1146,14 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#militaryShip%2CFaker"><span class="Identifier">militaryShip</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+空文字を返却する。
 
 </dd>
 <a id="militaryState,Faker"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#militaryState%2CFaker"><span class="Identifier">militaryState</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+空文字を返却する。
 
 </dd>
 <a id="postalcode,Faker"></a>
@@ -1185,6 +1197,10 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#state%2CFaker"><span class="Identifier">state</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
+<p>ランダムに都道府県を返す。 実体は <a class="reference external" href="#prefecture,Faker">proc prefecture</a> と同じです。</p>
+<p><strong>See also:</strong></p>
+<ul class="simple"><li><a class="reference external" href="#prefecture,Faker">proc prefecture</a> 都道府県を返す。</li>
+</ul>
 
 
 </dd>
@@ -1245,7 +1261,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2019-12-21 00:22:43 UTC</small>
+        <small>Made with Nim. Generated: 2019-12-21 00:51:38 UTC</small>
       </div>
     </div>
   </div>
