@@ -1029,7 +1029,16 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#postcode%2CFaker"><span class="Identifier">postcode</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-ランダムに郵便番号を返却する。
+<p>ランダムに郵便番号を返却する。</p>
+<p><em>Note:</em></p>
+<ul class="simple"><li>zip code はアメリカでの郵便番号(5桁の数字)</li>
+<li>postal code はイギリスでの郵便番号(数字とアルファベット)</li>
+</ul>
+<p><em>See also:</em></p>
+<ul class="simple"><li><a class="reference external" href="#zipcode,Faker">proc zipcode</a> 郵便番号を返す。これはアメリカでの名称で あり、本モジュール内では <tt class="docutils literal"><span class="pre">postcode</span></tt> のエイリアスである。</li>
+<li><a class="reference external" href="#postalcode,Faker">proc postalcode</a> 郵便番号を返す。これはイギリスでの名称で あり、本モジュール内では <tt class="docutils literal"><span class="pre">postcode</span></tt> のエイリアスである。</li>
+</ul>
+
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;ja_JP&quot;</span><span class="Other">)</span>
 <span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">postcode</span><span class="Other">(</span><span class="Other">)</span>
@@ -1041,7 +1050,11 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#zipcode%2CFaker"><span class="Identifier">zipcode</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-ランダムに郵便番号を返却する。 実体は <a class="reference external" href="#postcode,Faker">proc postcode</a> と同じです。
+<p>ランダムに郵便番号を返却する。zipcodeはアメリカでの名称。 実体は <a class="reference external" href="#postcode,Faker">proc postcode</a> と同じです。</p>
+<p><em>See also:</em></p>
+<ul class="simple"><li><a class="reference external" href="#postcode,Faker">proc postcode</a> 郵便場号を返す</li>
+</ul>
+
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;ja_JP&quot;</span><span class="Other">)</span>
 <span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">zipcode</span><span class="Other">(</span><span class="Other">)</span>
@@ -1103,6 +1116,8 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#militaryApo%2CFaker"><span class="Identifier">militaryApo</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
+<p><em>Note:</em></p>
+<p>APO (Air Force Post Office) は米国空軍郵便局を指す。</p>
 
 
 </dd>
@@ -1110,6 +1125,8 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#militaryDpo%2CFaker"><span class="Identifier">militaryDpo</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
+<p><em>Note:</em></p>
+<p>DPO (Diplomatic Post Office) は外交郵便局を指す。</p>
 
 
 </dd>
@@ -1128,10 +1145,19 @@ function main() {
 
 </dd>
 <a id="postalcode,Faker"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#postalcode%2CFaker"><span class="Identifier">postalcode</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#postalcode%2CFaker"><span class="Identifier">postalcode</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
+<p>ランダムに郵便番号を返却する。postalcodeはイギリスでの名称。 実体は <a class="reference external" href="#postcode,Faker">proc postcode</a> と同じです。</p>
+<p><em>See also:</em></p>
+<ul class="simple"><li><a class="reference external" href="#postcode,Faker">proc postcode</a> 郵便場号を返す</li>
+</ul>
 
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;ja_JP&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">postalcode</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   731-8901</span></pre>
 
 </dd>
 <a id="postalcodeInState,Faker,string"></a>
@@ -1219,7 +1245,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2019-12-21 00:06:40 UTC</small>
+        <small>Made with Nim. Generated: 2019-12-21 00:19:10 UTC</small>
       </div>
     </div>
   </div>
