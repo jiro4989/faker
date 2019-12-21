@@ -13,7 +13,38 @@ runnableExamples:
   ##   茨城県港区東三島31丁目3番16号
 
   for i in 1..10:
-    echo f.address() ## 10回ランダムな住所を出力する
+    ## 10回ランダムな住所を出力する
+    echo f.address()
+
+## その他のサンプルコードは、各プロシージャの説明のexamplesを確認ください。
+##
+## 言い換え用語
+## ------------
+##
+## このモジュールが公開しているプロシージャの中に、いくつか別のプロシージャのエ
+## イリアスが存在します。これは日本語での名称と英語での名称の違いを吸収するため
+## のアプローチによるものです。
+##
+## addressモジュールのインタフェースは英語をベースとしています。しかしながら、英
+## 語をベースにしたときに、英語には存在して、日本語では違う名称で同意義のものが
+## いくつか存在します。
+##
+## このとき、英語のインタフェースだけに統一すると、本モジュールを使用する際に、
+## 理解を難しくする恐れがあります。例えば、英語での「州」は日本では「都道府県」
+## に該当します。このとき、 `state` に統一するよりも、日本語モジュールにだけ
+## 都道府県を意味する `prefecture` プロシージャを設けて、これを `state` からも呼
+## び出すというアプローチにしています。
+##
+## 以下に英語と日本語での言い換え用語の表を示します。
+##
+## ==============  ==============  ===============  ==============  ===============  ==============
+## 名称(日本語)    プロシージャ名  名称(アメリカ)   プロシージャ名  名称(イギリス)   プロシージャ名
+## ==============  ==============  ===============  ==============  ===============  ==============
+## 郵便番号        postcode        郵便番号         zipcode         郵便番号         postalcode
+## 都道府県        prefecture      州               state           -                -
+## 番地            ban             番地             street          -                -
+## 市町村          city            市               city            -                -
+##
 
 import random, strutils
 from strformat import `&`
@@ -567,19 +598,27 @@ proc countryCode*(f: Faker, representation: string): string =
   f.rand.sample(countryCodes)
 
 proc militaryApo*(f: Faker): string =
+  ## 空文字を返却する。
   ## **Note:**
   ##
   ## APO (Air Force Post Office) は米国空軍郵便局を指す。
   ""
 
 proc militaryDpo*(f: Faker): string =
+  ## 空文字を返却する。
   ## **Note:**
   ##
   ## DPO (Diplomatic Post Office) は外交郵便局を指す。
   ""
 
-proc militaryShip*(f: Faker): string = ""
-proc militaryState*(f: Faker): string = ""
+proc militaryShip*(f: Faker): string =
+  ## 空文字を返却する。
+  ""
+
+proc militaryState*(f: Faker): string =
+  ## 空文字を返却する。
+  ""
+
 proc postalcode*(f: Faker): string =
   ## ランダムに郵便番号を返却する。postalcodeはイギリスでの名称。
   ## 実体は `proc postcode <#postcode,Faker>`_ と同じです。
@@ -598,7 +637,15 @@ proc postalcode*(f: Faker): string =
 proc postalcodeInState*(f: Faker, stateAbbr: string): string = ""
 proc postalcodePlus4*(f: Faker): string = ""
 proc secondaryAddress*(f: Faker): string = ""
-proc state*(f: Faker): string = ""
+proc state*(f: Faker): string =
+  ## ランダムに都道府県を返す。
+  ## 実体は `proc prefecture <#prefecture,Faker>`_ と同じです。
+  ##
+  ## **See also:**
+  ##
+  ## * `proc prefecture <#prefecture,Faker>`_ 都道府県を返す。
+  f.prefecture()
+
 proc stateAbbr*(f: Faker, includeTerritories: bool): string = ""
 proc streetAddress*(f: Faker): string = ""
 proc streetName*(f: Faker): string = ""
