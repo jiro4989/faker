@@ -470,6 +470,19 @@ proc buildingName*(f: Faker): string =
 
 proc postcode*(f: Faker): string =
   ## ランダムに郵便番号を返却する。
+  ##
+  ## **Note:**
+  ##
+  ## * zip code はアメリカでの郵便番号(5桁の数字)
+  ## * postal code はイギリスでの郵便番号(数字とアルファベット)
+  ##
+  ## **See also:**
+  ##
+  ## * `proc zipcode <#zipcode,Faker>`_ 郵便番号を返す。これはアメリカでの名称で
+  ##   あり、本モジュール内では `postcode` のエイリアスである。
+  ## * `proc postalcode <#postalcode,Faker>`_ 郵便番号を返す。これはイギリスでの名称で
+  ##   あり、本モジュール内では `postcode` のエイリアスである。
+
   runnableExamples:
     let f = newFaker("ja_JP")
     echo f.postcode()
@@ -481,8 +494,12 @@ proc postcode*(f: Faker): string =
   &"{x:>03}-{y:>04}"
 
 proc zipcode*(f: Faker): string =
-  ## ランダムに郵便番号を返却する。
+  ## ランダムに郵便番号を返却する。zipcodeはアメリカでの名称。
   ## 実体は `proc postcode <#postcode,Faker>`_ と同じです。
+  ##
+  ## **See also:**
+  ##
+  ## * `proc postcode <#postcode,Faker>`_ 郵便場号を返す
   runnableExamples:
     let f = newFaker("ja_JP")
     echo f.zipcode()
@@ -549,11 +566,35 @@ proc countryCode*(f: Faker, representation: string): string =
 
   f.rand.sample(countryCodes)
 
-proc militaryApo*(f: Faker): string = ""
-proc militaryDpo*(f: Faker): string = ""
+proc militaryApo*(f: Faker): string =
+  ## **Note:**
+  ##
+  ## APO (Air Force Post Office) は米国空軍郵便局を指す。
+  ""
+
+proc militaryDpo*(f: Faker): string =
+  ## **Note:**
+  ##
+  ## DPO (Diplomatic Post Office) は外交郵便局を指す。
+  ""
+
 proc militaryShip*(f: Faker): string = ""
 proc militaryState*(f: Faker): string = ""
-proc postalcode*(f: Faker): string = ""
+proc postalcode*(f: Faker): string =
+  ## ランダムに郵便番号を返却する。postalcodeはイギリスでの名称。
+  ## 実体は `proc postcode <#postcode,Faker>`_ と同じです。
+  ##
+  ## **See also:**
+  ##
+  ## * `proc postcode <#postcode,Faker>`_ 郵便場号を返す
+  runnableExamples:
+    let f = newFaker("ja_JP")
+    echo f.postalcode()
+    ## Output:
+    ##   731-8901
+
+  f.postcode()
+
 proc postalcodeInState*(f: Faker, stateAbbr: string): string = ""
 proc postalcodePlus4*(f: Faker): string = ""
 proc secondaryAddress*(f: Faker): string = ""
