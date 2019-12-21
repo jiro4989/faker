@@ -909,14 +909,24 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#address%2CFaker"><span class="Identifier">address</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Returns random address.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;en_US&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">address</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   Markerborough, IA 19906</span></pre>
 
 </dd>
 <a id="buildingNumber,Faker"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#buildingNumber%2CFaker"><span class="Identifier">buildingNumber</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Returns random building number.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;en_US&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">buildingNumber</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   8345</span></pre>
 
 </dd>
 <a id="city,Faker"></a>
@@ -930,14 +940,24 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#cityPrefix%2CFaker"><span class="Identifier">cityPrefix</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Returns random city prefix.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;en_US&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">cityPrefix</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   North</span></pre>
 
 </dd>
 <a id="citySuffix,Faker"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#citySuffix%2CFaker"><span class="Identifier">citySuffix</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Returns random city suffix.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;en_US&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">citySuffix</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   town</span></pre>
 
 </dd>
 <a id="country,Faker"></a>
@@ -955,17 +975,27 @@ function main() {
 
 </dd>
 <a id="militaryApo,Faker"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#militaryApo%2CFaker"><span class="Identifier">militaryApo</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#militaryApo%2CFaker"><span class="Identifier">militaryApo</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Returns random military apo.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;en_US&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">militaryApo</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   PSC 434, Box 12</span></pre>
 
 </dd>
 <a id="militaryDpo,Faker"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#militaryDpo%2CFaker"><span class="Identifier">militaryDpo</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#militaryDpo%2CFaker"><span class="Identifier">militaryDpo</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Returns random military dpo.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;en_US&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">militaryDpo</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   Unit 9101, Box 435</span></pre>
 
 </dd>
 <a id="militaryShip,Faker"></a>
@@ -1004,24 +1034,39 @@ function main() {
 
 </dd>
 <a id="postcode,Faker"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#postcode%2CFaker"><span class="Identifier">postcode</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#postcode%2CFaker"><span class="Identifier">postcode</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Returns random postcode.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;en_US&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">postcode</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   47542</span></pre>
 
 </dd>
 <a id="secondaryAddress,Faker"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#secondaryAddress%2CFaker"><span class="Identifier">secondaryAddress</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#secondaryAddress%2CFaker"><span class="Identifier">secondaryAddress</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Returns random secondary address.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;en_US&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">secondaryAddress</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   Apt. 921</span></pre>
 
 </dd>
 <a id="state,Faker"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#state%2CFaker"><span class="Identifier">state</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
+Returns random state.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;en_US&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">state</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   South Carolina</span></pre>
 
 </dd>
 <a id="stateAbbr,Faker,bool"></a>
@@ -1053,10 +1098,19 @@ function main() {
 
 </dd>
 <a id="zipcode,Faker"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#zipcode%2CFaker"><span class="Identifier">zipcode</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#zipcode%2CFaker"><span class="Identifier">zipcode</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
+<p>Returns random zipcode.</p>
+<p><strong>See also:</strong></p>
+<ul class="simple"><li><a class="reference external" href="#postcode,Faker">proc postcode</a> Returns random postcode.</li>
+</ul>
 
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="StringLit">&quot;en_US&quot;</span><span class="Other">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">zipcode</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Comment">## Output:</span>
+<span class="Comment">##   47542</span></pre>
 
 </dd>
 <a id="zipcodeInState,Faker,string"></a>
@@ -1088,7 +1142,7 @@ function main() {
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2019-12-21 05:40:42 UTC</small>
+        <small>Made with Nim. Generated: 2019-12-21 06:24:23 UTC</small>
       </div>
     </div>
   </div>
