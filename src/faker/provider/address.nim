@@ -15,5 +15,30 @@ macro genProc*(names, modules: untyped): untyped =
     lines.add(&"  else: en_US.{repr(name)}(f)")
   parseStmt(lines.join("\n"))
 
-genProc [address, buildingNumber, city],
-        [en_US, ja_JP]
+genProc [
+  address,
+  buildingNumber,
+  city,
+  cityPrefix,
+  citySuffix,
+  country,
+  #countryCode,
+  militaryApo,
+  militaryDpo,
+  militaryShip,
+  militaryState,
+  postalcode,
+  #postalcodeInState,
+  postalcodePlus4,
+  postcode,
+  secondaryAddress,
+  state,
+  #stateAbbr,
+  streetAddress,
+  streetName,
+  streetSuffix,
+  zipcode,
+  #zipcodeInState,
+  zipcodePlus4,
+  ],
+  [en_US, ja_JP]
