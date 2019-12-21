@@ -300,7 +300,7 @@ const
     "AS", "FM", "GU", "MH", "MP", "PW", "PR", "VI",
   ]
 
-  states_and_territories_abbr = states_abbr & territories_abbr
+  statesAndTerritoriesAbbr = statesAbbr & territoriesAbbr
 
   military_state_abbr = @["AE", "AA", "AP"]
 
@@ -339,9 +339,16 @@ const
   #     ("{{military_dpo}}\nDPO {{military_state}} {{postcode}}", 1),
   # ))
 
-  secondary_address_formats = @["Apt. ###", "Suite ###"]
+  secondaryAddressFormats = @["Apt. $number", "Suite $number"]
 
 proc address*(f: Faker): string =
+  ## Returns random address.
+  runnableExamples:
+    let f = newFaker("en_US")
+    echo f.address()
+    ## Output:
+    ##   Markerborough, IA 19906
+
   let
     addrFmt = f.rand.sample(addressFormats)
     streetAddress = f.streetAddress()
@@ -354,7 +361,16 @@ proc address*(f: Faker): string =
     "stateAbbr", stateAbbr,
     "postcode", postcode]
 
-proc buildingNumber*(f: Faker): string = "TODO"
+proc buildingNumber*(f: Faker): string =
+  ## Returns random building number.
+  runnableExamples:
+    let f = newFaker("en_US")
+    echo f.buildingNumber()
+    ## Output:
+    ##   8345
+
+  $f.rand.rand(1..65535)
+
 proc city*(f: Faker): string =
   let
     cityFmt = f.rand.sample(cityFormats)
@@ -369,24 +385,109 @@ proc city*(f: Faker): string =
     "firstName", firstName,
     "lastName", lastName,
     ]
-proc cityPrefix*(f: Faker): string = f.rand.sample(cityPrefixes)
-proc citySuffix*(f: Faker): string = f.rand.sample(citySuffixes)
+proc cityPrefix*(f: Faker): string =
+  ## Returns random city prefix.
+  runnableExamples:
+    let f = newFaker("en_US")
+    echo f.cityPrefix()
+    ## Output:
+    ##   North
+
+  f.rand.sample(cityPrefixes)
+
+proc citySuffix*(f: Faker): string =
+  ## Returns random city suffix.
+  runnableExamples:
+    let f = newFaker("en_US")
+    echo f.citySuffix()
+    ## Output:
+    ##   town
+
+  f.rand.sample(citySuffixes)
+
 proc country*(f: Faker): string = "TODO"
 proc countryCode*(f: Faker, representation: string): string = "TODO"
-proc militaryApo*(f: Faker): string = "TODO"
-proc militaryDpo*(f: Faker): string = "TODO"
+proc militaryApo*(f: Faker): string =
+  ## Returns random military apo.
+  runnableExamples:
+    let f = newFaker("en_US")
+    echo f.militaryApo()
+    ## Output:
+    ##   PSC 434, Box 12
+
+  let x = f.rand.rand(1..9999)
+  let y = f.rand.rand(1..9999)
+  &"PSC {x}, Box {y}"
+
+proc militaryDpo*(f: Faker): string =
+  ## Returns random military dpo.
+  runnableExamples:
+    let f = newFaker("en_US")
+    echo f.militaryDpo()
+    ## Output:
+    ##   Unit 9101, Box 435
+
+  let x = f.rand.rand(1..9999)
+  let y = f.rand.rand(1..9999)
+  &"Unit {x}, Box {y}"
+
 proc militaryShip*(f: Faker): string = "TODO"
 proc militaryState*(f: Faker): string = "TODO"
 proc postalcode*(f: Faker): string = "TODO"
 proc postalcodeInState*(f: Faker, stateAbbr: string): string = "TODO"
 proc postalcodePlus4*(f: Faker): string = "TODO"
-proc postcode*(f: Faker): string = "TODO"
-proc secondaryAddress*(f: Faker): string = "TODO"
-proc state*(f: Faker): string = "TODO"
-proc stateAbbr*(f: Faker, includeTerritories: bool): string = "TODO"
+proc postcode*(f: Faker): string =
+  ## Returns random postcode.
+  runnableExamples:
+    let f = newFaker("en_US")
+    echo f.postcode()
+    ## Output:
+    ##   47542
+
+  let pc = $f.rand.rand(501..99950)
+  &"{pc:>05}"
+
+proc secondaryAddress*(f: Faker): string =
+  ## Returns random secondary address.
+  runnableExamples:
+    let f = newFaker("en_US")
+    echo f.secondaryAddress()
+    ## Output:
+    ##   Apt. 921
+
+  let addrFmt = f.rand.sample(secondaryAddressFormats)
+  addrFmt % @["number", $f.rand.rand(1..999)]
+
+proc state*(f: Faker): string =
+  ## Returns random state.
+  runnableExamples:
+    let f = newFaker("en_US")
+    echo f.state()
+    ## Output:
+    ##   South Carolina
+  f.rand.sample(states)
+
+proc stateAbbr*(f: Faker, includeTerritories: bool): string =
+  if includeTerritories:
+    f.rand.sample(statesAndTerritoriesAbbr)
+  else:
+    f.rand.sample(statesAbbr)
+
 proc streetAddress*(f: Faker): string = "TODO"
 proc streetName*(f: Faker): string = "TODO"
 proc streetSuffix*(f: Faker): string = "TODO"
-proc zipcode*(f: Faker): string = "TODO"
+proc zipcode*(f: Faker): string =
+  ## Returns random zipcode.
+  ##
+  ## **See also:**
+  ##
+  ## * `proc postcode <#postcode,Faker>`_ Returns random postcode.
+  runnableExamples:
+    let f = newFaker("en_US")
+    echo f.zipcode()
+    ## Output:
+    ##   47542
+
+  f.postcode()
 proc zipcodeInState*(f: Faker, stateAbbr: string): string = "TODO"
 proc zipcodePlus4*(f: Faker): string = "TODO"
