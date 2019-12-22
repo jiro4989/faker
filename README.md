@@ -37,25 +37,25 @@ $ faker address
 ## Providers
 
 - [ ] base
-- [x] faker.providers.address
-- [ ] faker.providers.automotive
-- [ ] faker.providers.bank
-- [ ] faker.providers.barcode
-- [ ] faker.providers.color
-- [ ] faker.providers.company
-- [ ] faker.providers.credit_card
-- [ ] faker.providers.currency
-- [ ] faker.providers.date_time
-- [ ] faker.providers.file
-- [ ] faker.providers.geo
-- [ ] faker.providers.internet
-- [ ] faker.providers.isbn
-- [ ] faker.providers.job
-- [ ] faker.providers.lorem
-- [ ] faker.providers.misc
-- [ ] faker.providers.person
-- [ ] faker.providers.phone_number
-- [ ] faker.providers.profile
-- [ ] faker.providers.python
-- [ ] faker.providers.ssn
-- [ ] faker.providers.user_agent
+- [x] faker.provider.address
+- [ ] faker.provider.automotive
+- [ ] faker.provider.bank
+- [ ] faker.provider.barcode
+- [ ] faker.provider.color
+- [ ] faker.provider.company
+- [ ] faker.provider.credit_card
+- [ ] faker.provider.currency
+- [ ] faker.provider.date_time
+- [ ] faker.provider.file
+- [ ] faker.provider.geo
+- [ ] faker.provider.internet
+- [ ] faker.provider.isbn
+- [ ] faker.provider.job
+- [ ] faker.provider.lorem
+- [ ] faker.provider.misc
+- [ ] faker.provider.person
+- [ ] faker.provider.phone_number
+- [ ] faker.provider.profile
+- [ ] faker.provider.python
+- [ ] faker.provider.ssn
+- [ ] faker.provider.user_agent
