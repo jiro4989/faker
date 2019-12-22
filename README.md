@@ -37,7 +37,7 @@ $ faker address
 ## Providers
 
 - [ ] base
-- [ ] faker.providers.address
+- [x] faker.providers.address
 - [ ] faker.providers.automotive
 - [ ] faker.providers.bank
 - [ ] faker.providers.barcode
