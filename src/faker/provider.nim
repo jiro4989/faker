@@ -1,2 +1,2 @@
-import provider/[address]
-export address
+import provider/[address, phone_number]
+export address, phone_number

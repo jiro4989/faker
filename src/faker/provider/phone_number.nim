@@ -1,30 +1,8 @@
-import util, ../base, address/[en_US, ja_JP]
+import util, ../base, phone_number/[en_US, ja_JP]
 export base
 
 genProc [
-  address,
-  buildingNumber,
-  city,
-  cityPrefix,
-  citySuffix,
-  country,
-  #countryCode,
-  militaryApo,
-  militaryDpo,
-  militaryShip,
-  militaryState,
-  postalcode,
-  #postalcodeInState,
-  postalcodePlus4,
-  postcode,
-  secondaryAddress,
-  state,
-  #stateAbbr,
-  streetAddress,
-  streetName,
-  streetSuffix,
-  zipcode,
-  #zipcodeInState,
-  zipcodePlus4,
+  phoneNumber,
+  msisdn,
   ],
   [en_US, ja_JP]
