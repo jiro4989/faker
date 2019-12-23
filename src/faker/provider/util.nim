@@ -1,6 +1,6 @@
-import macros
+import macros, random
 from strformat import `&`
-from strutils import join
+from strutils import join, align
 
 macro genProc*(names, modules: untyped): untyped =
   ## プロシージャ定義を生成する。 `names` がプロシージャ名、 `modules` はプロシ
@@ -40,3 +40,19 @@ macro genProc*(names, modules: untyped): untyped =
     lines.add(&"  else: en_US.{repr(name)}(f)")
   parseStmt(lines.join("\n"))
 
+proc formatNumbers*(r: var Rand, format: string): string =
+  proc alignFmt(r: var Rand, buf: string): string =
+    let num = $r.rand(1..buf.len)
+    result = num.align(buf.len, '0')
+
+  var buf: string
+  for s in format:
+    if s == '#':
+      buf.add(s)
+      continue
+    if 0 < buf.len:
+      result.add(alignFmt(r, buf))
+      buf = ""
+    result.add(s)
+  if 0 < buf.len:
+    result.add(alignFmt(r, buf))
