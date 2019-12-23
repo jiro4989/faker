@@ -1,6 +1,7 @@
 import macros, random
 from strformat import `&`
 from strutils import join, align
+from math import `^`
 
 macro genProc*(names, modules: untyped): untyped =
   ## プロシージャ定義を生成する。 `names` がプロシージャ名、 `modules` はプロシ
@@ -42,7 +43,8 @@ macro genProc*(names, modules: untyped): untyped =
 
 proc formatNumbers*(r: var Rand, format: string): string =
   proc alignFmt(r: var Rand, buf: string): string =
-    let num = $r.rand(1..buf.len)
+    let max = 10 ^ buf.len - 1
+    let num = $r.rand(1..max)
     result = num.align(buf.len, '0')
 
   var buf: string
