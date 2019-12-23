@@ -10,8 +10,10 @@ proc main(args: seq[string]): int =
   let subcmd = args[0]
   let fake = newFaker()
   case subcmd
-  of "address":
-    echo fake.address()
+  of "address": echo fake.address()
+  of "phoneNumber": echo fake.phoneNumber()
+  of "phone_number": echo fake.phoneNumber()
+  of "job": echo fake.job()
   else:
     discard
 

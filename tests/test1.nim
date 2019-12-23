@@ -3,17 +3,17 @@ import unittest
 import faker
 
 suite "basic usage":
-  test "generate random value":
+  test "generate random values":
     let fake = newFaker()
     echo fake.address()
+    echo fake.phoneNumber()
+    echo fake.job()
   test "generate random values by loop":
-    let fake = newFaker()
-    for i in 1..10:
-      echo fake.address()
-  # test "case adding provider":
-  #   var fake = newFaker()
-  #   fake.addProvider(address)
-  #   echo fake.address()
-  test "localization":
-    let fake = newFaker("en_US")
-    echo fake.address()
+    let locales = ["en_US", "ja_JP"]
+    for locale in locales:
+      let fake = newFaker(locale)
+      for i in 1..10:
+        echo fake.address()
+        echo fake.phoneNumber()
+        echo fake.job()
+        echo "-----"
