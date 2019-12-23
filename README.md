@@ -50,11 +50,11 @@ $ faker address
 - [ ] faker.provider.geo
 - [ ] faker.provider.internet
 - [ ] faker.provider.isbn
-- [ ] faker.provider.job
+- [x] faker.provider.job
 - [ ] faker.provider.lorem
 - [ ] faker.provider.misc
 - [ ] faker.provider.person
-- [ ] faker.provider.phone_number
+- [x] faker.provider.phone_number
 - [ ] faker.provider.profile
 - [ ] faker.provider.python
 - [ ] faker.provider.ssn
