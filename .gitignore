@@ -1,2 +1,6 @@
 /bin/
 /docs/
+tests/*
+tests/*.exe
+!tests/*.nim
+!tests/*.nims
