@@ -3,13 +3,13 @@ from strformat import `&`
 from strutils import join, align
 from math import `^`
 
-macro genProc*(names, modules: untyped): untyped =
+macro genProc*(prefix, names, modules: untyped): untyped =
   ## プロシージャ定義を生成する。 `names` がプロシージャ名、 `modules` はプロシ
   ## ージャの属するモジュール名を表す。
   ##
   ## このマクロを次のように呼び出す。
   ##
-  ## `genProc [address], [en_US, ja_JP]`
+  ## `genProc address, [address], [en_US, ja_JP]`
   ##
   ## このコードから、以下のプロシージャ定義を生成する。
   ##
@@ -20,9 +20,9 @@ macro genProc*(names, modules: untyped): untyped =
   ##        let f = newFaker()
   ##        echo f.address()
   ##      case f.locale
-  ##      of "en_US": en_US.address()
-  ##      of "ja_JP": ja_JP.address()
-  ##      else: en_US.address()
+  ##      of "en_US": address_en_US.address()
+  ##      of "ja_JP": address_ja_JP.address()
+  ##      else: address_en_US.address()
   ##
   ## 第一引数を増やせば、増やした分だけ同様の構造のプロシージャ定義を生成する。
   ##
@@ -37,8 +37,8 @@ macro genProc*(names, modules: untyped): untyped =
     lines.add(&"    echo f.{repr(name)}()")
     lines.add(&"  case f.locale")
     for m in modules:
-      lines.add(&"""  of "{repr(m)}": {repr(m)}.{repr(name)}(f)""")
-    lines.add(&"  else: en_US.{repr(name)}(f)")
+      lines.add(&"""  of "{repr(m)}": {prefix}_{repr(m)}.{repr(name)}(f)""")
+    lines.add(&"  else: {prefix}_{modules[0]}.{repr(name)}(f)")
   parseStmt(lines.join("\n"))
 
 proc formatNumbers*(r: var Rand, format: string): string =

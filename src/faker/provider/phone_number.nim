@@ -1,8 +1,12 @@
-import util, ../base, phone_number/[en_US, ja_JP]
+import util, ../base, phone_number/[phone_number_en_US, phone_number_ja_JP]
 export base
 
-genProc [
-  phoneNumber,
-  msisdn,
+genProc phoneNumber,
+  [
+    phoneNumber,
+    msisdn,
   ],
-  [en_US, ja_JP]
+  [
+    en_US,
+    ja_JP,
+  ]

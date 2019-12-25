@@ -5,7 +5,7 @@
 ##
 
 runnableExamples:
-  import faker/provider/address/ja_JP
+  import faker/provider/address/address_ja_JP
 
   let f = newFaker("ja_JP")
   echo f.address()
