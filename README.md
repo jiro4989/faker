@@ -53,7 +53,7 @@ $ faker address
 - [x] faker.provider.job
 - [ ] faker.provider.lorem
 - [ ] faker.provider.misc
-- [ ] faker.provider.person
+- [x] faker.provider.person
 - [x] faker.provider.phone_number
 - [ ] faker.provider.profile
 - [ ] faker.provider.python
