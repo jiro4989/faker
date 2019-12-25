@@ -1,0 +1,24 @@
+address	faker/provider/address/address_en_US.html#address,Faker	address_en_US: address(f: Faker): string	
+buildingNumber	faker/provider/address/address_en_US.html#buildingNumber,Faker	address_en_US: buildingNumber(f: Faker): string	
+city	faker/provider/address/address_en_US.html#city,Faker	address_en_US: city(f: Faker): string	
+cityPrefix	faker/provider/address/address_en_US.html#cityPrefix,Faker	address_en_US: cityPrefix(f: Faker): string	
+citySuffix	faker/provider/address/address_en_US.html#citySuffix,Faker	address_en_US: citySuffix(f: Faker): string	
+country	faker/provider/address/address_en_US.html#country,Faker	address_en_US: country(f: Faker): string	
+countryCode	faker/provider/address/address_en_US.html#countryCode,Faker,string	address_en_US: countryCode(f: Faker; representation: string): string	
+militaryApo	faker/provider/address/address_en_US.html#militaryApo,Faker	address_en_US: militaryApo(f: Faker): string	
+militaryDpo	faker/provider/address/address_en_US.html#militaryDpo,Faker	address_en_US: militaryDpo(f: Faker): string	
+militaryShip	faker/provider/address/address_en_US.html#militaryShip,Faker	address_en_US: militaryShip(f: Faker): string	
+militaryState	faker/provider/address/address_en_US.html#militaryState,Faker	address_en_US: militaryState(f: Faker): string	
+postalcode	faker/provider/address/address_en_US.html#postalcode,Faker	address_en_US: postalcode(f: Faker): string	
+postalcodeInState	faker/provider/address/address_en_US.html#postalcodeInState,Faker,string	address_en_US: postalcodeInState(f: Faker; stateAbbr: string): string	
+postalcodePlus4	faker/provider/address/address_en_US.html#postalcodePlus4,Faker	address_en_US: postalcodePlus4(f: Faker): string	
+postcode	faker/provider/address/address_en_US.html#postcode,Faker	address_en_US: postcode(f: Faker): string	
+secondaryAddress	faker/provider/address/address_en_US.html#secondaryAddress,Faker	address_en_US: secondaryAddress(f: Faker): string	
+state	faker/provider/address/address_en_US.html#state,Faker	address_en_US: state(f: Faker): string	
+stateAbbr	faker/provider/address/address_en_US.html#stateAbbr,Faker,bool	address_en_US: stateAbbr(f: Faker; includeTerritories: bool): string	
+streetAddress	faker/provider/address/address_en_US.html#streetAddress,Faker	address_en_US: streetAddress(f: Faker): string	
+streetName	faker/provider/address/address_en_US.html#streetName,Faker	address_en_US: streetName(f: Faker): string	
+streetSuffix	faker/provider/address/address_en_US.html#streetSuffix,Faker	address_en_US: streetSuffix(f: Faker): string	
+zipcode	faker/provider/address/address_en_US.html#zipcode,Faker	address_en_US: zipcode(f: Faker): string	
+zipcodeInState	faker/provider/address/address_en_US.html#zipcodeInState,Faker,string	address_en_US: zipcodeInState(f: Faker; stateAbbr: string): string	
+zipcodePlus4	faker/provider/address/address_en_US.html#zipcodePlus4,Faker	address_en_US: zipcodePlus4(f: Faker): string	

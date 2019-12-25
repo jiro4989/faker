@@ -1,0 +1,3 @@
+使用例	phone_number_ja_JP.html#使用例	 使用例	
+phoneNumber	faker/provider/phone_number/phone_number_ja_JP.html#phoneNumber,Faker	phone_number_ja_JP: phoneNumber(f: Faker): string	
+msisdn	faker/provider/phone_number/phone_number_ja_JP.html#msisdn,Faker	phone_number_ja_JP: msisdn(f: Faker): string	
