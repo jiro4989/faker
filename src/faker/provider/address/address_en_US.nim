@@ -3,6 +3,7 @@ from strformat import `&`
 from sequtils import mapIt
 
 from ../person import lastName, firstName
+from ../util import formatNumbers
 
 include interfaces
 
@@ -1676,8 +1677,9 @@ proc buildingNumber*(f: Faker): string =
     ## Output:
     ##   8345
 
-  # TODO: formatNumbers
-  $f.rand.rand(1..65535)
+  let fmt = f.rand.sample(buildingNumberFormats)
+  var r = f.rand
+  r.formatNumbers(fmt)
 
 proc city*(f: Faker): string =
   let
@@ -1753,8 +1755,9 @@ proc postcode*(f: Faker): string =
     ## Output:
     ##   47542
 
-  let pc = $f.rand.rand(501..99950)
-  &"{pc:>05}"
+  let fmt = f.rand.sample(postcodeFormats)
+  var r = f.rand
+  r.formatNumbers(fmt)
 
 proc secondaryAddress*(f: Faker): string =
   ## Returns random secondary address.
