@@ -1,8 +1,8 @@
 # Package
 
-version       = "0.5.2"
+version       = "0.6.0"
 author        = "jiro4989"
-description   = "A new awesome nimble package"
+description   = "faker is a Nim package that generates fake data for you."
 license       = "MIT"
 srcDir        = "src"
 installExt    = @["nim"]
