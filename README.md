@@ -69,7 +69,7 @@ TODO list.
 - [ ] faker.provider.bank
 - [ ] faker.provider.barcode
 - [ ] faker.provider.color
-- [ ] faker.provider.company
+- [x] faker.provider.company
 - [ ] faker.provider.credit_card
 - [ ] faker.provider.currency
 - [ ] faker.provider.date_time
