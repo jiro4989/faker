@@ -1,0 +1,15 @@
+firstName	faker/provider/person/person_en_US.html#firstName,Faker	person_en_US: firstName(f: Faker): string	
+firstNameFemale	faker/provider/person/person_en_US.html#firstNameFemale,Faker	person_en_US: firstNameFemale(f: Faker): string	
+firstNameMale	faker/provider/person/person_en_US.html#firstNameMale,Faker	person_en_US: firstNameMale(f: Faker): string	
+lastName	faker/provider/person/person_en_US.html#lastName,Faker	person_en_US: lastName(f: Faker): string	
+lastNameFemale	faker/provider/person/person_en_US.html#lastNameFemale,Faker	person_en_US: lastNameFemale(f: Faker): string	
+lastNameMale	faker/provider/person/person_en_US.html#lastNameMale,Faker	person_en_US: lastNameMale(f: Faker): string	
+prefix	faker/provider/person/person_en_US.html#prefix,Faker	person_en_US: prefix(f: Faker): string	
+prefixFemale	faker/provider/person/person_en_US.html#prefixFemale,Faker	person_en_US: prefixFemale(f: Faker): string	
+prefixMale	faker/provider/person/person_en_US.html#prefixMale,Faker	person_en_US: prefixMale(f: Faker): string	
+suffix	faker/provider/person/person_en_US.html#suffix,Faker	person_en_US: suffix(f: Faker): string	
+suffixFemale	faker/provider/person/person_en_US.html#suffixFemale,Faker	person_en_US: suffixFemale(f: Faker): string	
+suffixMale	faker/provider/person/person_en_US.html#suffixMale,Faker	person_en_US: suffixMale(f: Faker): string	
+nameFemale	faker/provider/person/person_en_US.html#nameFemale,Faker	person_en_US: nameFemale(f: Faker): string	
+nameMale	faker/provider/person/person_en_US.html#nameMale,Faker	person_en_US: nameMale(f: Faker): string	
+name	faker/provider/person/person_en_US.html#name,Faker	person_en_US: name(f: Faker): string	

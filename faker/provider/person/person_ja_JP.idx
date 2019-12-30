@@ -1,0 +1,26 @@
+使用例	person_ja_JP.html#使用例	 使用例	
+firstName	faker/provider/person/person_ja_JP.html#firstName,Faker	person_ja_JP: firstName(f: Faker): string	
+firstNameFemale	faker/provider/person/person_ja_JP.html#firstNameFemale,Faker	person_ja_JP: firstNameFemale(f: Faker): string	
+firstNameMale	faker/provider/person/person_ja_JP.html#firstNameMale,Faker	person_ja_JP: firstNameMale(f: Faker): string	
+lastName	faker/provider/person/person_ja_JP.html#lastName,Faker	person_ja_JP: lastName(f: Faker): string	
+lastNameFemale	faker/provider/person/person_ja_JP.html#lastNameFemale,Faker	person_ja_JP: lastNameFemale(f: Faker): string	
+lastNameMale	faker/provider/person/person_ja_JP.html#lastNameMale,Faker	person_ja_JP: lastNameMale(f: Faker): string	
+firstKanaNameFemale	faker/provider/person/person_ja_JP.html#firstKanaNameFemale,Faker	person_ja_JP: firstKanaNameFemale(f: Faker): string	
+firstKanaNameMale	faker/provider/person/person_ja_JP.html#firstKanaNameMale,Faker	person_ja_JP: firstKanaNameMale(f: Faker): string	
+firstKanaName	faker/provider/person/person_ja_JP.html#firstKanaName,Faker	person_ja_JP: firstKanaName(f: Faker): string	
+lastKanaName	faker/provider/person/person_ja_JP.html#lastKanaName,Faker	person_ja_JP: lastKanaName(f: Faker): string	
+firstRomanizedNameFemale	faker/provider/person/person_ja_JP.html#firstRomanizedNameFemale,Faker	person_ja_JP: firstRomanizedNameFemale(f: Faker): string	
+firstRomanizedNameMale	faker/provider/person/person_ja_JP.html#firstRomanizedNameMale,Faker	person_ja_JP: firstRomanizedNameMale(f: Faker): string	
+firstRomanizedName	faker/provider/person/person_ja_JP.html#firstRomanizedName,Faker	person_ja_JP: firstRomanizedName(f: Faker): string	
+lastRomanizedName	faker/provider/person/person_ja_JP.html#lastRomanizedName,Faker	person_ja_JP: lastRomanizedName(f: Faker): string	
+nameFemale	faker/provider/person/person_ja_JP.html#nameFemale,Faker	person_ja_JP: nameFemale(f: Faker): string	
+nameMale	faker/provider/person/person_ja_JP.html#nameMale,Faker	person_ja_JP: nameMale(f: Faker): string	
+name	faker/provider/person/person_ja_JP.html#name,Faker	person_ja_JP: name(f: Faker): string	
+kanaName	faker/provider/person/person_ja_JP.html#kanaName,Faker	person_ja_JP: kanaName(f: Faker): string	
+romanizedName	faker/provider/person/person_ja_JP.html#romanizedName,Faker	person_ja_JP: romanizedName(f: Faker): string	
+prefix	faker/provider/person/person_ja_JP.html#prefix,Faker	person_ja_JP: prefix(f: Faker): string	
+prefixFemale	faker/provider/person/person_ja_JP.html#prefixFemale,Faker	person_ja_JP: prefixFemale(f: Faker): string	
+prefixMale	faker/provider/person/person_ja_JP.html#prefixMale,Faker	person_ja_JP: prefixMale(f: Faker): string	
+suffix	faker/provider/person/person_ja_JP.html#suffix,Faker	person_ja_JP: suffix(f: Faker): string	
+suffixFemale	faker/provider/person/person_ja_JP.html#suffixFemale,Faker	person_ja_JP: suffixFemale(f: Faker): string	
+suffixMale	faker/provider/person/person_ja_JP.html#suffixMale,Faker	person_ja_JP: suffixMale(f: Faker): string	
