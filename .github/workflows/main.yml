@@ -7,11 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     if: "! contains(github.event.head_commit.message, '[skip ci]')"
     steps:
-      - run: echo "${{ github.event.head_commit.message }}"
+      - run: echo "not contains '[skip ci]'"
 
   build:
     runs-on: ubuntu-latest
     needs: before
+    env:
+      NIM_VERSION: 1.0.4
     steps:
     - uses: actions/checkout@v1
     - name: Cache choosenim
