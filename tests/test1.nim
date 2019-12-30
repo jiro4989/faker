@@ -16,4 +16,5 @@ suite "basic usage":
         echo fake.address()
         echo fake.phoneNumber()
         echo fake.job()
+        echo fake.name()
         echo "-----"
