@@ -1,6 +1,8 @@
 # faker
 
-![Build Status](https://github.com/jiro4989/faker/workflows/build/badge.svg)
+[![Build Status](https://github.com/jiro4989/faker/workflows/build/badge.svg)](https://github.com/jiro4989/faker/actions)
+[![Build Status](https://nimble.directory/ci/badges/faker/nimdevel/status.svg)](https://nimble.directory/ci/badges/faker/nimdevel/output.html)
+[![Build Status](https://nimble.directory/ci/badges/faker/nimdevel/docstatus.svg)](https://nimble.directory/ci/badges/faker/nimdevel/doc_build_output.html)
 
 faker is a Nim package that generates fake data for you.
 faker is heavily inspired by [Python Faker](https://github.com/joke2k/faker).
