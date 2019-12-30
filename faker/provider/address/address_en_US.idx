@@ -1,3 +1,4 @@
+Country	faker/provider/address/address_en_US.html#Country	address_en_US: Country	
 address	faker/provider/address/address_en_US.html#address,Faker	address_en_US: address(f: Faker): string	
 buildingNumber	faker/provider/address/address_en_US.html#buildingNumber,Faker	address_en_US: buildingNumber(f: Faker): string	
 city	faker/provider/address/address_en_US.html#city,Faker	address_en_US: city(f: Faker): string	
