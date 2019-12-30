@@ -1,0 +1,4 @@
+bs	faker/provider/company.html#bs,Faker	company: bs(f: Faker): string	
+catchPhrase	faker/provider/company.html#catchPhrase,Faker	company: catchPhrase(f: Faker): string	
+company	faker/provider/company.html#company,Faker	company: company(f: Faker): string	
+companySuffix	faker/provider/company.html#companySuffix,Faker	company: companySuffix(f: Faker): string	
