@@ -1,0 +1,13 @@
+userAgent	faker/provider/user_agent.html#userAgent,Faker	user_agent: userAgent(f: Faker): string	
+chrome	faker/provider/user_agent.html#chrome,Faker	user_agent: chrome(f: Faker): string	
+firefox	faker/provider/user_agent.html#firefox,Faker	user_agent: firefox(f: Faker): string	
+opera	faker/provider/user_agent.html#opera,Faker	user_agent: opera(f: Faker): string	
+safari	faker/provider/user_agent.html#safari,Faker	user_agent: safari(f: Faker): string	
+internetExplorer	faker/provider/user_agent.html#internetExplorer,Faker	user_agent: internetExplorer(f: Faker): string	
+linuxPlatformToken	faker/provider/user_agent.html#linuxPlatformToken,Faker	user_agent: linuxPlatformToken(f: Faker): string	
+macPlatformToken	faker/provider/user_agent.html#macPlatformToken,Faker	user_agent: macPlatformToken(f: Faker): string	
+androidPlatformToken	faker/provider/user_agent.html#androidPlatformToken,Faker	user_agent: androidPlatformToken(f: Faker): string	
+iosPlatformToken	faker/provider/user_agent.html#iosPlatformToken,Faker	user_agent: iosPlatformToken(f: Faker): string	
+windowsPlatformToken	faker/provider/user_agent.html#windowsPlatformToken,Faker	user_agent: windowsPlatformToken(f: Faker): string	
+linuxProcessor	faker/provider/user_agent.html#linuxProcessor,Faker	user_agent: linuxProcessor(f: Faker): string	
+macProcessor	faker/provider/user_agent.html#macProcessor,Faker	user_agent: macProcessor(f: Faker): string	
