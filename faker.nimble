@@ -18,7 +18,6 @@ requires "nim >= 1.0.4"
 
 let
   providerDir = "src" / "faker" / "provider"
-  locales = ["en_US", "ja_JP"]
 
 task docs, "Generate API documents":
   exec "nimble doc --index:on --project --out:docs --hints:off src/faker.nim"
@@ -71,11 +70,13 @@ task genProvs, "Generate provider file":
     # Get submodule names
     let (_, prefix, _) = splitFile(dir)
     var modules: seq[string]
+    var locales: seq[string] # en_US, ja_JP
     for file in listFiles(dir):
       let (_, moduleName, _) = splitFile(file)
       if moduleName == "interfaces":
         continue
       modules.add(moduleName)
+      locales.add(moduleName[^5..^1])
     lines.add(&"""import {prefix}/[{modules.join(", ")}]""")
 
     lines.add("export base")

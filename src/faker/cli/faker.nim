@@ -33,6 +33,7 @@ proc main(args: seq[string]): int =
     stderr.writeLine usage
     return 1
 
+  # TODO: generates with nimble task
   let subcmd = args[0]
   let fake = newFaker()
   case subcmd
@@ -41,6 +42,7 @@ proc main(args: seq[string]): int =
   of "phone_number": echo fake.phoneNumber()
   of "job": echo fake.job()
   of "name": echo fake.name()
+  of "user_agent", "userAgent": echo fake.userAgent()
   of "-h", "--help": echo usage
   else:
     stderr.writeLine subcmd & " is not supported."
