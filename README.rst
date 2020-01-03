@@ -69,7 +69,6 @@ Supported locale
 
 I understand only English and Japanese.
 
-
 ======  ===========
 Locale  Description
 ======  ===========
