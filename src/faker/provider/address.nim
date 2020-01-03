@@ -31,6 +31,6 @@ genProc address,
     zipcode,
     zipcodePlus4,
   ], [
-    en_US,
     ja_JP,
+    en_US,
   ]

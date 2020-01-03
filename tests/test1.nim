@@ -18,4 +18,5 @@ suite "basic usage":
         echo fake.job()
         echo fake.name()
         echo fake.company()
+        echo fake.userAgent()
         echo "-----"
