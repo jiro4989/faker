@@ -14,7 +14,7 @@ import strformat, strutils, sequtils
 
 # Dependencies
 
-requires "nim >= 1.0.4"
+requires "nim >= 1.0.0"
 
 let
   providerDir = "src" / "faker" / "provider"
