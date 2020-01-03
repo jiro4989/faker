@@ -38,7 +38,7 @@ macro genProc*(prefix, names, modules: untyped): untyped =
     lines.add(&"  case f.locale")
     for m in modules:
       lines.add(&"""  of "{repr(m)}": {prefix}_{repr(m)}.{repr(name)}(f)""")
-    lines.add(&"  else: {prefix}_{modules[0]}.{repr(name)}(f)")
+    lines.add(&"  else: {prefix}_en_US.{repr(name)}(f)")
   parseStmt(lines.join("\n"))
 
 proc formatNumbers*(r: var Rand, format: string): string =
