@@ -19,4 +19,9 @@ suite "basic usage":
         echo fake.name()
         echo fake.company()
         echo fake.userAgent()
+        echo fake.chrome()
+        echo fake.firefox()
+        echo fake.opera()
+        echo fake.safari()
+        echo fake.internetExplorer()
         echo "-----"

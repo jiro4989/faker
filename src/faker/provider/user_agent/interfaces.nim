@@ -5,7 +5,7 @@
 # ジャを全て実装しないと、コンパイルが通らない。
 
 import random, strutils
-import ../../base
+import ../../base, ../util
 export base
 
 # === User agent ===
