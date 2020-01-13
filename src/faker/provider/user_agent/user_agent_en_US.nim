@@ -37,11 +37,85 @@ proc userAgent*(f: Faker): string =
 
 # === Browser ===
 
-proc chrome*(f: Faker): string = discard
-proc firefox*(f: Faker): string = discard
-proc opera*(f: Faker): string = discard
-proc safari*(f: Faker): string = discard
-proc internetExplorer*(f: Faker): string = discard
+proc chrome*(f: Faker): string =
+  const
+    versionFrom = 13
+    versionTo = 63
+    buildFrom = 800
+    buildTo = 899
+  let
+    saf = "$1.$2" % [$f.rand.rand(531..536), $f.rand.rand(0..2)]
+    bld = f.rand.formatNumbers("##?###")
+    tmplt = "($1) AppleWebKit/$2 (KHTML, like Gecko) Chrome/$3.0.$4.0 Safari/$5"
+    tmpltIos = "($1) AppleWebKit/$2 (KHTML, like Gecko) CriOS/$3.0.$4.0 Mobile/$5 Safari/$2"
+  proc platform(fmt, token, saf: string): string =
+    fmt % [token, saf, $f.rand.rand(versionFrom..versionTo), $f.rand.rand(buildFrom..buildTo), saf]
+  let
+    platforms = [
+      platform(tmplt, f.linuxPlatformToken, saf),
+      platform(tmplt, f.windowsPlatformToken, saf),
+      platform(tmplt, f.macPlatformToken, saf),
+      platform(tmplt, "Linux; " & f.androidPlatformToken, saf),
+      platform(tmpltIos, f.iosPlatformToken, bld),
+    ]
+  result = "Mozilla/5.0 " & f.rand.sample(platforms)
+
+proc firefox*(f: Faker): string =
+  let
+    #ver = "" # TODO
+    tmpltWin = "($1; $2; rv:1.9.$3.20) $4"
+    tmpltLin = "($1; rv:1.9.$2.20) $3"
+    tmpltMac = tmpltLin
+    tmpltAnd = "($1; Mobile; rv:$2.0) Gecko/$2.0 Firefox/$2.0"
+    tmpltIos = "($1) AppleWebKit/$2 (KHTML, like Gecko) FxiOS/$3.$4.0 Mobile/$5 Safari/$2"
+    saf = "$1.$2" % [ $f.rand.rand(531..536), $f.rand.rand(0..2) ]
+    bld = f.rand.formatNumbers("##?###")
+    bld2 = f.rand.formatNumbers("#?####")
+    platforms = [
+      # tmpltWin % [f.windowsPlatformToken, f.locale.replace("_", "-"), $f.rand.rand(0..2), ver],
+      # tmpltLin % [f.linuxPlatformToken, $f.rand.rand(5..7), ver],
+      # tmpltMac % [f.macPlatformToken, $f.rand.rand(2..6), ver],
+      tmpltAnd % [f.androidPlatformToken, $f.rand.rand(5..68)],
+      tmpltIos % [f.iosPlatformToken, saf, $f.rand.rand(9..18), bld2, bld],
+    ]
+  result = "Mozilla/5.0 " & f.rand.sample(platforms)
+
+proc opera*(f: Faker): string =
+  let platform = "($1; $2) Presto/2.9.$3 Version/$4.00" % [
+    f.linuxPlatformToken,
+    f.locale.replace("_", "-"),
+    $f.rand.rand(160..190),
+    $f.rand.rand(10..12),
+  ]
+  result = "Opera/$1.$2.$3" % [
+    $f.rand.rand(8..9),
+    $f.rand.rand(10..99),
+    platform,
+  ]
+
+proc safari*(f: Faker): string =
+  let
+    saf = "$1.$2.$3" % [$f.rand.rand(531..535), $f.rand.rand(1..50), $f.rand.rand(1..7)]
+    ver = "$1.$2" % [$f.rand.rand(4..5), $f.rand.rand(0..1)]
+    tmpltWin = "(Windows; U; $1) AppleWebKit/$2 (KHTML, like Gecko) Version/$3 Safari/$4"
+    tmpltMac = "($1 rv:$2.0; $3) AppleWebKit/$4 (KHTML, like Gecko) Version/$5 Safari/$6"
+    tmpltIpod = "(iPod; U; CPU iPhone OS $1_$2 like Mac OS X; $3) AppleWebKit/$4 (KHTML, like Gecko) Version/$5.0.5 Mobile/8B$6 Safari/6$7"
+    locale = f.locale.replace("_", "-")
+    platforms = [
+      tmpltWin % [f.windowsPlatformToken, saf, ver, saf],
+      tmpltMac % [f.macPlatformToken, $f.rand.rand(2..6), locale, saf, ver, saf],
+      tmpltIpod % [$f.rand.rand(3..4), $f.rand.rand(0..3), locale, saf, $f.rand.rand(3..4), $f.rand.rand(111..119), saf],
+    ]
+  result = "Mozilla/5.0 " & f.rand.sample(platforms)
+
+proc internetExplorer*(f: Faker): string =
+  let tmplt = "Mozilla/5.0 (compatible; MSIE $1.0; $2; Trident/$3.$4)"
+  result = tmplt % [
+    $f.rand.rand(5..9),
+    f.windowsPlatformToken,
+    $f.rand.rand(3..5),
+    $f.rand.rand(0..1)
+  ]
 
 # === Platform token ===
 
