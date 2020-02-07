@@ -6,6 +6,9 @@
 
 import random
 import ../../base
+import ../util
 export base
 
-proc job*(f: Faker): string
+proc bankCountry*(f: Faker): string
+proc bban*(f: Faker): string
+proc iban*(f: Faker): string

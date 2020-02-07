@@ -5,13 +5,14 @@
 
 import util
 import ../base
-import job/[job_en_US, job_ja_JP]
+import bank/[bank_en_US]
 export base
 
-genProc job,
+genProc bank,
   [
-    job,
+    bankCountry,
+    bban,
+    iban,
   ], [
     en_US,
-    ja_JP,
   ]
