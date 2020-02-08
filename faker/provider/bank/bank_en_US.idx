@@ -1,0 +1,3 @@
+bankCountry	faker/provider/bank/bank_en_US.html#bankCountry,Faker	bank_en_US: bankCountry(f: Faker): string	
+bban	faker/provider/bank/bank_en_US.html#bban,Faker	bank_en_US: bban(f: Faker): string	
+iban	faker/provider/bank/bank_en_US.html#iban,Faker	bank_en_US: iban(f: Faker): string	
