@@ -5,13 +5,18 @@
 
 import util
 import ../base
-import job/[job_en_US, job_ja_JP]
+import currency/[currency_en_US]
 export base
 
-genProc job,
+genProc currency,
   [
-    job,
+    currency,
+    currencyCode,
+    currencyName,
+    currencySymbol,
+    cryptocurrency,
+    cryptocurrencyCode,
+    cryptocurrencyName,
   ], [
     en_US,
-    ja_JP,
   ]

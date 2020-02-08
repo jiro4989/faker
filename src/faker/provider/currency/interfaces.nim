@@ -8,4 +8,10 @@ import random
 import ../../base
 export base
 
-proc job*(f: Faker): string
+proc currency*(f: Faker): (string, string)
+proc currencyCode*(f: Faker): string
+proc currencyName*(f: Faker): string
+proc currencySymbol*(f: Faker): string
+proc cryptocurrency*(f: Faker): (string, string)
+proc cryptocurrencyCode*(f: Faker): string
+proc cryptocurrencyName*(f: Faker): string
