@@ -24,4 +24,7 @@ suite "basic usage":
         echo fake.opera()
         echo fake.safari()
         echo fake.internetExplorer()
+        echo fake.bankCountry()
+        echo fake.bban()
+        echo fake.iban()
         echo "-----"

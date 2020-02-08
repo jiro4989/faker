@@ -83,12 +83,12 @@ Providers
 TODO list.
 
 - [ ] base
-- [X] faker.provider.address
+- [o] faker.provider.address
 - [ ] faker.provider.automotive
-- [ ] faker.provider.bank
+- [o] faker.provider.bank
 - [ ] faker.provider.barcode
 - [ ] faker.provider.color
-- [X] faker.provider.company
+- [o] faker.provider.company
 - [ ] faker.provider.credit_card
 - [ ] faker.provider.currency
 - [ ] faker.provider.date_time
@@ -96,15 +96,15 @@ TODO list.
 - [ ] faker.provider.geo
 - [ ] faker.provider.internet
 - [ ] faker.provider.isbn
-- [X] faker.provider.job
+- [o] faker.provider.job
 - [ ] faker.provider.lorem
 - [ ] faker.provider.misc
-- [X] faker.provider.person
-- [X] faker.provider.phone_number
+- [o] faker.provider.person
+- [o] faker.provider.phone_number
 - [ ] faker.provider.profile
 - [ ] faker.provider.python
 - [ ] faker.provider.ssn
-- [X] faker.provider.user_agent
+- [o] faker.provider.user_agent
 
 ************
 API document

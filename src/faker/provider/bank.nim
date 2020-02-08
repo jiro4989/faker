@@ -3,5 +3,16 @@
 # See 'faker.nimble'.                             #
 # ----------------------------------------------- #
 
-import provider/[address, bank, company, job, person, phone_number, user_agent]
-export address, bank, company, job, person, phone_number, user_agent
+import util
+import ../base
+import bank/[bank_en_US]
+export base
+
+genProc bank,
+  [
+    bankCountry,
+    bban,
+    iban,
+  ], [
+    en_US,
+  ]
