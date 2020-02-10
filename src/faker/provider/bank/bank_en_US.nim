@@ -7,7 +7,7 @@ from sequtils import mapIt
 
 const
   countryCode = "GB"
-  bbanFormat = "#############"
+  bbanFormat = "????#############"
   asciiUpperCase = {'A'..'Z'}
 
 let
@@ -22,9 +22,8 @@ proc bankCountry*(f: Faker): string =
 
 proc bban*(f: Faker): string =
   var r = f.rand
-  for i in 0..3:
-    result.add(r.sample(asciiUpperCase))
-  result.add(r.formatNumbers(bbanFormat))
+  result = r.formatUpperAscii(bbanFormat)
+  result = r.formatNumbers(result)
 
 proc iban*(f: Faker): string =
   let bban = f.bban()
