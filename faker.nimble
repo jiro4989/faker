@@ -27,6 +27,57 @@ proc addGeneratedText(lines: var seq[string]) =
   lines.add("# ----------------------------------------------- #")
   lines.add("")
 
+proc readPublicProcs(file: string): seq[string] =
+  readFile(file)
+    .split("\n")
+    .filterIt(it.startsWith("proc") and "*(f: Faker)" in it)
+
+proc readImplementedLocales(dir, provider: string): seq[string] =
+  for path in listFiles(dir):
+    let (_, name, _) = splitFile(path)
+    if name == "interfaces":
+      continue
+    result.add(name.replace(&"{provider}_", ""))
+
+proc genProviderIndexFile(provider: string) =
+  ## Generate provider/ `provider` .nim file.
+  let interfaceFile = providerDir/provider/"interfaces.nim"
+  let procs = readPublicProcs(interfaceFile)
+  let locales = readImplementedLocales(providerDir/provider, provider)
+  var lines: seq[string]
+  lines.addGeneratedText()
+  lines.add("import util")
+  lines.add("import ../base")
+  let modules = locales.mapIt(&"{provider}_{it}").join(", ")
+  lines.add(&"import {provider}/[{modules}]")
+  lines.add("export base")
+  lines.add("")
+  for p in procs:
+    let procName = p.split("*")[0].split("proc ")[1].strip()
+    let args = p.split("*")[1].split(":")[0..^2].join(":")
+    let returnType = p.split(":")[^1].strip()
+    lines.add(&"proc {procName}*{args}: {returnType} =")
+    lines.add(&"  ## Generates random {procName}.")
+    lines.add(&"  runnableExamples:")
+    lines.add(&"    let f = newFaker()")
+    let arg2 =
+      if 1 < args.split(",").len:
+        args.replace("f: Faker, ", "")
+      else:
+        ""
+    lines.add(&"    echo f.{procName}({arg2})")
+    lines.add("")
+    lines.add(&"  case f.locale")
+    let arg3 =
+      if arg2 == "": "f"
+      else: &"f, {arg2}"
+    for locale in locales:
+      lines.add(&"""  of "{locale}": {provider}_{locale}.{procName}({arg3})""")
+    lines.add(&"  else: {provider}_en_US.{procName}({arg3})")
+    lines.add("")
+  let indexFile = providerDir/provider & ".nim"
+  writeFile(indexFile, lines.join("\n"))
+
 task docs, "Generate API documents":
   exec "nimble doc --index:on --project --out:docs --hints:off src/faker.nim"
 
@@ -64,50 +115,12 @@ task genMod, "Generate module":
     echo "Generated: " & newPath
 
 task genProvs, "Generate provider file":
+  # generate provider / `provider` .nim file
   var providers: seq[string]
   for dir in listDirs(providerDir):
-    let dstFile = dir & ".nim"
-    var lines: seq[string]
-    lines.addGeneratedText()
-    lines.add("import util")
-    lines.add("import ../base")
-
-    # Get submodule names
-    let (_, prefix, _) = splitFile(dir)
-    providers.add(prefix)
-    var modules: seq[string]
-    var locales: seq[string] # en_US, ja_JP
-    for file in listFiles(dir):
-      let (_, moduleName, _) = splitFile(file)
-      if moduleName == "interfaces":
-        continue
-      modules.add(moduleName)
-      locales.add(moduleName[^5..^1])
-    lines.add(&"""import {prefix}/[{modules.join(", ")}]""")
-
-    lines.add("export base")
-    lines.add("")
-
-    # Set proc name list and locales
-
-    # 1. proc
-    lines.add(&"genProc {prefix},")
-    lines.add("  [")
-    let procs = readFile(dir / "interfaces.nim")
-      .split("\n")
-      .filterIt(it.startsWith("proc") and "*(f: Faker)" in it)
-    for p in procs:
-      let procStr = p.split("*")[0].split("proc ")[1].strip()
-      lines.add(&"    {procStr},")
-    lines.add("  ], [")
-
-    # 2. locale
-    for locale in locales:
-      lines.add(&"    {locale},")
-    lines.add("  ]")
-
-    let body = lines.join("\n")
-    writeFile(dir & ".nim", body)
+    let (_, provider, _) = splitFile(dir)
+    genProviderIndexFile(provider)
+    providers.add(provider)
 
   providers.sort()
 
