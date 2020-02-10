@@ -28,4 +28,10 @@ suite "basic usage":
         echo fake.bban()
         echo fake.iban()
         echo fake.licensePlate()
+        echo fake.fileExtension
+        echo fake.fileName()
+        echo fake.filePath()
+        echo fake.mimeType()
+        echo fake.unixDevice()
+        echo fake.unixPartition()
         echo "-----"
