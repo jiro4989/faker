@@ -79,7 +79,7 @@ TODO list.
 
 - [ ] base
 - [o] faker.provider.address
-- [ ] faker.provider.automotive
+- [o] faker.provider.automotive
 - [o] faker.provider.bank
 - [ ] faker.provider.barcode
 - [ ] faker.provider.color
@@ -87,7 +87,7 @@ TODO list.
 - [ ] faker.provider.credit_card
 - [o] faker.provider.currency
 - [ ] faker.provider.date_time
-- [ ] faker.provider.file
+- [o] faker.provider.file
 - [ ] faker.provider.geo
 - [ ] faker.provider.internet
 - [ ] faker.provider.isbn
