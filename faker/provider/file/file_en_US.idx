@@ -1,0 +1,6 @@
+filePath	faker/provider/file/file_en_US.html#filePath,Faker,int,string,string	file_en_US: filePath(f: Faker; depth = 1; category = &quot;&quot;; extension = &quot;&quot;): string	
+fileName	faker/provider/file/file_en_US.html#fileName,Faker,string,string	file_en_US: fileName(f: Faker; category = &quot;&quot;; extension = &quot;&quot;): string	
+fileExtension	faker/provider/file/file_en_US.html#fileExtension,Faker,string	file_en_US: fileExtension(f: Faker; category = &quot;&quot;): string	
+mimeType	faker/provider/file/file_en_US.html#mimeType,Faker,string	file_en_US: mimeType(f: Faker; category = &quot;&quot;): string	
+unixDevice	faker/provider/file/file_en_US.html#unixDevice,Faker,string	file_en_US: unixDevice(f: Faker; prefix = &quot;&quot;): string	
+unixPartition	faker/provider/file/file_en_US.html#unixPartition,Faker,string	file_en_US: unixPartition(f: Faker; prefix = &quot;&quot;): string	

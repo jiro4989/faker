@@ -1,2 +1,4 @@
+asciiUpperCase	faker/provider/util.html#asciiUpperCase	util: asciiUpperCase	
+asciiLowerCase	faker/provider/util.html#asciiLowerCase	util: asciiLowerCase	
 formatNumbers	faker/provider/util.html#formatNumbers,Rand,string	util: formatNumbers(r: var Rand; format: string): string	
 formatUpperAscii	faker/provider/util.html#formatUpperAscii,Rand,string	util: formatUpperAscii(r: var Rand; format: string): string	

@@ -1,0 +1,6 @@
+fileExtension	faker/provider/file.html#fileExtension,Faker,string	file: fileExtension(f: Faker; category = &quot;&quot;): string	
+fileName	faker/provider/file.html#fileName,Faker,string,string	file: fileName(f: Faker; category = &quot;&quot;; extension = &quot;&quot;): string	
+filePath	faker/provider/file.html#filePath,Faker,int,string,string	file: filePath(f: Faker; depth = 1; category = &quot;&quot;; extension = &quot;&quot;): string	
+mimeType	faker/provider/file.html#mimeType,Faker,string	file: mimeType(f: Faker; category = &quot;&quot;): string	
+unixDevice	faker/provider/file.html#unixDevice,Faker,string	file: unixDevice(f: Faker; prefix = &quot;&quot;): string	
+unixPartition	faker/provider/file.html#unixPartition,Faker,string	file: unixPartition(f: Faker; prefix = &quot;&quot;): string	
