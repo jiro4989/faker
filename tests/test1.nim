@@ -27,4 +27,5 @@ suite "basic usage":
         echo fake.bankCountry()
         echo fake.bban()
         echo fake.iban()
+        echo fake.licensePlate()
         echo "-----"
