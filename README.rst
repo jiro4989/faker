@@ -1,6 +1,6 @@
-#####
+=====
 faker
-#####
+=====
 
 |nimble-version| |nimble-install| |nimble-docs| |gh-actions|
 
@@ -12,19 +12,16 @@ faker is heavily inspired by `Python Faker <https://github.com/joke2k/faker>`_.
 .. contents:: Table of contents
    :depth: 3
 
-************
 Installation
-************
+============
 
 .. code-block:: Bash
 
    nimble install faker
 
-*****
 Usage
-*****
+=====
 
--------
 Library
 -------
 
@@ -50,7 +47,6 @@ Library
      echo fake.name()
      # -> Bruce Wagner DDS
 
-----
 CLI
 ----
 
@@ -63,9 +59,9 @@ CLI
    $ LANG=en_US.UTF-8 faker name
    Mr. Leonard Johns
 
-****************
+
 Supported locale
-****************
+================
 
 I understand only English and Japanese.
 
@@ -76,9 +72,8 @@ en_US   English
 ja_JP   Japanese
 ======  ===========
 
-*********
 Providers
-*********
+=========
 
 TODO list.
 
@@ -90,7 +85,7 @@ TODO list.
 - [ ] faker.provider.color
 - [o] faker.provider.company
 - [ ] faker.provider.credit_card
-- [ ] faker.provider.currency
+- [o] faker.provider.currency
 - [ ] faker.provider.date_time
 - [ ] faker.provider.file
 - [ ] faker.provider.geo
@@ -106,17 +101,14 @@ TODO list.
 - [ ] faker.provider.ssn
 - [o] faker.provider.user_agent
 
-************
 API document
-************
+============
 
 * https://jiro4989.github.io/faker/faker.html
 
-***********
 Development
-***********
+===========
 
------------------
 Adding new module
 -----------------
 
@@ -129,7 +121,6 @@ Run below.
 
 Please see other module implements, and edit a generated module.
 
---------------------
 Update provider code
 --------------------
 
@@ -153,15 +144,13 @@ A new provider will be generated.
    src/faker/provider/new_module.nim # <--- New provider.
    src/faker/provider/util.nim
 
-************
 Pull request
-************
+============
 
 Welcome :heart:
 
-*******
 LICENSE
-*******
+=======
 
 MIT
 
