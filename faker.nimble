@@ -46,7 +46,6 @@ proc genProviderIndexFile(provider: string) =
   let locales = readImplementedLocales(providerDir/provider, provider)
   var lines: seq[string]
   lines.addGeneratedText()
-  lines.add("import util")
   lines.add("import ../base")
   let modules = locales.mapIt(&"{provider}_{it}").join(", ")
   lines.add(&"import {provider}/[{modules}]")

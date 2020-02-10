@@ -3,7 +3,6 @@
 # See 'faker.nimble'.                             #
 # ----------------------------------------------- #
 
-import util
 import ../base
 import user_agent/[user_agent_en_US]
 export base

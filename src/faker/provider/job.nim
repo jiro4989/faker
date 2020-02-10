@@ -3,7 +3,6 @@
 # See 'faker.nimble'.                             #
 # ----------------------------------------------- #
 
-import util
 import ../base
 import job/[job_en_US, job_ja_JP]
 export base

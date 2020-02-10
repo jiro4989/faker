@@ -3,7 +3,6 @@
 # See 'faker.nimble'.                             #
 # ----------------------------------------------- #
 
-import util
 import ../base
 import phone_number/[phone_number_en_US, phone_number_ja_JP]
 export base

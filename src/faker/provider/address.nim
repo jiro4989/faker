@@ -3,7 +3,6 @@
 # See 'faker.nimble'.                             #
 # ----------------------------------------------- #
 
-import util
 import ../base
 import address/[address_ja_JP, address_en_US]
 export base
