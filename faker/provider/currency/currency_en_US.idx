@@ -1,0 +1,7 @@
+currency	faker/provider/currency/currency_en_US.html#currency,Faker	currency_en_US: currency(f: Faker): (string, string)	
+currencyCode	faker/provider/currency/currency_en_US.html#currencyCode,Faker	currency_en_US: currencyCode(f: Faker): string	
+currencyName	faker/provider/currency/currency_en_US.html#currencyName,Faker	currency_en_US: currencyName(f: Faker): string	
+currencySymbol	faker/provider/currency/currency_en_US.html#currencySymbol,Faker	currency_en_US: currencySymbol(f: Faker): string	
+cryptocurrency	faker/provider/currency/currency_en_US.html#cryptocurrency,Faker	currency_en_US: cryptocurrency(f: Faker): (string, string)	
+cryptocurrencyCode	faker/provider/currency/currency_en_US.html#cryptocurrencyCode,Faker	currency_en_US: cryptocurrencyCode(f: Faker): string	
+cryptocurrencyName	faker/provider/currency/currency_en_US.html#cryptocurrencyName,Faker	currency_en_US: cryptocurrencyName(f: Faker): string	

@@ -1,2 +1,1 @@
-genProc	faker/provider/util.html#genProc.m,untyped,untyped,untyped	util: genProc(prefix, names, modules: untyped): untyped	
 formatNumbers	faker/provider/util.html#formatNumbers,Rand,string	util: formatNumbers(r: var Rand; format: string): string	
