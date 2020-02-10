@@ -3,15 +3,17 @@
 # See 'faker.nimble'.                             #
 # ----------------------------------------------- #
 
-import util
 import ../base
 import job/[job_en_US, job_ja_JP]
 export base
 
-genProc job,
-  [
-    job,
-  ], [
-    en_US,
-    ja_JP,
-  ]
+proc job*(f: Faker): string =
+  ## Generates random job.
+  runnableExamples:
+    let f = newFaker()
+    echo f.job()
+
+  case f.locale
+  of "en_US": job_en_US.job(f)
+  of "ja_JP": job_ja_JP.job(f)
+  else: job_en_US.job(f)

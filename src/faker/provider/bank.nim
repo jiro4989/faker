@@ -3,16 +3,36 @@
 # See 'faker.nimble'.                             #
 # ----------------------------------------------- #
 
-import util
 import ../base
 import bank/[bank_en_US]
 export base
 
-genProc bank,
-  [
-    bankCountry,
-    bban,
-    iban,
-  ], [
-    en_US,
-  ]
+proc bankCountry*(f: Faker): string =
+  ## Generates random bankCountry.
+  runnableExamples:
+    let f = newFaker()
+    echo f.bankCountry()
+
+  case f.locale
+  of "en_US": bank_en_US.bankCountry(f)
+  else: bank_en_US.bankCountry(f)
+
+proc bban*(f: Faker): string =
+  ## Generates random bban.
+  runnableExamples:
+    let f = newFaker()
+    echo f.bban()
+
+  case f.locale
+  of "en_US": bank_en_US.bban(f)
+  else: bank_en_US.bban(f)
+
+proc iban*(f: Faker): string =
+  ## Generates random iban.
+  runnableExamples:
+    let f = newFaker()
+    echo f.iban()
+
+  case f.locale
+  of "en_US": bank_en_US.iban(f)
+  else: bank_en_US.iban(f)

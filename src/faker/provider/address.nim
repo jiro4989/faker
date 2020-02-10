@@ -3,34 +3,226 @@
 # See 'faker.nimble'.                             #
 # ----------------------------------------------- #
 
-import util
 import ../base
 import address/[address_ja_JP, address_en_US]
 export base
 
-genProc address,
-  [
-    address,
-    buildingNumber,
-    city,
-    cityPrefix,
-    citySuffix,
-    country,
-    militaryApo,
-    militaryDpo,
-    militaryShip,
-    militaryState,
-    postalcode,
-    postalcodePlus4,
-    postcode,
-    secondaryAddress,
-    state,
-    streetAddress,
-    streetName,
-    streetSuffix,
-    zipcode,
-    zipcodePlus4,
-  ], [
-    ja_JP,
-    en_US,
-  ]
+proc address*(f: Faker): string =
+  ## Generates random address.
+  runnableExamples:
+    let f = newFaker()
+    echo f.address()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.address(f)
+  of "en_US": address_en_US.address(f)
+  else: address_en_US.address(f)
+
+proc buildingNumber*(f: Faker): string =
+  ## Generates random buildingNumber.
+  runnableExamples:
+    let f = newFaker()
+    echo f.buildingNumber()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.buildingNumber(f)
+  of "en_US": address_en_US.buildingNumber(f)
+  else: address_en_US.buildingNumber(f)
+
+proc city*(f: Faker): string =
+  ## Generates random city.
+  runnableExamples:
+    let f = newFaker()
+    echo f.city()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.city(f)
+  of "en_US": address_en_US.city(f)
+  else: address_en_US.city(f)
+
+proc cityPrefix*(f: Faker): string =
+  ## Generates random cityPrefix.
+  runnableExamples:
+    let f = newFaker()
+    echo f.cityPrefix()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.cityPrefix(f)
+  of "en_US": address_en_US.cityPrefix(f)
+  else: address_en_US.cityPrefix(f)
+
+proc citySuffix*(f: Faker): string =
+  ## Generates random citySuffix.
+  runnableExamples:
+    let f = newFaker()
+    echo f.citySuffix()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.citySuffix(f)
+  of "en_US": address_en_US.citySuffix(f)
+  else: address_en_US.citySuffix(f)
+
+proc country*(f: Faker): string =
+  ## Generates random country.
+  runnableExamples:
+    let f = newFaker()
+    echo f.country()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.country(f)
+  of "en_US": address_en_US.country(f)
+  else: address_en_US.country(f)
+
+proc militaryApo*(f: Faker): string =
+  ## Generates random militaryApo.
+  runnableExamples:
+    let f = newFaker()
+    echo f.militaryApo()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.militaryApo(f)
+  of "en_US": address_en_US.militaryApo(f)
+  else: address_en_US.militaryApo(f)
+
+proc militaryDpo*(f: Faker): string =
+  ## Generates random militaryDpo.
+  runnableExamples:
+    let f = newFaker()
+    echo f.militaryDpo()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.militaryDpo(f)
+  of "en_US": address_en_US.militaryDpo(f)
+  else: address_en_US.militaryDpo(f)
+
+proc militaryShip*(f: Faker): string =
+  ## Generates random militaryShip.
+  runnableExamples:
+    let f = newFaker()
+    echo f.militaryShip()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.militaryShip(f)
+  of "en_US": address_en_US.militaryShip(f)
+  else: address_en_US.militaryShip(f)
+
+proc militaryState*(f: Faker): string =
+  ## Generates random militaryState.
+  runnableExamples:
+    let f = newFaker()
+    echo f.militaryState()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.militaryState(f)
+  of "en_US": address_en_US.militaryState(f)
+  else: address_en_US.militaryState(f)
+
+proc postalcode*(f: Faker): string =
+  ## Generates random postalcode.
+  runnableExamples:
+    let f = newFaker()
+    echo f.postalcode()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.postalcode(f)
+  of "en_US": address_en_US.postalcode(f)
+  else: address_en_US.postalcode(f)
+
+proc postalcodePlus4*(f: Faker): string =
+  ## Generates random postalcodePlus4.
+  runnableExamples:
+    let f = newFaker()
+    echo f.postalcodePlus4()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.postalcodePlus4(f)
+  of "en_US": address_en_US.postalcodePlus4(f)
+  else: address_en_US.postalcodePlus4(f)
+
+proc postcode*(f: Faker): string =
+  ## Generates random postcode.
+  runnableExamples:
+    let f = newFaker()
+    echo f.postcode()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.postcode(f)
+  of "en_US": address_en_US.postcode(f)
+  else: address_en_US.postcode(f)
+
+proc secondaryAddress*(f: Faker): string =
+  ## Generates random secondaryAddress.
+  runnableExamples:
+    let f = newFaker()
+    echo f.secondaryAddress()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.secondaryAddress(f)
+  of "en_US": address_en_US.secondaryAddress(f)
+  else: address_en_US.secondaryAddress(f)
+
+proc state*(f: Faker): string =
+  ## Generates random state.
+  runnableExamples:
+    let f = newFaker()
+    echo f.state()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.state(f)
+  of "en_US": address_en_US.state(f)
+  else: address_en_US.state(f)
+
+proc streetAddress*(f: Faker): string =
+  ## Generates random streetAddress.
+  runnableExamples:
+    let f = newFaker()
+    echo f.streetAddress()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.streetAddress(f)
+  of "en_US": address_en_US.streetAddress(f)
+  else: address_en_US.streetAddress(f)
+
+proc streetName*(f: Faker): string =
+  ## Generates random streetName.
+  runnableExamples:
+    let f = newFaker()
+    echo f.streetName()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.streetName(f)
+  of "en_US": address_en_US.streetName(f)
+  else: address_en_US.streetName(f)
+
+proc streetSuffix*(f: Faker): string =
+  ## Generates random streetSuffix.
+  runnableExamples:
+    let f = newFaker()
+    echo f.streetSuffix()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.streetSuffix(f)
+  of "en_US": address_en_US.streetSuffix(f)
+  else: address_en_US.streetSuffix(f)
+
+proc zipcode*(f: Faker): string =
+  ## Generates random zipcode.
+  runnableExamples:
+    let f = newFaker()
+    echo f.zipcode()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.zipcode(f)
+  of "en_US": address_en_US.zipcode(f)
+  else: address_en_US.zipcode(f)
+
+proc zipcodePlus4*(f: Faker): string =
+  ## Generates random zipcodePlus4.
+  runnableExamples:
+    let f = newFaker()
+    echo f.zipcodePlus4()
+
+  case f.locale
+  of "ja_JP": address_ja_JP.zipcodePlus4(f)
+  of "en_US": address_en_US.zipcodePlus4(f)
+  else: address_en_US.zipcodePlus4(f)
