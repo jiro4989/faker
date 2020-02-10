@@ -3,7 +3,8 @@ from strutils import join, align
 from math import `^`
 
 const
-  asciiUpperCase = {'A'..'Z'}
+  asciiUpperCase* = {'A'..'Z'}
+  asciiLowerCase* = {'a'..'z'}
 
 proc formatNumbers*(r: var Rand, format: string): string =
   ## Replace '#' to random number.
