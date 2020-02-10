@@ -3,6 +3,8 @@
 # See 'faker.nimble'.                             #
 # ----------------------------------------------- #
 
+## Warning: This module will be removed in future.
+
 import ../base
 import word/[word_ja_JP, word_en_US]
 export base

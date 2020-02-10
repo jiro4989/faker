@@ -3,5 +3,5 @@
 # See 'faker.nimble'.                             #
 # ----------------------------------------------- #
 
-import provider/[address, automotive, bank, company, currency, file, job, person, phone_number, user_agent, word]
-export address, automotive, bank, company, currency, file, job, person, phone_number, user_agent, word
+import provider/[address, automotive, bank, company, currency, file, job, person, phone_number, user_agent]
+export address, automotive, bank, company, currency, file, job, person, phone_number, user_agent
