@@ -90,7 +90,7 @@ TODO list.
 - [ ] faker.provider.color
 - [o] faker.provider.company
 - [ ] faker.provider.credit_card
-- [ ] faker.provider.currency
+- [o] faker.provider.currency
 - [ ] faker.provider.date_time
 - [ ] faker.provider.file
 - [ ] faker.provider.geo
