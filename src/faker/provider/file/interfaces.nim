@@ -8,4 +8,9 @@ import random
 import ../../base
 export base
 
-proc job*(f: Faker): string
+proc fileExtension*(f: Faker, category=""): string
+proc fileName*(f: Faker, category="", extension=""): string
+proc filePath*(f: Faker, depth=1, category="", extension=""): string
+proc mimeType*(f: Faker, category=""): string
+proc unixDevice*(f: Faker, prefix=""): string
+proc unixPartition*(f: Faker, prefix=""): string
