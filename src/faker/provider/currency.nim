@@ -8,15 +8,72 @@ import ../base
 import currency/[currency_en_US]
 export base
 
-genProc currency,
-  [
-    currency,
-    currencyCode,
-    currencyName,
-    currencySymbol,
-    cryptocurrency,
-    cryptocurrencyCode,
-    cryptocurrencyName,
-  ], [
-    en_US,
-  ]
+proc currency*(f: Faker): (string, string) =
+  ## Generates random currency.
+  runnableExamples:
+    let f = newFaker()
+    echo f.currency()
+
+  case f.locale
+  of "en_US": currency_en_US.currency(f)
+  else: currency_en_US.currency(f)
+
+proc currencyCode*(f: Faker): string =
+  ## Generates random currencyCode.
+  runnableExamples:
+    let f = newFaker()
+    echo f.currencyCode()
+
+  case f.locale
+  of "en_US": currency_en_US.currencyCode(f)
+  else: currency_en_US.currencyCode(f)
+
+proc currencyName*(f: Faker): string =
+  ## Generates random currencyName.
+  runnableExamples:
+    let f = newFaker()
+    echo f.currencyName()
+
+  case f.locale
+  of "en_US": currency_en_US.currencyName(f)
+  else: currency_en_US.currencyName(f)
+
+proc currencySymbol*(f: Faker): string =
+  ## Generates random currencySymbol.
+  runnableExamples:
+    let f = newFaker()
+    echo f.currencySymbol()
+
+  case f.locale
+  of "en_US": currency_en_US.currencySymbol(f)
+  else: currency_en_US.currencySymbol(f)
+
+proc cryptocurrency*(f: Faker): (string, string) =
+  ## Generates random cryptocurrency.
+  runnableExamples:
+    let f = newFaker()
+    echo f.cryptocurrency()
+
+  case f.locale
+  of "en_US": currency_en_US.cryptocurrency(f)
+  else: currency_en_US.cryptocurrency(f)
+
+proc cryptocurrencyCode*(f: Faker): string =
+  ## Generates random cryptocurrencyCode.
+  runnableExamples:
+    let f = newFaker()
+    echo f.cryptocurrencyCode()
+
+  case f.locale
+  of "en_US": currency_en_US.cryptocurrencyCode(f)
+  else: currency_en_US.cryptocurrencyCode(f)
+
+proc cryptocurrencyName*(f: Faker): string =
+  ## Generates random cryptocurrencyName.
+  runnableExamples:
+    let f = newFaker()
+    echo f.cryptocurrencyName()
+
+  case f.locale
+  of "en_US": currency_en_US.cryptocurrencyName(f)
+  else: currency_en_US.cryptocurrencyName(f)

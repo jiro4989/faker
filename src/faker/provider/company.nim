@@ -8,13 +8,46 @@ import ../base
 import company/[company_en_US, company_ja_JP]
 export base
 
-genProc company,
-  [
-    bs,
-    catchPhrase,
-    company,
-    companySuffix,
-  ], [
-    en_US,
-    ja_JP,
-  ]
+proc bs*(f: Faker): string =
+  ## Generates random bs.
+  runnableExamples:
+    let f = newFaker()
+    echo f.bs()
+
+  case f.locale
+  of "en_US": company_en_US.bs(f)
+  of "ja_JP": company_ja_JP.bs(f)
+  else: company_en_US.bs(f)
+
+proc catchPhrase*(f: Faker): string =
+  ## Generates random catchPhrase.
+  runnableExamples:
+    let f = newFaker()
+    echo f.catchPhrase()
+
+  case f.locale
+  of "en_US": company_en_US.catchPhrase(f)
+  of "ja_JP": company_ja_JP.catchPhrase(f)
+  else: company_en_US.catchPhrase(f)
+
+proc company*(f: Faker): string =
+  ## Generates random company.
+  runnableExamples:
+    let f = newFaker()
+    echo f.company()
+
+  case f.locale
+  of "en_US": company_en_US.company(f)
+  of "ja_JP": company_ja_JP.company(f)
+  else: company_en_US.company(f)
+
+proc companySuffix*(f: Faker): string =
+  ## Generates random companySuffix.
+  runnableExamples:
+    let f = newFaker()
+    echo f.companySuffix()
+
+  case f.locale
+  of "en_US": company_en_US.companySuffix(f)
+  of "ja_JP": company_ja_JP.companySuffix(f)
+  else: company_en_US.companySuffix(f)
