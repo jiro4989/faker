@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.10.0"
+version       = "0.11.0"
 author        = "jiro4989"
 description   = "faker is a Nim package that generates fake data for you."
 license       = "MIT"
@@ -30,7 +30,7 @@ proc addGeneratedText(lines: var seq[string]) =
 proc readPublicProcs(file: string): seq[string] =
   readFile(file)
     .split("\n")
-    .filterIt(it.startsWith("proc") and "*(f: Faker)" in it)
+    .filterIt(it.startsWith("proc") and "*(f: Faker" in it)
 
 proc readImplementedLocales(dir, provider: string): seq[string] =
   for path in listFiles(dir):
@@ -61,7 +61,7 @@ proc genProviderIndexFile(provider: string) =
     lines.add(&"    let f = newFaker()")
     let arg2 =
       if 1 < args.split(",").len:
-        args.replace("f: Faker, ", "")
+        args.replace("f: Faker, ", "").replace("(", "").replace(")", "")
       else:
         ""
     lines.add(&"    echo f.{procName}({arg2})")
