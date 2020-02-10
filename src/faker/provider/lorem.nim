@@ -3,10 +3,8 @@
 # See 'faker.nimble'.                             #
 # ----------------------------------------------- #
 
-## Warning: This module will be removed in future.
-
 import ../base
-import word/[word_ja_JP, word_en_US]
+import lorem/[lorem_ja_JP, lorem_en_US]
 export base
 
 proc word*(f: Faker): string =
@@ -16,6 +14,6 @@ proc word*(f: Faker): string =
     echo f.word()
 
   case f.locale
-  of "ja_JP": word_ja_JP.word(f)
-  of "en_US": word_en_US.word(f)
-  else: word_en_US.word(f)
+  of "ja_JP": lorem_ja_JP.word(f)
+  of "en_US": lorem_en_US.word(f)
+  else: lorem_en_US.word(f)

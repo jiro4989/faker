@@ -4,7 +4,7 @@ import tables
 
 include interfaces
 import ../util
-import ../word
+import ../lorem
 
 const
   applicationMimeTypes = @[

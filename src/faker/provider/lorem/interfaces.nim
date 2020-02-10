@@ -9,3 +9,10 @@ import ../../base
 export base
 
 proc word*(f: Faker): string
+# proc words*(f: Faker): string
+# proc sentence*(f: Faker): string
+# proc sentences*(f: Faker): string
+# proc paragraph*(f: Faker): string
+# proc paragraphs*(f: Faker): string
+# proc text*(f: Faker): string
+# proc texts*(f: Faker): string
