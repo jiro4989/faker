@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.11.0"
+version       = "0.12.1"
 author        = "jiro4989"
 description   = "faker is a Nim package that generates fake data for you."
 license       = "MIT"
