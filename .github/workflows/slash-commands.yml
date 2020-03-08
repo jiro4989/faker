@@ -23,29 +23,29 @@ jobs:
         uses: release-drafter/release-drafter@v5.3.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: &condition-release steps.command.outputs.command-name
+        if: steps.command.outputs.command-name
 
       # Generate document
       - uses: actions/checkout@v1
-        <<: *condition-release
+        if: steps.command.outputs.command-name
       - name: Cache choosenim
         id: cache-choosenim
         uses: actions/cache@v1
         with:
           path: ~/.choosenim
           key: ${{ runner.os }}-choosenim-${{ env.NIM_VERSION }}
-        <<: *condition-release
+        if: steps.command.outputs.command-name
       - uses: jiro4989/setup-nim-action@v1.0.1
-        <<: *condition-release
+        if: steps.command.outputs.command-name
       - name: Generate documents
         run: nimble docs
-        <<: *condition-release
+        if: steps.command.outputs.command-name
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.4.0
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./docs
-        <<: *condition-release
+        if: steps.command.outputs.command-name
 
       - run: echo "end"
