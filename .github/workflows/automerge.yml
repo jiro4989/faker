@@ -17,31 +17,8 @@ on:
   status: {}
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    env:
-      NIM_VERSION: 1.0.4
-    steps:
-    - uses: actions/checkout@v1
-    - name: Cache choosenim
-      id: cache-choosenim
-      uses: actions/cache@v1
-      with:
-        path: ~/.choosenim
-        key: ${{ runner.os }}-choosenim-${{ env.NIM_VERSION }}
-    - name: Cache nimble
-      id: cache-nimble
-      uses: actions/cache@v1
-      with:
-        path: ~/.nimble
-        key: ${{ runner.os }}-nimble-${{ hashFiles('*.nimble') }}
-    - uses: jiro4989/setup-nim-action@v1.0.1
-    - run: nimble build -Y
-    - run: nimble test -Y
-
   automerge:
     runs-on: ubuntu-latest
-    needs: test
     steps:
       - name: automerge
         uses: "pascalgn/automerge-action@v0.7.5"
