@@ -90,7 +90,7 @@ TODO list.
 - [o] faker.provider.file
 - [ ] faker.provider.geo
 - [ ] faker.provider.internet
-- [ ] faker.provider.isbn
+- [o] faker.provider.isbn
 - [o] faker.provider.job
 - [ ] faker.provider.lorem
 - [ ] faker.provider.misc
