@@ -34,4 +34,8 @@ suite "basic usage":
         echo fake.mimeType()
         echo fake.unixDevice()
         echo fake.unixPartition()
+        echo fake.isbn13()
+        echo fake.isbn10()
+        echo fake.isbn13("-")
+        echo fake.isbn10("-")
         echo "-----"
