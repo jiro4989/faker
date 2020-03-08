@@ -1,0 +1,22 @@
+name: slash commands
+
+on: issue_comment
+
+jobs:
+  slach-commands:
+    steps:
+      - name: Check for Command
+        id: command
+        uses: xt0rted/slash-command-action@v1
+        continue-on-error: true
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          command: release
+          reaction: "true"
+          reaction-type: "eyes"
+          allow-edits: "false"
+          permission-level: admin
+      - name: Action release
+        run: echo "release test"
+        if: steps.command.outputs.command-name
+      - run: echo "end"
