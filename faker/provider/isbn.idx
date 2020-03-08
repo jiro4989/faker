@@ -1,0 +1,2 @@
+isbn10	faker/provider/isbn.html#isbn10,Faker,string	isbn: isbn10(f: Faker; separator = &quot;&quot;): string	
+isbn13	faker/provider/isbn.html#isbn13,Faker,string	isbn: isbn13(f: Faker; separator = &quot;&quot;): string	
