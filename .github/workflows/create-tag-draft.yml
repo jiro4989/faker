@@ -1,0 +1,13 @@
+name: create tag draft
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  create-tag-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: release-drafter/release-drafter@v5.3.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
