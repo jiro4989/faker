@@ -38,4 +38,8 @@ suite "basic usage":
         echo fake.isbn10()
         echo fake.isbn13("-")
         echo fake.isbn10("-")
+        echo fake.boolean
+        echo fake.binary(1024)
+        echo fake.md5
+        echo fake.sha1
         echo "-----"

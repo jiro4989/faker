@@ -4,3 +4,6 @@ tests/*
 tests/*.exe
 !tests/*.nim
 !tests/*.nims
+
+tools/generator
+!tests/testdata
