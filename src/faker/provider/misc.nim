@@ -14,5 +14,15 @@ proc boolean*(f: Faker, chanceOfGettingTrue=50): bool =
     echo f.boolean(chanceOfGettingTrue=50)
 
   case f.locale
-  of "en_US": misc_en_US.boolean(f, chanceOfGettingTrue=50)
-  else: misc_en_US.boolean(f, chanceOfGettingTrue=50)
+  of "en_US": misc_en_US.boolean(f, chanceOfGettingTrue)
+  else: misc_en_US.boolean(f, chanceOfGettingTrue)
+
+proc binary*(f: Faker, length = 1048576): seq[byte] =
+  ## Generates random binary.
+  runnableExamples:
+    let f = newFaker()
+    echo f.binary(length = 1048576)
+
+  case f.locale
+  of "en_US": misc_en_US.binary(f, length)
+  else: misc_en_US.binary(f, length)
