@@ -38,4 +38,5 @@ suite "basic usage":
         echo fake.isbn10()
         echo fake.isbn13("-")
         echo fake.isbn10("-")
+        echo fake.boolean
         echo "-----"
