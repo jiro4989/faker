@@ -1,0 +1,4 @@
+boolean	faker/provider/misc.html#boolean,Faker,int	misc: boolean(f: Faker; chanceOfGettingTrue = 50): bool	
+binary	faker/provider/misc.html#binary,Faker,int	misc: binary(f: Faker; length = 1048576): seq[byte]	
+md5	faker/provider/misc.html#md5,Faker	misc: md5(f: Faker): string	
+sha1	faker/provider/misc.html#sha1,Faker	misc: sha1(f: Faker): string	
