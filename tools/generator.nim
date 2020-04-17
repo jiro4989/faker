@@ -1,6 +1,5 @@
 import strutils, sequtils, strformat, os
 from algorithm import sort
-
 type
   ProcDef = object
     name: string
@@ -62,7 +61,25 @@ proc generateProcDef(moduleName: string, p: ProcDef, locales: seq[string], defau
   result = lines.join("\n")
 
 proc main(): int =
-  discard
+  const dir = "src"/"faker"/"provider"
+  for kind, providerDir in dir.walkDir:
+    if kind == pcFile:
+      continue
+    var s: string
+    s.add("import ../base\n")
+    let
+      (_, moduleName, _) = providerDir.splitFile
+      locales = readLocalesFromDir(providerDir)
+      localesStr = locales.join(", ")
+      interfaceFile = providerDir/"interfaces.nim"
+      content = readFile(interfaceFile)
+      procDefs = content.parseProcDef()
+    s.add(&"import {moduleName}/[{localesStr}]\n")
+    for p in procDefs:
+      s.add(generateProcDef(moduleName, p, locales))
+    let outFile = &"{providerDir}.nim"
+    writeFile(outFile, s)
+    echo &"Generated: {outFile}"
 
 when isMainModule and not defined modeTest:
   quit main()
