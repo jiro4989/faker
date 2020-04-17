@@ -6,3 +6,4 @@ tests/*.exe
 !tests/*.nims
 
 tools/generator
+!tests/testdata
