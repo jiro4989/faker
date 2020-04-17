@@ -93,7 +93,7 @@ TODO list.
 - [o] faker.provider.isbn
 - [o] faker.provider.job
 - [ ] faker.provider.lorem
-- [ ] faker.provider.misc
+- [o] faker.provider.misc
 - [o] faker.provider.person
 - [o] faker.provider.phone_number
 - [ ] faker.provider.profile
