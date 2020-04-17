@@ -31,3 +31,8 @@ proc md5*(f: Faker): string =
   case f.locale
   of "en_US": misc_en_US.md5(f)
   else: misc_en_US.md5(f)
+
+proc sha1*(f: Faker): string =
+  case f.locale
+  of "en_US": misc_en_US.sha1(f)
+  else: misc_en_US.sha1(f)

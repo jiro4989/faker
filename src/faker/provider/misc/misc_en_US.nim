@@ -13,3 +13,9 @@ proc md5*(f: Faker): string =
   for b in f.binary(256):
     s.add(b.char)
   result = s.getMD5()
+
+proc sha1*(f: Faker): string =
+  var s: string
+  for b in f.binary(256):
+    s.add(b.char)
+  result = $s.secureHash()

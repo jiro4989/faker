@@ -41,4 +41,5 @@ suite "basic usage":
         echo fake.boolean
         echo fake.binary(1024)
         echo fake.md5
+        echo fake.sha1
         echo "-----"
