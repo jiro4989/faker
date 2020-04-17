@@ -124,12 +124,13 @@ Please see other module implements, and edit a generated module.
 Update provider code
 --------------------
 
-You can update `src/faker/provider/*.nim` codes with `nimble genProvs` task.
+You can update `src/faker/provider/*.nim` codes with `generator` tool.
 Run below if you had edited a new module.
 
 .. code-block:: Bash
 
-   $ nimble genProvs
+   $ nimble tool
+   $ ./tools/generator
 
 See `src/faker/provider/*.nim`.
 A new provider will be generated.
