@@ -131,3 +131,6 @@ task genProvs, "Generate provider file":
   lines.add(&"export {prov}")
   let body = lines.join("\n")
   writeFile(providerDir & ".nim", body)
+
+task tool, "Build tools":
+  exec "nim c tools/generator.nim"
