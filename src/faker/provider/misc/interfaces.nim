@@ -4,7 +4,7 @@
 # このモジュールをincludeしたモジュールは、このモジュールに定義しているプロシー
 # ジャを全て実装しないと、コンパイルが通らない。
 
-import random, sequtils
+import random, sequtils, md5
 import ../../base
 export base
 
@@ -15,3 +15,5 @@ proc boolean*(f: Faker, chanceOfGettingTrue=50): bool
 
 # 1048576 == 1 * 1024 * 1024
 proc binary*(f: Faker, length = 1048576): seq[byte]
+
+proc md5*(f: Faker): string

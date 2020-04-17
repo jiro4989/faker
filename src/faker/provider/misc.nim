@@ -26,3 +26,8 @@ proc binary*(f: Faker, length = 1048576): seq[byte] =
   case f.locale
   of "en_US": misc_en_US.binary(f, length)
   else: misc_en_US.binary(f, length)
+
+proc md5*(f: Faker): string =
+  case f.locale
+  of "en_US": misc_en_US.md5(f)
+  else: misc_en_US.md5(f)
