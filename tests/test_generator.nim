@@ -77,10 +77,12 @@ proc proc1*(f: Faker, n = 2): string
     """
     const want = @[
       ProcDef(name: "run",
+              argsDef: "f: Faker",
               argsExample: "",
               args: @["f"],
               returnType: "string"),
       ProcDef(name: "proc1",
+              argsDef: "f: Faker, n = 2",
               argsExample: "n = 2",
               args: @["f", "n"],
               returnType: "string"),
