@@ -4,7 +4,7 @@
 # ----------------------------------------------- #
 
 import ../base
-import lorem/[lorem_ja_JP, lorem_en_US]
+import lorem/[lorem_en_US, lorem_ja_JP]
 export base
 
 proc word*(f: Faker): string =
@@ -14,6 +14,6 @@ proc word*(f: Faker): string =
     echo f.word()
 
   case f.locale
-  of "ja_JP": lorem_ja_JP.word(f)
   of "en_US": lorem_en_US.word(f)
+  of "ja_JP": lorem_ja_JP.word(f)
   else: lorem_en_US.word(f)
