@@ -155,7 +155,7 @@ LICENSE
 
 MIT
 
-.. |gh-actions| image:: https://github.com/jiro4989/faker/workflows/build/badge.svg
+.. |gh-actions| image:: https://github.com/jiro4989/faker/workflows/test/badge.svg
    :target: https://github.com/jiro4989/faker/actions
 .. |nimble-version| image:: https://nimble.directory/ci/badges/faker/version.svg
    :target: https://nimble.directory/ci/badges/faker/nimdevel/output.html
