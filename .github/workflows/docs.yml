@@ -2,8 +2,8 @@ name: docs
 
 on:
   push:
-    # tags:
-    #   - 'v*.*.*'
+    tags:
+      - 'v*.*.*'
 
 env:
   nim-version: stable
