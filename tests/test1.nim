@@ -12,7 +12,7 @@ suite "basic usage":
     let locales = ["en_US", "ja_JP"]
     for locale in locales:
       let fake = newFaker(locale)
-      for i in 1..10:
+      for i in 1..100:
         echo fake.address()
         echo fake.phoneNumber()
         echo fake.job()
