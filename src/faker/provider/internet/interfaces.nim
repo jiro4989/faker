@@ -8,13 +8,6 @@ import random
 import ../../base
 export base
 
-proc safeDomainName*(f: Faker): string
-proc freeDomainName*(f: Faker): string
-proc safeEmail*(f: Faker): string
-proc freeEmail*(f: Faker): string
-proc email*(f: Faker): string
-proc topLevelDomain*(f: Faker): string
-
 const
   safeDomainNames = @["example.org", "example.com", "example.net"]
   freeDomainNames = @["gmail.com", "yahoo.co.jp", "hotmail.com"]
@@ -28,3 +21,7 @@ proc freeDomainName*(f: Faker): string =
 
 proc topLevelDomain*(f: Faker): string =
   f.rand.sample(topLevelDomains)
+
+proc safeEmail*(f: Faker): string
+proc freeEmail*(f: Faker): string
+proc email*(f: Faker): string
