@@ -44,7 +44,7 @@ proc parseArgs(line: string): seq[string] =
 proc parseReturnType(line: string): string =
   result = line.split("):")[1].strip
   if result.endsWith(" ="):
-    return result[0..^2]
+    return result[0..^3]
 
 proc parseProcDef(code: string): seq[ProcDef] =
   ## コードをパースしてプロシージャ定義を抽出する
