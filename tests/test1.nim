@@ -42,4 +42,10 @@ suite "basic usage":
         echo fake.binary(1024)
         echo fake.md5
         echo fake.sha1
+        echo fake.safeDomainName
+        echo fake.freeDomainName
+        echo fake.safeEmail
+        echo fake.freeEmail
+        echo fake.email
+        echo fake.topLevelDomain
         echo "-----"
