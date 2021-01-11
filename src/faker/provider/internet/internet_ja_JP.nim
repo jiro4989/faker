@@ -1,12 +1,12 @@
 include interfaces
 import strutils
-import ../person
+import ../person/person_ja_JP
 
 proc safeEmail*(f: Faker): string =
-  f.firstName.toLower & "@" & f.safeDomainName
+  f.firstRomanizedName.toLower & "@" & f.safeDomainName
 
 proc freeEmail*(f: Faker): string =
-  f.firstName.toLower & "@" & f.freeDomainName
+  f.firstRomanizedName.toLower & "@" & f.freeDomainName
 
 proc email*(f: Faker): string =
   let domain =
@@ -14,4 +14,4 @@ proc email*(f: Faker): string =
       f.freeDomainName
     else:
       f.safeDomainName
-  f.firstName.toLower & "@" & domain
+  f.firstRomanizedName.toLower & "@" & domain

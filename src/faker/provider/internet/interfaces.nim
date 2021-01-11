@@ -14,3 +14,17 @@ proc safeEmail*(f: Faker): string
 proc freeEmail*(f: Faker): string
 proc email*(f: Faker): string
 proc topLevelDomain*(f: Faker): string
+
+const
+  safeDomainNames = @["example.org", "example.com", "example.net"]
+  freeDomainNames = @["gmail.com", "yahoo.co.jp", "hotmail.com"]
+  topLevelDomains = @["com", "biz", "info", "net", "org"]
+
+proc safeDomainName*(f: Faker): string =
+  f.rand.sample(safeDomainNames)
+
+proc freeDomainName*(f: Faker): string =
+  f.rand.sample(freeDomainNames)
+
+proc topLevelDomain*(f: Faker): string =
+  f.rand.sample(topLevelDomains)
