@@ -1,0 +1,6 @@
+safeDomainName	faker/provider/internet.html#safeDomainName,Faker	internet: safeDomainName(f: Faker): string	
+freeDomainName	faker/provider/internet.html#freeDomainName,Faker	internet: freeDomainName(f: Faker): string	
+topLevelDomain	faker/provider/internet.html#topLevelDomain,Faker	internet: topLevelDomain(f: Faker): string	
+safeEmail	faker/provider/internet.html#safeEmail,Faker	internet: safeEmail(f: Faker): string	
+freeEmail	faker/provider/internet.html#freeEmail,Faker	internet: freeEmail(f: Faker): string	
+email	faker/provider/internet.html#email,Faker	internet: email(f: Faker): string	

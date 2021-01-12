@@ -1,4 +1,4 @@
-使用例	person_ja_JP.html#使用例	 使用例	
+使用例	faker/provider/person/person_ja_JP.html#使用例	 使用例	
 firstName	faker/provider/person/person_ja_JP.html#firstName,Faker	person_ja_JP: firstName(f: Faker): string	
 firstNameFemale	faker/provider/person/person_ja_JP.html#firstNameFemale,Faker	person_ja_JP: firstNameFemale(f: Faker): string	
 firstNameMale	faker/provider/person/person_ja_JP.html#firstNameMale,Faker	person_ja_JP: firstNameMale(f: Faker): string	

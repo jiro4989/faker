@@ -1,4 +1,4 @@
-Usage	company_en_US.html#usage	 Usage	
+Usage	faker/provider/company/company_en_US.html#usage	 Usage	
 companySuffix	faker/provider/company/company_en_US.html#companySuffix,Faker	company_en_US: companySuffix(f: Faker): string	
 company	faker/provider/company/company_en_US.html#company,Faker	company_en_US: company(f: Faker): string	
 bs	faker/provider/company/company_en_US.html#bs,Faker	company_en_US: bs(f: Faker): string	

@@ -1,0 +1,6 @@
+safeDomainName	faker/provider/internet/internet_en_US.html#safeDomainName,Faker	internet_en_US: safeDomainName(f: Faker): string	
+freeDomainName	faker/provider/internet/internet_en_US.html#freeDomainName,Faker	internet_en_US: freeDomainName(f: Faker): string	
+topLevelDomain	faker/provider/internet/internet_en_US.html#topLevelDomain,Faker	internet_en_US: topLevelDomain(f: Faker): string	
+safeEmail	faker/provider/internet/internet_en_US.html#safeEmail,Faker	internet_en_US: safeEmail(f: Faker): string	
+freeEmail	faker/provider/internet/internet_en_US.html#freeEmail,Faker	internet_en_US: freeEmail(f: Faker): string	
+email	faker/provider/internet/internet_en_US.html#email,Faker	internet_en_US: email(f: Faker): string	

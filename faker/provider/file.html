@@ -20,7 +20,7 @@
 <title>faker/provider/file</title>
 <link rel="stylesheet" type="text/css" href="../../nimdoc.out.css">
 
-<script type="text/javascript" src="dochack.js"></script>
+<script type="text/javascript" src="../../dochack.js"></script>
 
 <script type="text/javascript">
 function main() {
@@ -47,21 +47,12 @@ function main() {
 
   toggleSwitch.addEventListener('change', switchTheme, false);
 
+  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+  if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
 
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.setAttribute('data-theme', "dark");
-    toggleSwitch.checked = true;
-  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    document.documentElement.setAttribute('data-theme', "light");
-    toggleSwitch.checked = false;
-  } else {
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-    if (currentTheme) {
-      document.documentElement.setAttribute('data-theme', currentTheme);
-
-      if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-      }
+    if (currentTheme === 'dark') {
+      toggleSwitch.checked = true;
     }
   }
 }
@@ -83,6 +74,9 @@ function main() {
   </div>
   <div id="global-links">
     <ul class="simple">
+    <li>
+      <a href="../../theindex.html">Index</a>
+    </li>
     </ul>
   </div>
   <div id="searchInputDiv">
@@ -106,18 +100,36 @@ function main() {
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
+      <ul class="simple nested-toc-section">fileName
+      <li><a class="reference" href="#fileName%2CFaker%2Cstring%2Cstring"
+    title="fileName(f: Faker; category = &quot;&quot;; extension = &quot;&quot;): string">fileName,<wbr>Faker,<wbr>string,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">unixDevice
+      <li><a class="reference" href="#unixDevice%2CFaker%2Cstring"
+    title="unixDevice(f: Faker; prefix = &quot;&quot;): string">unixDevice,<wbr>Faker,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">filePath
+      <li><a class="reference" href="#filePath%2CFaker%2Cint%2Cstring%2Cstring"
+    title="filePath(f: Faker; depth = 1; category = &quot;&quot;; extension = &quot;&quot;): string">filePath,<wbr>Faker,<wbr>int,<wbr>string,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">fileExtension
       <li><a class="reference" href="#fileExtension%2CFaker%2Cstring"
-    title="fileExtension(f: Faker; category = &quot;&quot;): string"><wbr />file<wbr />Extension<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#fileName%2CFaker%2Cstring%2Cstring"
-    title="fileName(f: Faker; category = &quot;&quot;; extension = &quot;&quot;): string"><wbr />file<wbr />Name<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#filePath%2CFaker%2Cint%2Cstring%2Cstring"
-    title="filePath(f: Faker; depth = 1; category = &quot;&quot;; extension = &quot;&quot;): string"><wbr />file<wbr />Path<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#mimeType%2CFaker%2Cstring"
-    title="mimeType(f: Faker; category = &quot;&quot;): string"><wbr />mime<wbr />Type<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#unixDevice%2CFaker%2Cstring"
-    title="unixDevice(f: Faker; prefix = &quot;&quot;): string"><wbr />unix<wbr />Device<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#unixPartition%2CFaker%2Cstring"
-    title="unixPartition(f: Faker; prefix = &quot;&quot;): string"><wbr />unix<wbr />Partition<span class="attachedType"></span></a></li>
+    title="fileExtension(f: Faker; category = &quot;&quot;): string">fileExtension,<wbr>Faker,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">unixPartition
+      <li><a class="reference" href="#unixPartition%2CFaker%2Cstring"
+    title="unixPartition(f: Faker; prefix = &quot;&quot;): string">unixPartition,<wbr>Faker,<wbr>string</a></li>
+
+  </ul>
+  <ul class="simple nested-toc-section">mimeType
+      <li><a class="reference" href="#mimeType%2CFaker%2Cstring"
+    title="mimeType(f: Faker; category = &quot;&quot;): string">mimeType,<wbr>Faker,<wbr>string</a></li>
+
+  </ul>
 
   </ul>
 </li>
@@ -144,13 +156,14 @@ function main() {
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
 <a id="fileExtension,Faker,string"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#fileExtension%2CFaker%2Cstring"><span class="Identifier">fileExtension</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">;</span> <span class="Identifier">category</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#fileExtension%2CFaker%2Cstring"><span class="Identifier">fileExtension</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">;</span> <span class="Identifier">category</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Generates random fileExtension.
-<p><strong class="examples_text">Examples:</strong></p>
-<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="Other">)</span>
-<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">fileExtension</span><span class="Other">(</span><span class="Identifier">category</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span></pre>
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newFaker</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Operator">.</span><span class="Identifier">fileExtension</span><span class="Punctuation">(</span><span class="Identifier">category</span><span class="Operator">=</span><span class="StringLit">&quot;&quot;</span><span class="Punctuation">)</span></pre>
 
 </dd>
 <a id="fileName,Faker,string,string"></a>
@@ -159,9 +172,9 @@ Generates random fileExtension.
 <dd>
 
 Generates random fileName.
-<p><strong class="examples_text">Examples:</strong></p>
-<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="Other">)</span>
-<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">fileName</span><span class="Other">(</span><span class="Identifier">category</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">,</span> <span class="Identifier">extension</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span></pre>
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newFaker</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Operator">.</span><span class="Identifier">fileName</span><span class="Punctuation">(</span><span class="Identifier">category</span><span class="Operator">=</span><span class="StringLit">&quot;&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">extension</span><span class="Operator">=</span><span class="StringLit">&quot;&quot;</span><span class="Punctuation">)</span></pre>
 
 </dd>
 <a id="filePath,Faker,int,string,string"></a>
@@ -170,9 +183,9 @@ Generates random fileName.
 <dd>
 
 Generates random filePath.
-<p><strong class="examples_text">Examples:</strong></p>
-<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="Other">)</span>
-<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">filePath</span><span class="Other">(</span><span class="Identifier">depth</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">category</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">,</span> <span class="Identifier">extension</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span></pre>
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newFaker</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Operator">.</span><span class="Identifier">filePath</span><span class="Punctuation">(</span><span class="Identifier">depth</span><span class="Operator">=</span><span class="DecNumber">1</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">category</span><span class="Operator">=</span><span class="StringLit">&quot;&quot;</span><span class="Punctuation">,</span><span class="Whitespace"> </span><span class="Identifier">extension</span><span class="Operator">=</span><span class="StringLit">&quot;&quot;</span><span class="Punctuation">)</span></pre>
 
 </dd>
 <a id="mimeType,Faker,string"></a>
@@ -180,9 +193,9 @@ Generates random filePath.
 <dd>
 
 Generates random mimeType.
-<p><strong class="examples_text">Examples:</strong></p>
-<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="Other">)</span>
-<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">mimeType</span><span class="Other">(</span><span class="Identifier">category</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span></pre>
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newFaker</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Operator">.</span><span class="Identifier">mimeType</span><span class="Punctuation">(</span><span class="Identifier">category</span><span class="Operator">=</span><span class="StringLit">&quot;&quot;</span><span class="Punctuation">)</span></pre>
 
 </dd>
 <a id="unixDevice,Faker,string"></a>
@@ -190,19 +203,20 @@ Generates random mimeType.
 <dd>
 
 Generates random unixDevice.
-<p><strong class="examples_text">Examples:</strong></p>
-<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="Other">)</span>
-<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">unixDevice</span><span class="Other">(</span><span class="Identifier">prefix</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span></pre>
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newFaker</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Operator">.</span><span class="Identifier">unixDevice</span><span class="Punctuation">(</span><span class="Identifier">prefix</span><span class="Operator">=</span><span class="StringLit">&quot;&quot;</span><span class="Punctuation">)</span></pre>
 
 </dd>
 <a id="unixPartition,Faker,string"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#unixPartition%2CFaker%2Cstring"><span class="Identifier">unixPartition</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">;</span> <span class="Identifier">prefix</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#unixPartition%2CFaker%2Cstring"><span class="Identifier">unixPartition</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">;</span> <span class="Identifier">prefix</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Generates random unixPartition.
-<p><strong class="examples_text">Examples:</strong></p>
-<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">newFaker</span><span class="Other">(</span><span class="Other">)</span>
-<span class="Identifier">echo</span> <span class="Identifier">f</span><span class="Other">.</span><span class="Identifier">unixPartition</span><span class="Other">(</span><span class="Identifier">prefix</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span></pre>
+<p><strong class="examples_text">Example:</strong></p>
+<pre class="listing"><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newFaker</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Operator">.</span><span class="Identifier">unixPartition</span><span class="Punctuation">(</span><span class="Identifier">prefix</span><span class="Operator">=</span><span class="StringLit">&quot;&quot;</span><span class="Punctuation">)</span></pre>
 
 </dd>
 
@@ -210,7 +224,7 @@ Generates random unixPartition.
 <div class="section" id="19">
 <h1><a class="toc-backref" href="#19">Exports</a></h1>
 <dl class="item">
-<a href="../base.html#Faker"><span class="Identifier">Faker</span></a>, <a class="reference external" href="../base.html">../base</a>, <a href="../base.html#newFaker"><span class="Identifier">newFaker</span></a>
+<a href="../base.html#Faker"><span class="Identifier">Faker</span></a>, <a href="../base.html#newFaker,string,int"><span class="Identifier">newFaker</span></a>
 </dl></div>
 
   </div>
@@ -220,7 +234,7 @@ Generates random unixPartition.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-08-16 05:02:05 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2021-01-12 00:02:26 UTC</small>
       </div>
     </div>
   </div>

@@ -1,2 +1,2 @@
-使用例	lorem_ja_JP.html#使用例	 使用例	
+使用例	faker/provider/lorem/lorem_ja_JP.html#使用例	 使用例	
 word	faker/provider/lorem/lorem_ja_JP.html#word,Faker	lorem_ja_JP: word(f: Faker): string	

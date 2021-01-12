@@ -1,2 +1,2 @@
-使用例	job_ja_JP.html#使用例	 使用例	
+使用例	faker/provider/job/job_ja_JP.html#使用例	 使用例	
 job	faker/provider/job/job_ja_JP.html#job,Faker	job_ja_JP: job(f: Faker): string	

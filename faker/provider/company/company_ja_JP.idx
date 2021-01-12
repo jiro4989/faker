@@ -1,4 +1,4 @@
-使用例	company_ja_JP.html#使用例	 使用例	
+使用例	faker/provider/company/company_ja_JP.html#使用例	 使用例	
 companyPrefix	faker/provider/company/company_ja_JP.html#companyPrefix,Faker	company_ja_JP: companyPrefix(f: Faker): string	
 companyCategory	faker/provider/company/company_ja_JP.html#companyCategory,Faker	company_ja_JP: companyCategory(f: Faker): string	
 company	faker/provider/company/company_ja_JP.html#company,Faker	company_ja_JP: company(f: Faker): string	
