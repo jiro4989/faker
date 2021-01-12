@@ -3,5 +3,5 @@
 # See 'tools/generator'.                          #
 # ----------------------------------------------- #
 
-import provider/[address, automotive, bank, company, currency, file, isbn, job, lorem, misc, person, phone_number, user_agent]
-export address, automotive, bank, company, currency, file, isbn, job, lorem, misc, person, phone_number, user_agent
+import provider/[address, automotive, bank, company, currency, file, internet, isbn, job, lorem, misc, person, phone_number, user_agent]
+export address, automotive, bank, company, currency, file, internet, isbn, job, lorem, misc, person, phone_number, user_agent

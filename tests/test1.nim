@@ -12,7 +12,7 @@ suite "basic usage":
     let locales = ["en_US", "ja_JP"]
     for locale in locales:
       let fake = newFaker(locale)
-      for i in 1..10:
+      for i in 1..100:
         echo fake.address()
         echo fake.phoneNumber()
         echo fake.job()
@@ -42,4 +42,10 @@ suite "basic usage":
         echo fake.binary(1024)
         echo fake.md5
         echo fake.sha1
+        echo fake.safeDomainName
+        echo fake.freeDomainName
+        echo fake.safeEmail
+        echo fake.freeEmail
+        echo fake.email
+        echo fake.topLevelDomain
         echo "-----"
