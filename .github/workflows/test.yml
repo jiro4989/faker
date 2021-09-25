@@ -2,7 +2,15 @@ name: test
 
 on:
   push:
+    branches:
+      - master
+    paths:
+      - '**.nim'
+      - '.github/workflows/*'
   pull_request:
+    paths:
+      - '**.nim'
+      - '.github/workflows/*'
 
 jobs:
   skip:
@@ -20,10 +28,15 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        nim-version: ['1.0.x', '1.2.x', 'stable']
+        nim-version:
+          - '1.0.0'
+          - '1.0.x'
+          - '1.2.x'
+          - '1.4.x'
+          - 'stable'
     needs: before
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: jiro4989/setup-nim-action@v1
         with:
           nim-version: ${{ matrix.nim-version }}
