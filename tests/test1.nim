@@ -48,4 +48,5 @@ suite "basic usage":
         echo fake.freeEmail
         echo fake.email
         echo fake.topLevelDomain
+        echo fake.dangerPassword
         echo "-----"
