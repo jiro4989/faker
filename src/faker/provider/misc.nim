@@ -46,3 +46,13 @@ proc sha1*(f: Faker): string =
   case f.locale
   of "en_US": misc_en_US.sha1(f)
   else: misc_en_US.sha1(f)
+
+proc dangerPassword*(f: Faker, specialChars = specialCharacters): string =
+  ## Generates random dangerPassword.
+  runnableExamples:
+    let f = newFaker()
+    echo f.dangerPassword(specialChars = specialCharacters)
+
+  case f.locale
+  of "en_US": misc_en_US.dangerPassword(f, specialChars)
+  else: misc_en_US.dangerPassword(f, specialChars)
