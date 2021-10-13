@@ -14,17 +14,6 @@ on:
       - '.github/workflows/*'
 
 jobs:
-  skip:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Skip job"
-
-  before:
-    runs-on: ubuntu-latest
-    if: "! contains(github.event.head_commit.message, '[skip ci]')"
-    steps:
-      - run: echo "not contains '[skip ci]'"
-
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -35,7 +24,6 @@ jobs:
           - '1.2.x'
           - '1.4.x'
           - 'stable'
-    needs: before
     steps:
       - uses: actions/checkout@v2
       - uses: jiro4989/setup-nim-action@v1
