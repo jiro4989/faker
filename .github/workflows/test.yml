@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - develop
     paths:
       - '**.nim'
       - '.github/workflows/*'
