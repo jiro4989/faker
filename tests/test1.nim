@@ -9,7 +9,7 @@ suite "basic usage":
     echo fake.phoneNumber()
     echo fake.job()
   test "generate random values by loop":
-    let locales = ["en_US", "ja_JP"]
+    let locales = ["en_US", "ja_JP", "fa_IR"]
     for locale in locales:
       let fake = newFaker(locale)
       for i in 1..100:
