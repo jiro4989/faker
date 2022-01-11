@@ -70,6 +70,7 @@ Locale  Description
 ======  ===========
 en_US   English
 ja_JP   Japanese
+fa_IR   Persian
 ======  ===========
 
 Providers

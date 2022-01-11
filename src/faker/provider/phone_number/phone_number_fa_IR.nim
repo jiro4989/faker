@@ -23,7 +23,7 @@ proc phoneNumber*(f: Faker): string =
   f.formatNumbers(formats)
 
 proc msisdn*(f: Faker): string =
-  ## ランダムにMSISDNを返す。
+  ## شماره به فرمت MSISDN
   runnableExamples:
     let f = newFaker("fa_IR")
     echo f.msisdn()
