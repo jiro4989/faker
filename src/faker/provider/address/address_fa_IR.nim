@@ -3,22 +3,9 @@ runnableExamples:
   let f = newFaker("fa_IR")
   echo f.address()
   ## Output:
-  ## TODO   茨城県港区東三島31丁目3番16号
-  for i in 1..10:
-    ## TODO
-    echo f.address()
-##
-## 以下に英語と日本語での言い換え用語の表を示します。
-##
-## ==============  ==============  ===============  ==============  ===============  ==============
-## 日本語名称      プロシージャ名  アメリカ名称     プロシージャ名  イギリス名称     プロシージャ名
-## ==============  ==============  ===============  ==============  ===============  ==============
-## 郵便番号        postcode        郵便番号         zipcode         郵便番号         postalcode
-## 都道府県        prefecture      州               state           -                -
-## 番地            ban             番地             street          -                -
-## 市町村          city            市               city            -                -
-##
-import random, strutils
+  ## استان سمنان شهر فیروزآباد بردسکن خیابان تبریزی کوچه باهنر پلاک 7 طبقه 5
+
+import random
 import strformat
 
 include interfaces
