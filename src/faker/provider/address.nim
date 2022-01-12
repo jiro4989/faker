@@ -4,7 +4,7 @@
 # ----------------------------------------------- #
 
 import ../base
-import address/[address_ja_JP, address_en_US]
+import address/[address_ja_JP, address_en_US, address_fa_IR]
 export base
 
 proc address*(f: Faker): string =
@@ -16,6 +16,7 @@ proc address*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.address(f)
   of "en_US": address_en_US.address(f)
+  of "fa_IR": address_fa_IR.address(f)
   else: address_en_US.address(f)
 
 proc buildingNumber*(f: Faker): string =
@@ -27,6 +28,7 @@ proc buildingNumber*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.buildingNumber(f)
   of "en_US": address_en_US.buildingNumber(f)
+  of "fa_IR": address_fa_IR.buildingNumber(f)
   else: address_en_US.buildingNumber(f)
 
 proc city*(f: Faker): string =
@@ -38,6 +40,7 @@ proc city*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.city(f)
   of "en_US": address_en_US.city(f)
+  of "fa_IR": address_fa_IR.city(f)
   else: address_en_US.city(f)
 
 proc cityPrefix*(f: Faker): string =
@@ -49,6 +52,7 @@ proc cityPrefix*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.cityPrefix(f)
   of "en_US": address_en_US.cityPrefix(f)
+  of "fa_IR": address_fa_IR.cityPrefix(f)
   else: address_en_US.cityPrefix(f)
 
 proc citySuffix*(f: Faker): string =
@@ -60,6 +64,7 @@ proc citySuffix*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.citySuffix(f)
   of "en_US": address_en_US.citySuffix(f)
+  of "fa_IR": address_fa_IR.citySuffix(f)
   else: address_en_US.citySuffix(f)
 
 proc country*(f: Faker): string =
@@ -71,6 +76,7 @@ proc country*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.country(f)
   of "en_US": address_en_US.country(f)
+  of "fa_IR": address_fa_IR.country(f)
   else: address_en_US.country(f)
 
 proc militaryApo*(f: Faker): string =
@@ -82,6 +88,7 @@ proc militaryApo*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.militaryApo(f)
   of "en_US": address_en_US.militaryApo(f)
+  of "fa_IR": address_fa_IR.militaryApo(f)
   else: address_en_US.militaryApo(f)
 
 proc militaryDpo*(f: Faker): string =
@@ -93,6 +100,7 @@ proc militaryDpo*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.militaryDpo(f)
   of "en_US": address_en_US.militaryDpo(f)
+  of "fa_IR": address_fa_IR.militaryDpo(f)
   else: address_en_US.militaryDpo(f)
 
 proc militaryShip*(f: Faker): string =
@@ -104,6 +112,7 @@ proc militaryShip*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.militaryShip(f)
   of "en_US": address_en_US.militaryShip(f)
+  of "fa_IR": address_fa_IR.militaryShip(f)
   else: address_en_US.militaryShip(f)
 
 proc militaryState*(f: Faker): string =
@@ -115,6 +124,7 @@ proc militaryState*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.militaryState(f)
   of "en_US": address_en_US.militaryState(f)
+  of "fa_IR": address_fa_IR.militaryState(f)
   else: address_en_US.militaryState(f)
 
 proc postalcode*(f: Faker): string =
@@ -126,6 +136,7 @@ proc postalcode*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.postalcode(f)
   of "en_US": address_en_US.postalcode(f)
+  of "fa_IR": address_fa_IR.postalcode(f)
   else: address_en_US.postalcode(f)
 
 proc postalcodePlus4*(f: Faker): string =
@@ -137,6 +148,7 @@ proc postalcodePlus4*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.postalcodePlus4(f)
   of "en_US": address_en_US.postalcodePlus4(f)
+  of "fa_IR": address_fa_IR.postalcodePlus4(f)
   else: address_en_US.postalcodePlus4(f)
 
 proc postcode*(f: Faker): string =
@@ -148,6 +160,7 @@ proc postcode*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.postcode(f)
   of "en_US": address_en_US.postcode(f)
+  of "fa_IR": address_fa_IR.postcode(f)
   else: address_en_US.postcode(f)
 
 proc secondaryAddress*(f: Faker): string =
@@ -159,6 +172,7 @@ proc secondaryAddress*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.secondaryAddress(f)
   of "en_US": address_en_US.secondaryAddress(f)
+  of "fa_IR": address_fa_IR.secondaryAddress(f)
   else: address_en_US.secondaryAddress(f)
 
 proc state*(f: Faker): string =
@@ -170,6 +184,7 @@ proc state*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.state(f)
   of "en_US": address_en_US.state(f)
+  of "fa_IR": address_fa_IR.state(f)
   else: address_en_US.state(f)
 
 proc streetAddress*(f: Faker): string =
@@ -181,6 +196,7 @@ proc streetAddress*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.streetAddress(f)
   of "en_US": address_en_US.streetAddress(f)
+  of "fa_IR": address_fa_IR.streetAddress(f)
   else: address_en_US.streetAddress(f)
 
 proc streetName*(f: Faker): string =
@@ -192,6 +208,7 @@ proc streetName*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.streetName(f)
   of "en_US": address_en_US.streetName(f)
+  of "fa_IR": address_fa_IR.streetName(f)
   else: address_en_US.streetName(f)
 
 proc streetSuffix*(f: Faker): string =
@@ -203,6 +220,7 @@ proc streetSuffix*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.streetSuffix(f)
   of "en_US": address_en_US.streetSuffix(f)
+  of "fa_IR": address_fa_IR.streetSuffix(f)
   else: address_en_US.streetSuffix(f)
 
 proc zipcode*(f: Faker): string =
@@ -214,6 +232,7 @@ proc zipcode*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.zipcode(f)
   of "en_US": address_en_US.zipcode(f)
+  of "fa_IR": address_fa_IR.zipcode(f)
   else: address_en_US.zipcode(f)
 
 proc zipcodePlus4*(f: Faker): string =
@@ -225,4 +244,5 @@ proc zipcodePlus4*(f: Faker): string =
   case f.locale
   of "ja_JP": address_ja_JP.zipcodePlus4(f)
   of "en_US": address_en_US.zipcodePlus4(f)
+  of "fa_IR": address_fa_IR.zipcodePlus4(f)
   else: address_en_US.zipcodePlus4(f)

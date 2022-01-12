@@ -4,7 +4,7 @@
 # ----------------------------------------------- #
 
 import ../base
-import job/[job_en_US, job_ja_JP]
+import job/[job_en_US, job_ja_JP, job_fa_IR]
 export base
 
 proc job*(f: Faker): string =
@@ -16,4 +16,5 @@ proc job*(f: Faker): string =
   case f.locale
   of "en_US": job_en_US.job(f)
   of "ja_JP": job_ja_JP.job(f)
+  of "fa_IR": job_fa_IR.job(f)
   else: job_en_US.job(f)

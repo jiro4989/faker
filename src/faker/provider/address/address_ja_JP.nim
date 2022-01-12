@@ -391,7 +391,7 @@ const
 
   buildingNames = @["パレス", "ハイツ", "コーポ", "アーバン", "クレスト", "パーク", "シティ", "シャルム", "コート"]
 
-  countryCodes = @[
+  countryCodes* = @[
     "AC", "AD", "AE", "AF", "AG", "AI", "AL", "AM", "AN", "AO",
     "AQ", "AR", "AS", "AT", "AU", "AW", "AZ", "BA", "BB", "BD",
     "BE", "BF", "BG", "BH", "BI", "BJ", "BM", "BN", "BO", "BR",
