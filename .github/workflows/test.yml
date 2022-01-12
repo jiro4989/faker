@@ -41,4 +41,4 @@ jobs:
       - uses: jiro4989/setup-nim-action@v1
         with:
           nim-version: 1.4.8 # FIXME
-      - run: nimble doc --index:on --project --out:${{ env.deploy-dir }} ${{ env.nim-src }}
+      - run: nimble doc --index:on --project src/faker.nim
