@@ -1,0 +1,2 @@
+phoneNumber	faker/provider/phone_number/phone_number_fa_IR.html#phoneNumber,Faker	phone_number_fa_IR: phoneNumber(f: Faker): string	
+msisdn	faker/provider/phone_number/phone_number_fa_IR.html#msisdn,Faker	phone_number_fa_IR: msisdn(f: Faker): string	

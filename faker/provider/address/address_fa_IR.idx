@@ -1,0 +1,27 @@
+prefecture	faker/provider/address/address_fa_IR.html#prefecture,Faker	address_fa_IR: prefecture(f: Faker): string	
+city	faker/provider/address/address_fa_IR.html#city,Faker	address_fa_IR: city(f: Faker): string	
+country	faker/provider/address/address_fa_IR.html#country,Faker	address_fa_IR: country(f: Faker): string	
+town	faker/provider/address/address_fa_IR.html#town,Faker	address_fa_IR: town(f: Faker): string	
+postcode	faker/provider/address/address_fa_IR.html#postcode,Faker	address_fa_IR: postcode(f: Faker): string	
+zipcode	faker/provider/address/address_fa_IR.html#zipcode,Faker	address_fa_IR: zipcode(f: Faker): string	
+postalcode	faker/provider/address/address_fa_IR.html#postalcode,Faker	address_fa_IR: postalcode(f: Faker): string	
+buildingNumber	faker/provider/address/address_fa_IR.html#buildingNumber,Faker	address_fa_IR: buildingNumber(f: Faker): string	
+floorNumber	faker/provider/address/address_fa_IR.html#floorNumber,Faker	address_fa_IR: floorNumber(f: Faker): string	
+countryCode	faker/provider/address/address_fa_IR.html#countryCode,Faker,string	address_fa_IR: countryCode(f: Faker; representation: string): string	
+address	faker/provider/address/address_fa_IR.html#address,Faker	address_fa_IR: address(f: Faker): string	
+cityPrefix	faker/provider/address/address_fa_IR.html#cityPrefix,Faker	address_fa_IR: cityPrefix(f: Faker): string	
+citySuffix	faker/provider/address/address_fa_IR.html#citySuffix,Faker	address_fa_IR: citySuffix(f: Faker): string	
+militaryApo	faker/provider/address/address_fa_IR.html#militaryApo,Faker	address_fa_IR: militaryApo(f: Faker): string	
+militaryDpo	faker/provider/address/address_fa_IR.html#militaryDpo,Faker	address_fa_IR: militaryDpo(f: Faker): string	
+militaryShip	faker/provider/address/address_fa_IR.html#militaryShip,Faker	address_fa_IR: militaryShip(f: Faker): string	
+militaryState	faker/provider/address/address_fa_IR.html#militaryState,Faker	address_fa_IR: militaryState(f: Faker): string	
+postalcodeInState	faker/provider/address/address_fa_IR.html#postalcodeInState,Faker,string	address_fa_IR: postalcodeInState(f: Faker; stateAbbr: string): string	
+postalcodePlus4	faker/provider/address/address_fa_IR.html#postalcodePlus4,Faker	address_fa_IR: postalcodePlus4(f: Faker): string	
+secondaryAddress	faker/provider/address/address_fa_IR.html#secondaryAddress,Faker	address_fa_IR: secondaryAddress(f: Faker): string	
+state	faker/provider/address/address_fa_IR.html#state,Faker	address_fa_IR: state(f: Faker): string	
+stateAbbr	faker/provider/address/address_fa_IR.html#stateAbbr,Faker,bool	address_fa_IR: stateAbbr(f: Faker; includeTerritories: bool): string	
+streetAddress	faker/provider/address/address_fa_IR.html#streetAddress,Faker	address_fa_IR: streetAddress(f: Faker): string	
+streetName	faker/provider/address/address_fa_IR.html#streetName,Faker	address_fa_IR: streetName(f: Faker): string	
+streetSuffix	faker/provider/address/address_fa_IR.html#streetSuffix,Faker	address_fa_IR: streetSuffix(f: Faker): string	
+zipcodeInState	faker/provider/address/address_fa_IR.html#zipcodeInState,Faker,string	address_fa_IR: zipcodeInState(f: Faker; stateAbbr: string): string	
+zipcodePlus4	faker/provider/address/address_fa_IR.html#zipcodePlus4,Faker	address_fa_IR: zipcodePlus4(f: Faker): string	

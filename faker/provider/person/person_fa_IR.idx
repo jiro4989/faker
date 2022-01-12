@@ -1,0 +1,16 @@
+finglish	faker/provider/person/person_fa_IR.html#finglish	person_fa_IR: finglish	
+firstName	faker/provider/person/person_fa_IR.html#firstName,Faker	person_fa_IR: firstName(f: Faker): string	
+firstNameFemale	faker/provider/person/person_fa_IR.html#firstNameFemale,Faker	person_fa_IR: firstNameFemale(f: Faker): string	
+firstNameMale	faker/provider/person/person_fa_IR.html#firstNameMale,Faker	person_fa_IR: firstNameMale(f: Faker): string	
+lastName	faker/provider/person/person_fa_IR.html#lastName,Faker	person_fa_IR: lastName(f: Faker): string	
+lastNameFemale	faker/provider/person/person_fa_IR.html#lastNameFemale,Faker	person_fa_IR: lastNameFemale(f: Faker): string	
+lastNameMale	faker/provider/person/person_fa_IR.html#lastNameMale,Faker	person_fa_IR: lastNameMale(f: Faker): string	
+prefix	faker/provider/person/person_fa_IR.html#prefix,Faker	person_fa_IR: prefix(f: Faker): string	
+prefixFemale	faker/provider/person/person_fa_IR.html#prefixFemale,Faker	person_fa_IR: prefixFemale(f: Faker): string	
+prefixMale	faker/provider/person/person_fa_IR.html#prefixMale,Faker	person_fa_IR: prefixMale(f: Faker): string	
+suffix	faker/provider/person/person_fa_IR.html#suffix,Faker	person_fa_IR: suffix(f: Faker): string	
+suffixFemale	faker/provider/person/person_fa_IR.html#suffixFemale,Faker	person_fa_IR: suffixFemale(f: Faker): string	
+suffixMale	faker/provider/person/person_fa_IR.html#suffixMale,Faker	person_fa_IR: suffixMale(f: Faker): string	
+nameFemale	faker/provider/person/person_fa_IR.html#nameFemale,Faker	person_fa_IR: nameFemale(f: Faker): string	
+nameMale	faker/provider/person/person_fa_IR.html#nameMale,Faker	person_fa_IR: nameMale(f: Faker): string	
+name	faker/provider/person/person_fa_IR.html#name,Faker	person_fa_IR: name(f: Faker): string	

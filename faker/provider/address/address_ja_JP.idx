@@ -1,5 +1,6 @@
 使用例	faker/provider/address/address_ja_JP.html#使用例	 使用例	
 言い換え用語	faker/provider/address/address_ja_JP.html#言い換え用語	 言い換え用語	
+countryCodes	faker/provider/address/address_ja_JP.html#countryCodes	address_ja_JP: countryCodes	
 prefecture	faker/provider/address/address_ja_JP.html#prefecture,Faker	address_ja_JP: prefecture(f: Faker): string	
 city	faker/provider/address/address_ja_JP.html#city,Faker	address_ja_JP: city(f: Faker): string	
 country	faker/provider/address/address_ja_JP.html#country,Faker	address_ja_JP: country(f: Faker): string	

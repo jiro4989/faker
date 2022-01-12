@@ -17,10 +17,10 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 <!-- CSS -->
-<title>faker/provider/bank</title>
-<link rel="stylesheet" type="text/css" href="../../nimdoc.out.css">
+<title>faker/provider/job/job_fa_IR</title>
+<link rel="stylesheet" type="text/css" href="../../../nimdoc.out.css">
 
-<script type="text/javascript" src="../../dochack.js"></script>
+<script type="text/javascript" src="../../../dochack.js"></script>
 
 <script type="text/javascript">
 function main() {
@@ -62,7 +62,7 @@ function main() {
 <body onload="main()">
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">faker/provider/bank</h1>
+    <h1 class="title">faker/provider/job/job_fa_IR</h1>
     <div class="row">
   <div class="three columns">
   <div class="theme-switch-wrapper">
@@ -75,7 +75,7 @@ function main() {
   <div id="global-links">
     <ul class="simple">
     <li>
-      <a href="../../theindex.html">Index</a>
+      <a href="../../../theindex.html">Index</a>
     </li>
     </ul>
   </div>
@@ -100,19 +100,9 @@ function main() {
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">Procs</a>
   <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">bban
-      <li><a class="reference" href="#bban%2CFaker"
-    title="bban(f: Faker): string">bban,<wbr>Faker</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">iban
-      <li><a class="reference" href="#iban%2CFaker"
-    title="iban(f: Faker): string">iban,<wbr>Faker</a></li>
-
-  </ul>
-  <ul class="simple nested-toc-section">bankCountry
-      <li><a class="reference" href="#bankCountry%2CFaker"
-    title="bankCountry(f: Faker): string">bankCountry,<wbr>Faker</a></li>
+      <ul class="simple nested-toc-section">job
+      <li><a class="reference" href="#job%2CFaker"
+    title="job(f: Faker): string">job,<wbr>Faker</a></li>
 
   </ul>
 
@@ -135,39 +125,21 @@ function main() {
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">Imports</a></h1>
 <dl class="item">
-<a class="reference external" href="../base.html">../base</a>, <a class="reference external" href="bank/bank_en_US.html">bank/bank_en_US</a>
+<a class="reference external" href="../../base.html">../../base</a>
 </dl></div>
 <div class="section" id="12">
 <h1><a class="toc-backref" href="#12">Procs</a></h1>
 <dl class="item">
-<a id="bankCountry,Faker"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#bankCountry%2CFaker"><span class="Identifier">bankCountry</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="job,Faker"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#job%2CFaker"><span class="Identifier">job</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Generates random bankCountry.
+Returns random job.
 <p><strong class="examples_text">Example:</strong></p>
-<pre class="listing"><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newFaker</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
-</span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Operator">.</span><span class="Identifier">bankCountry</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre>
-
-</dd>
-<a id="bban,Faker"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#bban%2CFaker"><span class="Identifier">bban</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-
-Generates random bban.
-<p><strong class="examples_text">Example:</strong></p>
-<pre class="listing"><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newFaker</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
-</span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Operator">.</span><span class="Identifier">bban</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre>
-
-</dd>
-<a id="iban,Faker"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#iban%2CFaker"><span class="Identifier">iban</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="../base.html#Faker"><span class="Identifier">Faker</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-
-Generates random iban.
-<p><strong class="examples_text">Example:</strong></p>
-<pre class="listing"><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newFaker</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
-</span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Operator">.</span><span class="Identifier">iban</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre>
+<pre class="listing"><span class="Keyword">let</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Whitespace"> </span><span class="Operator">=</span><span class="Whitespace"> </span><span class="Identifier">newFaker</span><span class="Punctuation">(</span><span class="StringLit">&quot;fa_IR&quot;</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Identifier">echo</span><span class="Whitespace"> </span><span class="Identifier">f</span><span class="Operator">.</span><span class="Identifier">job</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Whitespace">
+</span><span class="Comment">## Output:</span><span class="Whitespace">
+</span><span class="Comment">##   Writer</span></pre>
 
 </dd>
 
@@ -175,7 +147,7 @@ Generates random iban.
 <div class="section" id="19">
 <h1><a class="toc-backref" href="#19">Exports</a></h1>
 <dl class="item">
-<a href="../base.html#Faker"><span class="Identifier">Faker</span></a>, <a href="../base.html#newFaker,string,int"><span class="Identifier">newFaker</span></a>
+<a href="../../base.html#Faker"><span class="Identifier">Faker</span></a>, <a href="../../base.html#newFaker,string,int"><span class="Identifier">newFaker</span></a>
 </dl></div>
 
   </div>
@@ -185,7 +157,7 @@ Generates random iban.
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-12 12:51:00 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2022-01-12 12:51:18 UTC</small>
       </div>
     </div>
   </div>
