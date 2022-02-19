@@ -1,4 +1,8 @@
-import random, times, os, strutils
+import std/os
+import std/random
+import std/strutils
+import std/times
+
 export random
 
 type
