@@ -7,3 +7,5 @@ tests/*.exe
 
 tools/generator
 !tests/testdata
+testresults/
+nimcache/
