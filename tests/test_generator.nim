@@ -1,4 +1,9 @@
-import unittest
+discard """
+  exitCode: 0
+  output: ""
+"""
+
+import std/unittest
 
 include ../tools/generator
 
@@ -43,7 +48,8 @@ block:
     check "f: Faker, n = 1 * 1024" == "proc run*(f: Faker, n = 1 * 1024): int".parseArgsDef
   block:
     checkpoint "named args (3)"
-    check "f: Faker, n = 1 * 1024, m = 2" == "proc run*(f: Faker, n = 1 * 1024, m = 2): int".parseArgsDef
+    check "f: Faker, n = 1 * 1024, m = 2" ==
+        "proc run*(f: Faker, n = 1 * 1024, m = 2): int".parseArgsDef
 
 block:
   checkpoint "parseArgsExample"
