@@ -1,4 +1,8 @@
-import random, times, os, strutils
+import std/os
+import std/random
+import std/strutils
+import std/times
+
 export random
 
 type
@@ -11,7 +15,7 @@ proc newFaker*(locale = "", seed = 0): Faker =
   # seed値で乱数を初期化。seedが0以下なら現在時刻をseed値とする
   result.rand =
     if 0 < seed: initRand(seed)
-    else: 
+    else:
       let now = times.getTime()
       initRand(convert(Seconds, Nanoseconds, now.toUnix) + now.nanosecond)
   # 言語をセット

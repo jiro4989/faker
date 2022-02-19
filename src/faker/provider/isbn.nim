@@ -4,7 +4,7 @@
 # ----------------------------------------------- #
 
 import ../base
-import isbn/[isbn_en_US]
+import isbn/isbn_en_US
 export base
 
 proc isbn13*(f: Faker, separator=""): string =

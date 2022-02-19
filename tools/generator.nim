@@ -36,10 +36,12 @@ proc parseArgsDef(line: string): string =
   result = line.split("*(")[1..^1].join.split("):")[0].strip
 
 proc parseArgsExample(line: string): string =
-  result = line.split("*(")[1..^1].join.split("):")[0].split("Faker")[1..^1].join.strip(chars = {',', ' '})
+  result = line.split("*(")[1..^1].join.split("):")[0].split("Faker")[
+      1..^1].join.strip(chars = {',', ' '})
 
 proc parseArgs(line: string): seq[string] =
-  result = line.split("*(")[1..^1].join.split("):")[0].split(",").mapIt(it.strip.split({':', '='})[0].strip)
+  result = line.split("*(")[1..^1].join.split("):")[0].split(",").mapIt(
+      it.strip.split({':', '='})[0].strip)
 
 proc parseReturnType(line: string): string =
   result = line.split("):")[1].strip
@@ -58,7 +60,8 @@ proc parseProcDef(code: string): seq[ProcDef] =
     p.returnType = line.parseReturnType
     result.add(p)
 
-proc generateProcDef(moduleName: string, p: ProcDef, locales: seq[string], defaultLocale = "en_US"): string =
+proc generateProcDef(moduleName: string, p: ProcDef, locales: seq[string],
+    defaultLocale = "en_US"): string =
   var lines: seq[string]
   lines.add(&"proc {p.name}*({p.argsDef}): {p.returnType} =")
   lines.add(&"  ## Generates random {p.name}.")
@@ -83,11 +86,11 @@ proc writeProvidersIndexFiles(): seq[string] =
     let
       (_, moduleName, _) = providerDir.splitFile
       locales = readLocalesFromDir(providerDir)
-      localesStr = locales.mapIt(&"{moduleName}_{it}").join(", ")
+      importLines = locales.mapIt(&"import {moduleName}/{moduleName}_{it}")
       interfaceFile = providerDir/"interfaces.nim"
       procDefs = readFile(interfaceFile).parseProcDef()
     result.add(moduleName)
-    lines.add(&"import {moduleName}/[{localesStr}]")
+    lines.add(importLines)
     lines.add("export base")
     lines.add("")
     for p in procDefs:
@@ -101,11 +104,11 @@ proc writeProvidersIndexFiles(): seq[string] =
   result.sort
 
 proc writeProviderFile(modules: seq[string]) =
-  let mods = modules.join(", ")
   var lines: seq[string]
   lines.add(generatedText)
-  lines.add(&"import provider/[{mods}]")
-  lines.add(&"export {mods}")
+  lines.add(modules.mapIt(&"import provider/{it}"))
+  lines.add("")
+  lines.add(modules.mapIt(&"export {it}"))
   let
     outFile = &"{packageProviderDir}.nim"
     content = lines.join("\n")

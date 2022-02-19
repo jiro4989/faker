@@ -1,14 +1,22 @@
-import unittest
+discard """
+  exitCode: 0
+"""
+
+import std/unittest
 
 import faker
 
-suite "basic usage":
-  test "generate random values":
+block:
+  checkpoint "basic usage"
+
+  block:
+    checkpoint "generate random values"
     let fake = newFaker()
     echo fake.address()
     echo fake.phoneNumber()
     echo fake.job()
-  test "generate random values by loop":
+  block:
+    checkpoint "generate random values by loop"
     let locales = ["en_US", "ja_JP", "fa_IR"]
     for locale in locales:
       let fake = newFaker(locale)

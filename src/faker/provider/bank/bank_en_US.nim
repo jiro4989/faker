@@ -1,21 +1,10 @@
 include interfaces
 
-import tables
-from strutils import join, parseBiggestUInt
-from strformat import `&`
-from sequtils import mapIt
+from std/strformat import `&`
 
 const
   countryCode = "GB"
   bbanFormat = "????#############"
-  asciiUpperCase = {'A'..'Z'}
-
-let
-  alpha = block:
-    var tbl = initTable[char, string]()
-    for ch in asciiUpperCase:
-      tbl.add(ch, $(ch.ord mod 55))
-    tbl
 
 proc bankCountry*(f: Faker): string =
   countryCode

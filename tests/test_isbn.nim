@@ -1,15 +1,30 @@
-import unittest
+discard """
+  exitCode: 0
+  output: ""
+"""
+
+import std/unittest
 
 include faker/provider/isbn/isbn_en_US
 
 # https://www.shokabo.co.jp/mybooks/ISBN-order.html
 
-suite "checkDigit13":
-  test "979-11-193114-7-? == 7":
+block:
+  checkpoint "checkDigit13"
+
+  block:
+    checkpoint "979-11-193114-7-? == 7"
     check checkDigit13("979111931147") == 7
-  test "978-4-10-109205-? == 8":
+
+  block:
+    checkpoint "978-4-10-109205-? == 8"
     check checkDigit13("978410109205") == 8
-  test "3000 test cases":
+
+  block:
+    checkpoint "3000 test cases"
+
+    # NOTE: check自体がmacroだからか、大量のcheck呼び出しをすると
+    # コンパイル時間がめちゃくちゃ長くなるのでdoAssertを使うようにしている。
     doAssert checkDigit13("978478530001") == 2
     doAssert checkDigit13("978478530001") == 2
     doAssert checkDigit13("978478530002") == 9
@@ -3312,6 +3327,9 @@ suite "checkDigit13":
     doAssert checkDigit13("978478539213") == 0
     doAssert checkDigit13("978478539213") == 0
 
-suite "checkDigit10":
-  test "ISBN4-10-109205-? == 2":
+block:
+  checkpoint "checkDigit10"
+
+  block:
+    checkpoint "ISBN4-10-109205-? == 2"
     check checkDigit10("410109205") == "2"

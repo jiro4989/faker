@@ -4,7 +4,9 @@
 # ----------------------------------------------- #
 
 import ../base
-import internet/[internet_en_US, internet_ja_JP, internet_fa_IR]
+import internet/internet_en_US
+import internet/internet_fa_IR
+import internet/internet_ja_JP
 export base
 
 proc safeDomainName*(f: Faker): string =
@@ -15,8 +17,8 @@ proc safeDomainName*(f: Faker): string =
 
   case f.locale
   of "en_US": internet_en_US.safeDomainName(f)
-  of "ja_JP": internet_ja_JP.safeDomainName(f)
   of "fa_IR": internet_fa_IR.safeDomainName(f)
+  of "ja_JP": internet_ja_JP.safeDomainName(f)
   else: internet_en_US.safeDomainName(f)
 
 proc freeDomainName*(f: Faker): string =
@@ -27,8 +29,8 @@ proc freeDomainName*(f: Faker): string =
 
   case f.locale
   of "en_US": internet_en_US.freeDomainName(f)
-  of "ja_JP": internet_ja_JP.freeDomainName(f)
   of "fa_IR": internet_fa_IR.freeDomainName(f)
+  of "ja_JP": internet_ja_JP.freeDomainName(f)
   else: internet_en_US.freeDomainName(f)
 
 proc topLevelDomain*(f: Faker): string =
@@ -39,8 +41,8 @@ proc topLevelDomain*(f: Faker): string =
 
   case f.locale
   of "en_US": internet_en_US.topLevelDomain(f)
-  of "ja_JP": internet_ja_JP.topLevelDomain(f)
   of "fa_IR": internet_fa_IR.topLevelDomain(f)
+  of "ja_JP": internet_ja_JP.topLevelDomain(f)
   else: internet_en_US.topLevelDomain(f)
 
 proc safeEmail*(f: Faker): string =
@@ -51,8 +53,8 @@ proc safeEmail*(f: Faker): string =
 
   case f.locale
   of "en_US": internet_en_US.safeEmail(f)
-  of "ja_JP": internet_ja_JP.safeEmail(f)
   of "fa_IR": internet_fa_IR.safeEmail(f)
+  of "ja_JP": internet_ja_JP.safeEmail(f)
   else: internet_en_US.safeEmail(f)
 
 proc freeEmail*(f: Faker): string =
@@ -63,8 +65,8 @@ proc freeEmail*(f: Faker): string =
 
   case f.locale
   of "en_US": internet_en_US.freeEmail(f)
-  of "ja_JP": internet_ja_JP.freeEmail(f)
   of "fa_IR": internet_fa_IR.freeEmail(f)
+  of "ja_JP": internet_ja_JP.freeEmail(f)
   else: internet_en_US.freeEmail(f)
 
 proc email*(f: Faker): string =
@@ -75,6 +77,6 @@ proc email*(f: Faker): string =
 
   case f.locale
   of "en_US": internet_en_US.email(f)
-  of "ja_JP": internet_ja_JP.email(f)
   of "fa_IR": internet_fa_IR.email(f)
+  of "ja_JP": internet_ja_JP.email(f)
   else: internet_en_US.email(f)

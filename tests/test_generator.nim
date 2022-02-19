@@ -1,75 +1,114 @@
-import unittest
+discard """
+  exitCode: 0
+  output: ""
+"""
+
+import std/unittest
 
 include ../tools/generator
 
 const
   testDir = "tests"/"testdata"
 
-suite "readLocalesFromDir":
-  test "prov1":
+block:
+  checkpoint "readLocalesFromDir"
+  block:
+    checkpoint "prov1"
     const want = @["en_US", "ja_JP"]
     check want == readLocalesFromDir(testDir/"prov1")
 
-suite "parseProcName":
-  test "normal":
+block:
+  checkpoint "parseProcName"
+  block:
+    checkpoint "normal"
     check "run" == "proc run*(f: Faker): string".parseProcName
-  test "return type is int":
+  block:
+    checkpoint "return type is int"
     check "run" == "proc run*(f: Faker): int".parseProcName
-  test "2 args":
+  block:
+    checkpoint "2 args"
     check "run" == "proc run*(f: Faker, n: int): string".parseProcName
 
-suite "parseArgsDef":
-  test "normal":
+block:
+  checkpoint "parseArgsDef"
+  block:
+    checkpoint "normal"
     check "f: Faker" == "proc run*(f: Faker): string".parseArgsDef
-  test "return type is int":
+  block:
+    checkpoint "return type is int"
     check "f: Faker" == "proc run*(f: Faker): int".parseArgsDef
-  test "2 args":
+  block:
+    checkpoint "2 args"
     check "f: Faker, n: int" == "proc run*(f: Faker, n: int): int".parseArgsDef
-  test "named args":
+  block:
+    checkpoint "named args"
     check "f: Faker, n = 1" == "proc run*(f: Faker, n = 1): int".parseArgsDef
-  test "named args (2)":
+  block:
+    checkpoint "named args (2)"
     check "f: Faker, n = 1 * 1024" == "proc run*(f: Faker, n = 1 * 1024): int".parseArgsDef
-  test "named args (3)":
-    check "f: Faker, n = 1 * 1024, m = 2" == "proc run*(f: Faker, n = 1 * 1024, m = 2): int".parseArgsDef
+  block:
+    checkpoint "named args (3)"
+    check "f: Faker, n = 1 * 1024, m = 2" ==
+        "proc run*(f: Faker, n = 1 * 1024, m = 2): int".parseArgsDef
 
-suite "parseArgsExample":
-  test "normal":
+block:
+  checkpoint "parseArgsExample"
+  block:
+    checkpoint "normal"
     check "" == "proc run*(f: Faker): string".parseArgsExample
-  test "return type is int":
+  block:
+    checkpoint "return type is int"
     check "" == "proc run*(f: Faker): int".parseArgsExample
-  # test "2 args":
+  # block:
+    checkpoint "2 args"
   #   check "n" == "proc run*(f: Faker, n: int): int".parseArgsExample
-  test "named args":
+  block:
+    checkpoint "named args"
     check "n = 1" == "proc run*(f: Faker, n = 1): int".parseArgsExample
-  test "named args (2)":
+  block:
+    checkpoint "named args (2)"
     check "n = 1 * 1024" == "proc run*(f: Faker, n = 1 * 1024): int".parseArgsExample
-  test "named args (3)":
+  block:
+    checkpoint "named args (3)"
     check "n = 1 * 1024, m = 2" == "proc run*(f: Faker, n = 1 * 1024, m = 2): int".parseArgsExample
 
-suite "parseArgs":
-  test "normal":
+block:
+  checkpoint "parseArgs"
+  block:
+    checkpoint "normal"
     check @["f"] == "proc run*(f: Faker): string".parseArgs
-  test "return type is int":
+  block:
+    checkpoint "return type is int"
     check @["f"] == "proc run*(f: Faker): int".parseArgs
-  test "2 args":
+  block:
+    checkpoint "2 args"
     check @["f", "n"] == "proc run*(f: Faker, n: int): int".parseArgs
-  test "named args":
+  block:
+    checkpoint "named args"
     check @["f", "n"] == "proc run*(f: Faker, n = 1): int".parseArgs
-  test "named args (2)":
+  block:
+    checkpoint "named args (2)"
     check @["f", "n"] == "proc run*(f: Faker, n = 1 * 1024): int".parseArgs
-  test "named args (3)":
+  block:
+    checkpoint "named args (3)"
     check @["f", "n", "m"] == "proc run*(f: Faker, n = 1 * 1024, m = 2): int".parseArgs
 
-suite "parseReturnType":
-  test "normal":
+block:
+  checkpoint "parseReturnType"
+  block:
+    checkpoint "normal"
     check "string" == "proc run*(f: Faker): string".parseReturnType
-  test "return type is int":
+  block:
+    checkpoint "return type is int"
     check "int" == "proc run*(f: Faker): int".parseReturnType
-  test "tuple":
+  block:
+    checkpoint "tuple"
     check "(int, string)" == "proc run*(f: Faker, n = 1 * 1024, m = 2): (int, string)".parseReturnType
 
-suite "parseProcDef":
-  test "normal":
+block:
+  checkpoint "parseProcDef"
+  block:
+    checkpoint "normal"
     const code = """
 proc run*(f: Faker): string
 proc run2(f: Faker): string
@@ -89,8 +128,10 @@ proc proc1*(f: Faker, n = 2): string
       ]
     check want == parseProcDef(code)
 
-suite "generateProcDef":
-  test "normal":
+block:
+  checkpoint "generateProcDef"
+  block:
+    checkpoint "normal"
     const d =
       ProcDef(name: "run",
               argsDef: "f: Faker, n = 1024",
@@ -109,7 +150,8 @@ suite "generateProcDef":
   else: sample_en_US.run(f, n)"""
     check want == generateProcDef("sample", d, @["en_US", "ja_JP"])
 
-  test "1 locale":
+  block:
+    checkpoint "1 locale"
     const d =
       ProcDef(name: "run",
               argsDef: "f: Faker",

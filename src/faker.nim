@@ -9,5 +9,8 @@ runnableExamples:
   let fake = newFaker()
   echo fake.address()
 
-import faker/[base, provider]
-export base, provider
+import ./faker/base
+import ./faker/provider
+
+export base
+export provider

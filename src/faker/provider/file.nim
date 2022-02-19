@@ -4,7 +4,7 @@
 # ----------------------------------------------- #
 
 import ../base
-import file/[file_en_US]
+import file/file_en_US
 export base
 
 proc fileExtension*(f: Faker, category=""): string =

@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.15.1"
+version       = "0.15.2"
 author        = "jiro4989"
 description   = "faker is a Nim package that generates fake data for you."
 license       = "MIT"
@@ -19,6 +19,9 @@ requires "nim >= 1.0.0"
 
 let
   providerDir = "src" / "faker" / "provider"
+
+task tests, "Run test":
+  exec "testament p 'tests/test_*.nim'"
 
 task docs, "Generate API documents":
   exec "nimble doc --index:on --project --out:docs --hints:off src/faker.nim"
