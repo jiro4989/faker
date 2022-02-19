@@ -4,7 +4,7 @@
 # ----------------------------------------------- #
 
 import ../base
-import bank/[bank_en_US]
+import bank/bank_en_US
 export base
 
 proc bankCountry*(f: Faker): string =

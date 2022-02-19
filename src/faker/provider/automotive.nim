@@ -4,7 +4,7 @@
 # ----------------------------------------------- #
 
 import ../base
-import automotive/[automotive_en_US]
+import automotive/automotive_en_US
 export base
 
 proc licensePlate*(f: Faker): string =

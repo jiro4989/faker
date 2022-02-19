@@ -4,7 +4,9 @@
 # ----------------------------------------------- #
 
 import ../base
-import person/[person_en_US, person_ja_JP, person_fa_IR]
+import person/person_en_US
+import person/person_fa_IR
+import person/person_ja_JP
 export base
 
 proc firstName*(f: Faker): string =
@@ -15,8 +17,8 @@ proc firstName*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.firstName(f)
-  of "ja_JP": person_ja_JP.firstName(f)
   of "fa_IR": person_fa_IR.firstName(f)
+  of "ja_JP": person_ja_JP.firstName(f)
   else: person_en_US.firstName(f)
 
 proc firstNameFemale*(f: Faker): string =
@@ -27,8 +29,8 @@ proc firstNameFemale*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.firstNameFemale(f)
-  of "ja_JP": person_ja_JP.firstNameFemale(f)
   of "fa_IR": person_fa_IR.firstNameFemale(f)
+  of "ja_JP": person_ja_JP.firstNameFemale(f)
   else: person_en_US.firstNameFemale(f)
 
 proc firstNameMale*(f: Faker): string =
@@ -39,8 +41,8 @@ proc firstNameMale*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.firstNameMale(f)
-  of "ja_JP": person_ja_JP.firstNameMale(f)
   of "fa_IR": person_fa_IR.firstNameMale(f)
+  of "ja_JP": person_ja_JP.firstNameMale(f)
   else: person_en_US.firstNameMale(f)
 
 proc lastName*(f: Faker): string =
@@ -51,8 +53,8 @@ proc lastName*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.lastName(f)
-  of "ja_JP": person_ja_JP.lastName(f)
   of "fa_IR": person_fa_IR.lastName(f)
+  of "ja_JP": person_ja_JP.lastName(f)
   else: person_en_US.lastName(f)
 
 proc lastNameFemale*(f: Faker): string =
@@ -63,8 +65,8 @@ proc lastNameFemale*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.lastNameFemale(f)
-  of "ja_JP": person_ja_JP.lastNameFemale(f)
   of "fa_IR": person_fa_IR.lastNameFemale(f)
+  of "ja_JP": person_ja_JP.lastNameFemale(f)
   else: person_en_US.lastNameFemale(f)
 
 proc lastNameMale*(f: Faker): string =
@@ -75,8 +77,8 @@ proc lastNameMale*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.lastNameMale(f)
-  of "ja_JP": person_ja_JP.lastNameMale(f)
   of "fa_IR": person_fa_IR.lastNameMale(f)
+  of "ja_JP": person_ja_JP.lastNameMale(f)
   else: person_en_US.lastNameMale(f)
 
 proc name*(f: Faker): string =
@@ -87,8 +89,8 @@ proc name*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.name(f)
-  of "ja_JP": person_ja_JP.name(f)
   of "fa_IR": person_fa_IR.name(f)
+  of "ja_JP": person_ja_JP.name(f)
   else: person_en_US.name(f)
 
 proc nameFemale*(f: Faker): string =
@@ -99,8 +101,8 @@ proc nameFemale*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.nameFemale(f)
-  of "ja_JP": person_ja_JP.nameFemale(f)
   of "fa_IR": person_fa_IR.nameFemale(f)
+  of "ja_JP": person_ja_JP.nameFemale(f)
   else: person_en_US.nameFemale(f)
 
 proc nameMale*(f: Faker): string =
@@ -111,8 +113,8 @@ proc nameMale*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.nameMale(f)
-  of "ja_JP": person_ja_JP.nameMale(f)
   of "fa_IR": person_fa_IR.nameMale(f)
+  of "ja_JP": person_ja_JP.nameMale(f)
   else: person_en_US.nameMale(f)
 
 proc prefix*(f: Faker): string =
@@ -123,8 +125,8 @@ proc prefix*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.prefix(f)
-  of "ja_JP": person_ja_JP.prefix(f)
   of "fa_IR": person_fa_IR.prefix(f)
+  of "ja_JP": person_ja_JP.prefix(f)
   else: person_en_US.prefix(f)
 
 proc prefixFemale*(f: Faker): string =
@@ -135,8 +137,8 @@ proc prefixFemale*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.prefixFemale(f)
-  of "ja_JP": person_ja_JP.prefixFemale(f)
   of "fa_IR": person_fa_IR.prefixFemale(f)
+  of "ja_JP": person_ja_JP.prefixFemale(f)
   else: person_en_US.prefixFemale(f)
 
 proc prefixMale*(f: Faker): string =
@@ -147,8 +149,8 @@ proc prefixMale*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.prefixMale(f)
-  of "ja_JP": person_ja_JP.prefixMale(f)
   of "fa_IR": person_fa_IR.prefixMale(f)
+  of "ja_JP": person_ja_JP.prefixMale(f)
   else: person_en_US.prefixMale(f)
 
 proc suffix*(f: Faker): string =
@@ -159,8 +161,8 @@ proc suffix*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.suffix(f)
-  of "ja_JP": person_ja_JP.suffix(f)
   of "fa_IR": person_fa_IR.suffix(f)
+  of "ja_JP": person_ja_JP.suffix(f)
   else: person_en_US.suffix(f)
 
 proc suffixFemale*(f: Faker): string =
@@ -171,8 +173,8 @@ proc suffixFemale*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.suffixFemale(f)
-  of "ja_JP": person_ja_JP.suffixFemale(f)
   of "fa_IR": person_fa_IR.suffixFemale(f)
+  of "ja_JP": person_ja_JP.suffixFemale(f)
   else: person_en_US.suffixFemale(f)
 
 proc suffixMale*(f: Faker): string =
@@ -183,6 +185,6 @@ proc suffixMale*(f: Faker): string =
 
   case f.locale
   of "en_US": person_en_US.suffixMale(f)
-  of "ja_JP": person_ja_JP.suffixMale(f)
   of "fa_IR": person_fa_IR.suffixMale(f)
+  of "ja_JP": person_ja_JP.suffixMale(f)
   else: person_en_US.suffixMale(f)

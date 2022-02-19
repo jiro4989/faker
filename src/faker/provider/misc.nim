@@ -4,7 +4,7 @@
 # ----------------------------------------------- #
 
 import ../base
-import misc/[misc_en_US]
+import misc/misc_en_US
 export base
 
 proc boolean*(f: Faker, chanceOfGettingTrue=50): bool =

@@ -4,7 +4,7 @@
 # ----------------------------------------------- #
 
 import ../base
-import currency/[currency_en_US]
+import currency/currency_en_US
 export base
 
 proc currency*(f: Faker): (string, string) =

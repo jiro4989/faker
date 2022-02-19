@@ -4,7 +4,8 @@
 # ----------------------------------------------- #
 
 import ../base
-import company/[company_en_US, company_ja_JP]
+import company/company_en_US
+import company/company_ja_JP
 export base
 
 proc bs*(f: Faker): string =
