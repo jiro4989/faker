@@ -20,6 +20,9 @@ requires "nim >= 1.0.0"
 let
   providerDir = "src" / "faker" / "provider"
 
+task tests, "Run test":
+  exec "testament p 'tests/test_*.nim'"
+
 task docs, "Generate API documents":
   exec "nimble doc --index:on --project --out:docs --hints:off src/faker.nim"
 
