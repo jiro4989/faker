@@ -83,11 +83,11 @@ proc writeProvidersIndexFiles(): seq[string] =
     let
       (_, moduleName, _) = providerDir.splitFile
       locales = readLocalesFromDir(providerDir)
-      localesStr = locales.mapIt(&"{moduleName}_{it}").join(", ")
+      importLines = locales.mapIt(&"import {moduleName}/{moduleName}_{it}")
       interfaceFile = providerDir/"interfaces.nim"
       procDefs = readFile(interfaceFile).parseProcDef()
     result.add(moduleName)
-    lines.add(&"import {moduleName}/[{localesStr}]")
+    lines.add(importLines)
     lines.add("export base")
     lines.add("")
     for p in procDefs:
