@@ -104,11 +104,11 @@ proc writeProvidersIndexFiles(): seq[string] =
   result.sort
 
 proc writeProviderFile(modules: seq[string]) =
-  let mods = modules.join(", ")
   var lines: seq[string]
   lines.add(generatedText)
-  lines.add(&"import provider/[{mods}]")
-  lines.add(&"export {mods}")
+  lines.add(modules.mapIt(&"import provider/{it}"))
+  lines.add("")
+  lines.add(modules.mapIt(&"export {it}"))
   let
     outFile = &"{packageProviderDir}.nim"
     content = lines.join("\n")
