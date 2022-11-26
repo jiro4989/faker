@@ -99,7 +99,7 @@ TODO list.
 - [o] faker.provider.phone_number
 - [ ] faker.provider.profile
 - [ ] faker.provider.python
-- [ ] faker.provider.ssn
+- [o] faker.provider.ssn
 - [o] faker.provider.user_agent
 
 API document
