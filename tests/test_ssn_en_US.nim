@@ -8,6 +8,7 @@ test "SSN":
       let fake = newFaker()
       let ssn = fake.ssn()
       let (success, aNum, gNum, sNum) = scanTuple(ssn, "$i-$i-$i")
-      assert len($aNum) == 3
-      assert len($gNum) == 2
-      assert len($sNum) == 4
+      check len($aNum) == 3
+      check len($gNum) == 2
+      check len($sNum) == 4
+      check len(ssn) == 11
