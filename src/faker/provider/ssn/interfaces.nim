@@ -6,10 +6,11 @@
 
 import random
 import std/strutils
+import strformat
 import ../../base
 export base
 
 proc ssn*(f: Faker): string
-proc areaNumber(f: Faker): int
-proc groupNumber(f: Faker): int
-proc serialNumber(f: Faker): int
+proc areaNumber(f: Faker): string
+proc groupNumber(f: Faker): string
+proc serialNumber(f: Faker): string
