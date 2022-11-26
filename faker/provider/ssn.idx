@@ -1,0 +1,1 @@
+ssn	faker/provider/ssn.html#ssn,Faker	ssn: ssn(f: Faker): string	
