@@ -2,7 +2,7 @@
 faker
 =====
 
-|nimble-version| |nimble-install| |nimble-docs| |gh-actions|
+|gh-actions|
 
 faker is a Nim package that generates fake data for you.
 faker is heavily inspired by `Python Faker <https://github.com/joke2k/faker>`_.
@@ -158,9 +158,3 @@ MIT
 
 .. |gh-actions| image:: https://github.com/jiro4989/faker/workflows/test/badge.svg
    :target: https://github.com/jiro4989/faker/actions
-.. |nimble-version| image:: https://nimble.directory/ci/badges/faker/version.svg
-   :target: https://nimble.directory/ci/badges/faker/nimdevel/output.html
-.. |nimble-install| image:: https://nimble.directory/ci/badges/faker/nimdevel/status.svg
-   :target: https://nimble.directory/ci/badges/faker/nimdevel/output.html
-.. |nimble-docs| image:: https://nimble.directory/ci/badges/faker/nimdevel/docstatus.svg
-   :target: https://nimble.directory/ci/badges/faker/nimdevel/doc_build_output.html
