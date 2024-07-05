@@ -28,9 +28,10 @@ jobs:
           - 'stable'
     steps:
       - uses: actions/checkout@v4
-      - uses: jiro4989/setup-nim-action@v1
+      - uses: jiro4989/setup-nim-action@v2-beta
         with:
           nim-version: ${{ matrix.nim-version }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: nimble build -Y
       - run: nimble install -Y
       - run: nimble tests
@@ -39,7 +40,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: jiro4989/setup-nim-action@v1
+      - uses: jiro4989/setup-nim-action@v2-beta
         with:
           nim-version: 1.4.8 # FIXME
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: nimble doc --index:on --project src/faker.nim
