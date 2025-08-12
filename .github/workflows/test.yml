@@ -27,7 +27,7 @@ jobs:
           - '2.0.x'
           - 'stable'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: jiro4989/setup-nim-action@v2
         with:
           nim-version: ${{ matrix.nim-version }}
@@ -39,7 +39,7 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: jiro4989/setup-nim-action@v2
         with:
           nim-version: 1.4.8 # FIXME
